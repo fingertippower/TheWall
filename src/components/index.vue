@@ -20,5 +20,5 @@
 </script>
 
 <style lang="scss">
-    @import '../assets/css/function.scss';
+
 </style>

@@ -15,7 +15,6 @@
 </script>
 
 <style lang="scss" scoped>
-    @import '../assets/css/function.scss';
     .foot{
         width: 100%;
         height: 3.0625rem;
