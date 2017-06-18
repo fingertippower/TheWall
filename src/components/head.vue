@@ -13,9 +13,10 @@
     .head{
         width: 100%;
         height: px2rem(88px);
-        position: absolute;
-        top: 0px;
+        position: fixed;
+        top: 0;
         background-color: #E5E5E5;
+        z-index: 2;
         text-align: center;
     }
     .head p{

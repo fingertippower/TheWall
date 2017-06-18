@@ -25,7 +25,7 @@
         width: 100%;
         height: px2rem(98px);
         background-color: #E5E5E5;
-        position: absolute;
+        position: fixed;
         bottom: 0;
     }
     .foot-ul{
