@@ -8,10 +8,18 @@
                     <span class="time">2017-06-16 12:04:18</span>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三十多那哪看得ad哪里但是的那里是到哪了单色凌你打算离开单色凌但是离开你打撒大声地打算打打阿萨德按时</p>
                     <div class="img-content">
-                        <img src="../assets/img/coment/1.jpg" alt="">
-                        <img src="../assets/img/coment/2.png" alt="">
-                        <img src="../assets/img/coment/1.jpg" alt="">
-                        <img src="../assets/img/coment/2.png" alt="">
+                        <ul class="img-con">
+                            <li> <img src="../assets/img/coment/1.jpg" alt=""></li>
+                            <li><img src="../assets/img/coment/2.png" alt=""></li>
+                            <li><img src="../assets/img/coment/2.png" alt=""></li>
+                            <li><img src="../assets/img/coment/1.jpg" alt=""></li>
+                            <li><img src="../assets/img/coment/1.jpg" alt=""></li>
+                            <li>  <img src="../assets/img/coment/2.png" alt=""></li>
+                        </ul>
+                        <!--<img src="../assets/img/coment/1.jpg" alt="">-->
+                        <!--<img src="../assets/img/coment/2.png" alt="">-->
+                        <!--<img src="../assets/img/coment/1.jpg" alt="">-->
+                        <!--<img src="../assets/img/coment/2.png" alt="">-->
                     </div>
                 </div>
                 <div class="wrap-choice">
@@ -26,8 +34,18 @@
                     <span class="title">衡水中学、衡水一中</span><br>
                     <span class="time">2017-06-16 12:04:18</span>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三十多那哪看得ad哪里但是的那里是到哪了单色凌你打算离开单色凌但是离开你打撒大声地打算打打阿萨德按时</p>
-                    <div class="img-content"></div>
+                    <div class="img-content">
+                        <ul class="img-con">
+                            <li> <img src="../assets/img/coment/1.jpg" alt=""></li>
+                            <li><img src="../assets/img/coment/2.png" alt=""></li>
+                            <li><img src="../assets/img/coment/2.png" alt=""></li>
+                            <li><img src="../assets/img/coment/1.jpg" alt=""></li>
+                            <li><img src="../assets/img/coment/1.jpg" alt=""></li>
+                            <li><img src="../assets/img/coment/2.png" alt=""></li>
+                        </ul>
+                    </div>
                 </div>
+                <!--想要评论或者是转发点赞的时候需要在下面绑定点击事件-->
                 <div class="wrap-choice">
                     <div><img src="../assets/img/comments.png" alt=""><span class="choice-total">4089</span></div>
                     <div><img src="../assets/img/skip.png" alt=""><span class="choice-total">4089</span></div>
@@ -120,10 +138,10 @@
     .content .show-news .wrap {
         width:85%;
         margin: 0 auto;
-        min-height: px2rem(227px);
         max-height: px2rem(745px);
 
     }
+    /*评论者的头部样式*/
     .wrap .p-img{
 
         display: inline-block;
@@ -137,6 +155,7 @@
         height: px2rem(46px);
         border-radius: 50%;
     }
+    /*评论区的头部样式*/
     .wrap .title{
         clear: both;
         display: inline-block;
@@ -150,23 +169,46 @@
         margin-left: px2rem(55px);
         color: gray;
     }
+    /*发表图片的样式*/
+
     .wrap .img-content{
-        display: flex;
+        /*display: flex;*/
         max-height: px2rem(440px);
         margin:px2rem(20px) 0;
         min-height: 0;
+        /*flex-wrap:wrap;*/
+        /*overflow: hidden;*/
+        /*justify-content:space-around;*/
+    }
+    .wrap .img-content .img-con{
+        display: flex;
+        width: 100%;
+        height: px2rem(440px);
         flex-wrap:wrap;
         overflow: hidden;
         justify-content:space-around;
     }
-    .wrap .img-content img{
-        /*display: inline-block;*/
-        /*min-width: px2rem(230px);*/
-        /*!*max-width: 100%;*!*/
-        /*min-height: px2rem(217px);*/
-        /*!*max-height: 100%;*!*/
-        flex: 1;
+    .img-con li{
+
+        /*flex: 1;*/
+
+        width: 33%;
+        height: 49%;
+
     }
+    .img-con li img{
+        width: 100%;
+        height: 100%;
+    }
+    /*.wrap .img-content img{*/
+        /*display: block;*/
+       /*!*width: 20%;*!*/
+        /*width:  px2rem(217px);*/
+        /*!*!*max-width: 100%;*!*!*/
+        /*height: px2rem(217px);*/
+        /*!*!*max-height: 100%;*!*!*/
+        /*flex: 1;*/
+    /*}*/
     /*底部选择的样式*/
     .wrap-choice{
         width: 100%;
