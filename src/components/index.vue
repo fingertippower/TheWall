@@ -1,15 +1,11 @@
 <template>
     <div id="app">
-        <index-head></index-head>
-        <indexContent></indexContent>
-        <index-foot></index-foot>
+        <wall-login></wall-login>
     </div>
 </template>
 
 <script>
-    import foot from './foot.vue'
-    import head from './head.vue'
-    import content from './content.vue'
+    import login from './login.vue'
     export default {
         name: 'app',
         data () {
@@ -18,9 +14,7 @@
             }
         },
         components:{
-            indexFoot:foot,
-            indexHead:head,
-            indexContent : content
+            wallLogin:login
         }
     }
 </script>
