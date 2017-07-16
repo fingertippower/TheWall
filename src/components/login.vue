@@ -9,13 +9,16 @@
             </p>
         </div>
         <div class="down">
+            <span class="span1">
+                <img src="../../img/phone.png">
+            </span>
             <input class="text1" type="text" placeholder="输入手机号">
             <input class="text2" type="password" placeholder="输入密码">
             <button class="btn1">立即注册</button>
             <button class="btn2">忘记密码</button>
             <button class="btn3">登录</button>
             <hr>
-            <span>快速登录</span>
+            <span class="span2">快速登录</span>
         </div>
     </div>
 </template>
@@ -81,8 +84,11 @@
         position: relative;
         text-align: center;
     }
+    .down .span1{
+        margin-left: px2rem(27.4912px);
+    }
     .down input{
-        width: px2rem(548.9722px);
+        width: px2rem(514.9722px);
         height: px2rem(45px);
         margin-top: px2rem(40px);
         border: px2rem(1px) solid;
@@ -91,12 +97,18 @@
         border-right-style: none;
         border-color: #26A8F7;
         color: #26A8F7;
+        font-size: px2rem(30px);
+        padding-left: px2rem(34px);
     }
     input::-webkit-input-placeholder{
         color: #26A8F7;
     }
     .down input.text1{
         margin-top: px2rem(95px);
+    }
+    .down img{
+        width: px2rem(20.792px);
+        height: px2rem(34px);
     }
     .down button{
         font-size: px2rem(18px);
@@ -132,7 +144,7 @@
         text-align: center;
         position: relative;
     }
-    .down span{
+    .down .span2{
         width: px2rem(130px);
         background-color: #ffffff;
         font-size: px2rem(24px);
