@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="background">
         <div class="up">
             <img>
             <span>登录</span>
@@ -44,6 +44,15 @@
         margin: 0;
         padding: 0;
         background-color: tan;
+    }
+    .background{
+        background-color: tan;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        top: px2rem(40.6611px);
+        bottom: px2rem(50.873px);
     }
     .up{
         width: px2rem(605px);
