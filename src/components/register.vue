@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="background">
         <div class="up">
             <img>
             <span>注册</span>
@@ -47,17 +47,29 @@
     *{
         margin: 0;
         padding: 0;
-        background-color: antiquewhite;
+        background-color: tan;
+    }
+    .background{
+        background-color: tan;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        top: px2rem(40.6611px);
+        bottom: px2rem(50.873px);
     }
     .up{
         width: px2rem(605px);
         height: px2rem(460px);
         margin: px2rem(95px) auto;
         margin-bottom: 0;
-        border: px2rem(1px) solid;
+        border: 0 ;
         border-radius: px2rem(10px) px2rem(10px) 0 0;
         position: relative;
         text-align: center;
+        background-color: transparent;
+        background-color: rgba(255,255,255,0.5);
+        box-shadow:0 0 px2rem(4px) dimgrey;
     }
     .up img{
         width: px2rem(115px);
@@ -68,7 +80,7 @@
         margin:auto;
         border-radius: px2rem(10px);
         position: absolute;
-        box-shadow:0 px2rem(1px) 0 #000;
+        box-shadow:0 0 px2rem(7px) #000;
     }
     .up span{
         font-size: px2rem(72px);
@@ -77,6 +89,7 @@
         right:0;
         top:px2rem(216.667px);
         position: absolute;
+        background-color: transparent;
     }
     .up p{
         font-size: px2rem(24px);
@@ -86,29 +99,43 @@
         top:px2rem(335.7383px);
         position: absolute;
         font-family: 宋体;
+        background-color: transparent;
     }
     .down{
         width: px2rem(605px);
         height: px2rem(710px);
         margin: px2rem(16px) auto;
-        border: px2rem(1px) solid;
+
+        border: 0;
         border-radius:  0 0 px2rem(10px) px2rem(10px);
         position: relative;
         text-align: center;
+        background-color: transparent;
+        background-color: rgba(255,255,255,0.5);
+        box-shadow:0 0 px2rem(4px) dimgrey;
+    }
+    .down .phone{
+        background-color: transparent;
+    }
+    .down .password{
+        background-color: transparent;
     }
     .down .phone .span1{
         margin-left: px2rem(7px);
         margin-top: px2rem(98px);
         position: absolute;
+        background-color: transparent;
     }
     .down .password .span1{
         margin-left: px2rem(7px);
         margin-top: px2rem(46.333px);
         position: absolute;
+        background-color: transparent;
     }
     .down input{
         border: px2rem(1px) solid;
         border-color: #26A8F7;
+        background-color: transparent;
     }
     .down input.text1::-webkit-input-placeholder,.down input.text2::-webkit-input-placeholder{
         color: #38B0F9;
@@ -116,10 +143,12 @@
     .down .phone img{
         width: px2rem(20.792px);
         height: px2rem(34px);
+        background-color: transparent;
     }
     .down .password img{
         width: px2rem(20.792px);
         height: px2rem(28.667px);
+        background-color: transparent;
     }
     .down input.text1{
         width: px2rem(514.9722px);
@@ -156,6 +185,7 @@
         margin-left: px2rem(-116.667px);
         margin-top: px2rem(46.333px);
         position: absolute;
+        background-color: transparent;
     }
     .down .phone button{
         width: px2rem(102.667px);
@@ -217,15 +247,14 @@
         position: absolute;
         text-align:center;
     }
-    .down .span4 img{
-        width: px2rem(70px);
-        height: px2rem(70px);
-        margin:px2rem(32.499px) px2rem(31px);
+    .down .div1{
+        background-color: transparent;
     }
     .down .div1 img{
         width: px2rem(70px);
         height: px2rem(70px);
         margin:px2rem(32.499px) px2rem(31px);
         margin-bottom: 0;
+        background-color: transparent;
     }
 </style>
