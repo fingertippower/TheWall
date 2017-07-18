@@ -178,7 +178,7 @@
         margin-top: px2rem(47.9561px);
         text-align: center;
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
-        color: #727272;
+        color: #848484;
         border-color: #30AFEF;
     }
     .down .phone .span2{
