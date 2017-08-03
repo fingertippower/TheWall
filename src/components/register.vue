@@ -240,7 +240,8 @@
     }
     .down .span3{
         width: px2rem(130px);
-        background-color: #ffffff;
+        /*background-color: rgba(255, 255, 255, 1);*/
+        background-color: #fff;
         font-size: px2rem(24px);
         color: #A5A5A5;
         margin:px2rem(-20px) px2rem(-65px);
