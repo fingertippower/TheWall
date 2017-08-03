@@ -25,7 +25,7 @@
             <button class="btn2">忘记密码</button>
             <button class="btn3">登录</button>
             <hr>
-            <span class="span3" id="aaa">快速登录</span>
+            <span class="span3">快速登录</span>
             <div class="div1">
                 <img src="../../img/QQ.png">
                 <img src="../../img/weixin.png">
@@ -46,8 +46,7 @@
         background-color: tan;
     }
     .background{
-        /*background-color: tan;*/
-        background-image:url(../assets/img/11.png);
+        background-color: tan;
         width: 100%;
         height: 100%;
         margin: 0;
@@ -106,7 +105,7 @@
         border-radius: 0 0 px2rem(10px) px2rem(10px);
         position: relative;
         text-align: center;
-        /*background-color: transparent;*/
+        background-color: transparent;
         background-color: rgba(255,255,255,0.5);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }
@@ -194,7 +193,7 @@
     }
     .down .span3{
         width: px2rem(130px);
-        background-color: rgba(255, 255, 255, 1);
+        background-color: #ffffff;
         font-size: px2rem(24px);
         color: #A5A5A5;
         margin:px2rem(-20px) px2rem(-65px);
@@ -211,8 +210,5 @@
         margin:px2rem(32.499px) px2rem(31px);
         margin-bottom: 0;
         background-color: transparent;
-    }
-    #aaa{
-        background-color: rgba(255,255,255,0.5);
     }
 </style>
