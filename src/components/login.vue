@@ -1,7 +1,7 @@
 <template>
     <div class="background">
         <div class="up">
-            <img>
+            <img >
             <span>登录</span>
             <p>
                 登录，才能给你更好的<br/>
@@ -10,16 +10,22 @@
         </div>
         <div class="down">
             <div class="phone">
-                <span>
-                    <img src="../../img/phone.png">
+                <span class="span1">
+                    <img class="img1" src="../assets/img/phone.png">
                 </span>
                 <input class="text1" type="text" placeholder="输入手机号">
+                <span class="span2">
+                    <img class="img2" src="../assets/img/delete.png">
+                </span>
             </div>
             <div class="password">
-                <span>
-                    <img src="../../img/password.png">
+                <span class="span1">
+                    <img class="img3" src="../assets/img/password.png">
                 </span>
                 <input class="text2" type="password" placeholder="输入密码">
+                <span class="span2">
+                    <img class="img2" src="../assets/img/delete.png">
+                </span>
             </div>
             <button class="btn1">立即注册</button>
             <button class="btn2">忘记密码</button>
@@ -43,16 +49,14 @@
     *{
         margin: 0;
         padding: 0;
-        background-color: tan;
     }
     .background{
-        background-color: tan;
-        width: 100%;
+        background: url("../assets/img/background.png");
+        width: px2rem(750px);
         height: 100%;
         margin: 0;
         padding: 0;
-        top: px2rem(40.6611px);
-        bottom: px2rem(50.873px);
+        position: fixed;
     }
     .up{
         width: px2rem(605px);
@@ -64,7 +68,7 @@
         position: relative;
         text-align: center;
         background-color: transparent;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255,255,255,0.85);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }
     .up img{
@@ -80,7 +84,7 @@
     }
     .up span{
         font-size: px2rem(72px);
-        color: #26A8F7;
+        color: #DA9128;
         left:0;
         right:0;
         top:px2rem(216.667px);
@@ -89,7 +93,7 @@
     }
     .up p{
         font-size: px2rem(24px);
-        color: #26A8F7;
+        color: #DA9128;
         left:0;
         right:0;
         top:px2rem(335.7383px);
@@ -101,12 +105,13 @@
         width: px2rem(605px);
         height: px2rem(710px);
         margin: px2rem(16px) auto;
+        margin-bottom: px2rem(38.9956px);
         border: 0;
         border-radius: 0 0 px2rem(10px) px2rem(10px);
         position: relative;
         text-align: center;
         background-color: transparent;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255,255,255,0.85);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }
     .down .phone{
@@ -115,15 +120,27 @@
     .down .password{
         background-color: transparent;
     }
-    .down .phone span{
+    .down .phone .span1{
         margin-left: px2rem(7px);
         margin-top: px2rem(98px);
         position: absolute;
         background-color: transparent;
     }
-    .down .password span{
+    .down .phone .span2{
+        margin-left: px2rem(-36.4063px);
+        margin-top: px2rem(107px);
+        position: absolute;
+        background-color: transparent;
+    }
+    .down .password .span1{
         margin-left: px2rem(7px);
         margin-top: px2rem(46.333px);
+        position: absolute;
+        background-color: transparent;
+    }
+    .down .password .span2{
+        margin-left: px2rem(-36.4063px);
+        margin-top: px2rem(52px);
         position: absolute;
         background-color: transparent;
     }
@@ -135,26 +152,31 @@
         border-top-style: none;
         border-left-style: none;
         border-right-style: none;
-        border-color: #26A8F7;
+        border-color: #684707;
         color: #38B0F9;
         font-size: px2rem(30px);
         padding-left: px2rem(34px);
         background-color: transparent;
     }
     input::-webkit-input-placeholder{
-        color: #38B0F9;
+        color: #DA9128;
     }
     .down input.text1{
         margin-top: px2rem(95px);
     }
-    .down .phone img{
+    .down .img1{
         width: px2rem(20.792px);
         height: px2rem(34px);
         background-color: transparent;
     }
-    .down .password img{
+    .down .img3{
         width: px2rem(20.792px);
         height: px2rem(28.667px);
+        background-color: transparent;
+    }
+    .down .img2{
+        width: px2rem(22.4063px);
+        height: px2rem(22.4063px);
         background-color: transparent;
     }
     .down button{
