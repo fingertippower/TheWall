@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <v-headnotice></v-headnotice>
-    <v-headnavigation></v-headnavigation>
+    <router-view></router-view>
   </div>
 </template>
 
