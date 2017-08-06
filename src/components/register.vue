@@ -1,7 +1,7 @@
 <template>
     <div class="background">
         <div class="up">
-            <img>
+            <img src="../assets/img/logo.png">
             <span>注册</span>
             <p>
                 注册，一切美好的开始<br/>
@@ -11,7 +11,7 @@
         <div class="down">
             <div class="phone">
                 <span class="span1">
-                    <img src="../../img/phone.png">
+                    <img src="../assets/img/phone.png">
                 </span>
                 <input class="text1" type="text" placeholder="输入手机号">
                 <span class="span2">
@@ -20,11 +20,11 @@
             </div>
             <div class="password">
                 <span class="span1">
-                    <img class="img1" src="../../img/password.png">
+                    <img class="img1" src="../assets/img/password.png">
                 </span>
                 <input class="text2" type="password" placeholder="输入密码">
                 <span class="span2">
-                    <img class="img2" src="../../img/delete.png">
+                    <img class="img2" src="../assets/img/delete.png">
                 </span>
             </div>
             <button class="btn1">立即注册</button>
@@ -37,8 +37,8 @@
                 <span class="span3">快速登录</span>
             </div>
             <div class="div1">
-                <img class="QQ" src="../../img/QQ.png">
-                <img class="weixin" src="../../img/weixin.png">
+                <img class="QQ" src="../assets/img/QQ.png">
+                <img class="WeChat" src="../assets/img/WeChat.png">
             </div>
         </div>
     </div>
@@ -55,12 +55,12 @@
         padding: 0;
     }
     .background{
+        background: url("../assets/img/background.png");
         width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
-        top: px2rem(40.6611px);
-        bottom: px2rem(50.873px);
+        position: fixed;
     }
     .up{
         width: px2rem(605px);
@@ -72,23 +72,21 @@
         position: relative;
         text-align: center;
         background-color: transparent;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255,255,255,0.85);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }
     .up img{
-        width: px2rem(115px);
-        height: px2rem(115px);
+        width: px2rem(139px);
+        height: px2rem(139px);
         left:0;
         right:0;
         top:px2rem(55px);
         margin:auto;
-        border-radius: px2rem(10px);
         position: absolute;
-        box-shadow:0 0 px2rem(7px) #000;
     }
     .up span{
         font-size: px2rem(72px);
-        color: #26A8F7;
+        color: #DA9128;
         left:0;
         right:0;
         top:px2rem(216.667px);
@@ -97,7 +95,7 @@
     }
     .up p{
         font-size: px2rem(24px);
-        color: #26A8F7;
+        color: #DA9128;
         left:0;
         right:0;
         top:px2rem(335.7383px);
@@ -115,7 +113,7 @@
         position: relative;
         text-align: center;
         background-color: transparent;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255,255,255,0.85);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }
     .down .phone{
@@ -138,11 +136,11 @@
     }
     .down input{
         border: px2rem(1px) solid;
-        border-color: #26A8F7;
+        border-color: #684707;
         background-color: transparent;
     }
     .down input.text1::-webkit-input-placeholder,.down input.text2::-webkit-input-placeholder{
-        color: #38B0F9;
+        color: #DA9128;
     }
     .down .phone img{
         width: px2rem(20.792px);
@@ -166,7 +164,7 @@
         border-top-style: none;
         border-left-style: none;
         border-right-style: none;
-        color: #38B0F9;
+        color: #DA9128;
         font-size: px2rem(30px);
         padding-left: px2rem(34px);
     }
@@ -177,7 +175,7 @@
         border-top-style: none;
         border-left-style: none;
         border-right-style: none;
-        color: #38B0F9;
+        color: #DA9128;
         font-size: px2rem(30px);
         padding-left: px2rem(34px);
     }
@@ -188,7 +186,7 @@
         text-align: center;
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
         color: #848484;
-        border-color: #30AFEF;
+        border-color: #503202;
     }
     .down .phone .span2{
         margin-left: px2rem(-116.667px);
@@ -209,7 +207,7 @@
         font-family: 宋体;
         background-color: transparent;
         border: none;
-        background-color: #38B0F9;
+        background-color: #DA9128;
         color: #ffffff;
         border-radius: px2rem(4px) px2rem(4px) px2rem(4px) px2rem(4px);
         margin-top: px2rem(62.5px);
@@ -220,7 +218,7 @@
         margin-top: px2rem(20px);
         background-color: transparent;
         border: none;
-        color: #38B0F9;
+        color: #FF006E;
         float: left;
         margin-left: px2rem(66.6616px);
     }
@@ -242,7 +240,7 @@
         width: px2rem(415.3335px);
         height: px2rem(82.124px);
         margin-top: px2rem(51.9541px);
-        background-color: #38B0F9;
+        background-color: #503202;
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
     }
     .down .div2 hr{
@@ -265,7 +263,7 @@
         /*background-color: rgba(255, 255, 255, 1);*/
         background-color: #fff;
         font-size: px2rem(24px);
-        color: #A5A5A5;
+        color: #DA9128;
         margin:px2rem(107px) px2rem(-65px);
         position: absolute;
         text-align:center;
@@ -284,7 +282,7 @@
     .down .div1 .QQ{
         float: left;
     }
-    .down .div1 .weixin{
+    .down .div1 .WeChat{
         float: right;
     }
 </style>

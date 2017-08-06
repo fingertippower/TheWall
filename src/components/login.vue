@@ -1,7 +1,7 @@
 <template>
     <div class="background">
         <div class="up">
-            <img >
+            <img src="../assets/img/logo.png">
             <span>登录</span>
             <p>
                 登录，才能给你更好的<br/>
@@ -30,11 +30,15 @@
             <button class="btn1">立即注册</button>
             <button class="btn2">忘记密码</button>
             <button class="btn3">登录</button>
-            <hr>
+            <div class="div2">
+                <hr class="hr1">
+                <hr class="hr2">
+                <span class="span3">快速登录</span>
+            </div>
             <span class="span3">快速登录</span>
             <div class="div1">
-                <img src="../../img/QQ.png">
-                <img src="../../img/weixin.png">
+                <img class="QQ" src="../assets/img/QQ.png">
+                <img class="WeChat" src="../assets/img/WeChat.png">
             </div>
         </div>
     </div>
@@ -52,7 +56,7 @@
     }
     .background{
         background: url("../assets/img/background.png");
-        width: px2rem(750px);
+        width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
@@ -72,15 +76,13 @@
         box-shadow:0 0 px2rem(4px) dimgrey;
     }
     .up img{
-        width: px2rem(115px);
-        height: px2rem(115px);
+        width: px2rem(139px);
+        height: px2rem(139px);
         left:0;
         right:0;
         top:px2rem(55px);
         margin:auto;
-        border-radius: px2rem(10px);
         position: absolute;
-        box-shadow:0 0 px2rem(7px) #000;
     }
     .up span{
         font-size: px2rem(72px);
@@ -153,7 +155,7 @@
         border-left-style: none;
         border-right-style: none;
         border-color: #684707;
-        color: #38B0F9;
+        color: #DA9128;
         font-size: px2rem(30px);
         padding-left: px2rem(34px);
         background-color: transparent;
@@ -175,8 +177,8 @@
         background-color: transparent;
     }
     .down .img2{
-        width: px2rem(22.4063px);
-        height: px2rem(22.4063px);
+        width: px2rem(24px);
+        height: px2rem(24px);
         background-color: transparent;
     }
     .down button{
@@ -187,7 +189,7 @@
         border: none;
     }
     .down button.btn1{
-        color: #38B0F9;
+        color: #FF006E;
         float: left;
         margin-left: px2rem(66.6616px);
     }
@@ -202,23 +204,30 @@
         width: px2rem(415.3335px);
         height: px2rem(82.124px);
         margin-top: px2rem(95px);
-        background-color: #38B0F9;
+        background-color: #503202;
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
     }
-    .down hr{
-        width: px2rem(548.9722px);
+    .down .div2 hr{
+        width: px2rem(208px);
         margin: px2rem(132.084px) auto;
         margin-bottom: 0;
         color: #A5A5A5;
-        text-align: center;
         position: relative;
+    }
+    .down .div2 .hr1{
+        float: left;
+        left: px2rem(29.1577px);
+    }
+    .down .div2 .hr2{
+        float: right;
+        right: px2rem(29.1577px);
     }
     .down .span3{
         width: px2rem(130px);
         background-color: #ffffff;
         font-size: px2rem(24px);
-        color: #A5A5A5;
-        margin:px2rem(-20px) px2rem(-65px);
+        color: #DA9128;
+        margin:px2rem(116px) px2rem(-65px);
         position: absolute;
         text-align:center;
         background-color: transparent;
@@ -228,10 +237,15 @@
     }
     .down .div1 img{
         width: px2rem(70px);
-        height: px2rem(70px);
-        margin:px2rem(32.499px) px2rem(31px);
+        height: px2rem(71px);
+        margin-top:px2rem(169px);
         margin-bottom: 0;
         background-color: transparent;
     }
-
+    .down .div1 .QQ{
+        float: left;
+    }
+    .down .div1 .WeChat{
+        float: right;
+    }
 </style>
