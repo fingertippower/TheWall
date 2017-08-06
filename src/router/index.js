@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Register from '../components/register.vue'
 import Login from '../components/login.vue'
 import Index from '../components/index.vue'
+import Personal from '../components/personal.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +22,11 @@ export default new Router({
             path: '/index',
             name: 'index',
             component: Index
+        },
+        {
+            path:'/personal',
+            name:'personal',
+            component:Personal
         }
     ]
 })
