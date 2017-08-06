@@ -33,6 +33,7 @@
         margin: 0 10%;
     }
     .headNavigation{
+        position: fixed;
         margin-top: px2rem(122px);
         background-color: antiquewhite;
     }

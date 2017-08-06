@@ -2,6 +2,7 @@
     <div id="app">
         <v-headnotice></v-headnotice>
         <v-headnavigation></v-headnavigation>
+        <router-view class="aa"></router-view>
     </div>
 </template>
 
@@ -24,4 +25,7 @@
 
 <style lang="scss">
     @import '../assets/css/function.scss';
+    .aa{
+        background-color: red;
+    }
 </style>
