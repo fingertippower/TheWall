@@ -4,6 +4,7 @@ import Register from '../components/register.vue'
 import Login from '../components/login.vue'
 import Index from '../components/index.vue'
 import Personal from '../components/personal.vue'
+import School from '../components/school.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +28,11 @@ export default new Router({
             path:'/personal',
             name:'personal',
             component:Personal
+        },
+        {
+            path:'/school',
+            name:'school',
+            component:School
         }
     ]
 })
