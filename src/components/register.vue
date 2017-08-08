@@ -107,12 +107,10 @@
         width: px2rem(605px);
         height: px2rem(710px);
         margin: px2rem(16px) auto;
-
         border: 0;
         border-radius:  0 0 px2rem(10px) px2rem(10px);
         position: relative;
         text-align: center;
-        background-color: transparent;
         background-color: rgba(255,255,255,0.85);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }

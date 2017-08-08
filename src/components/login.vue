@@ -35,7 +35,6 @@
                 <hr class="hr2">
                 <span class="span3">快速登录</span>
             </div>
-            <span class="span3">快速登录</span>
             <div class="div1">
                 <img class="QQ" src="../assets/img/QQ.png">
                 <img class="WeChat" src="../assets/img/WeChat.png">
@@ -112,7 +111,6 @@
         border-radius: 0 0 px2rem(10px) px2rem(10px);
         position: relative;
         text-align: center;
-        background-color: transparent;
         background-color: rgba(255,255,255,0.85);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }
