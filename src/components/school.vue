@@ -29,8 +29,8 @@
             <span>分享<br/>邀请校友</span>
         </div>
         <div class="chat">
-            <img src="../assets/img/QQ.png">
-            <img src="../assets/img/WeChat.png">
+            <img class="QQ" src="../assets/img/QQ.png">
+            <img class="WeChat" src="../assets/img/WeChat.png">
         </div>
     </div>
 </template>
@@ -44,9 +44,6 @@
     *{
         margin: 0;
         padding: 0;
-    }
-    .background{
-        position: relative;
     }
     .head{
         width:100%;
@@ -68,7 +65,6 @@
         right:0;
         top:px2rem(55.4971px);
         position: absolute;
-
     }
     .message{
         width: 100%;
@@ -137,5 +133,12 @@
         width: px2rem(70px);
         height: px2rem(71px);
         margin-top:px2rem(330px);
+        position: absolute;
+    }
+    .QQ{
+        margin-left: px2rem(-31px);
+    }
+    .WeChat{
+        margin-left: px2rem(101px);
     }
 </style>
