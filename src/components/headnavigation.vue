@@ -49,6 +49,7 @@
         float: left;
     }
     .headNavigationBtn{
+
         width: px2rem(135px);
         height: px2rem(38px);
         border: 1px solid #fff;
