@@ -5,6 +5,8 @@ import Login from '../components/login.vue'
 import Index from '../components/index.vue'
 import Personal from '../components/personal.vue'
 import School from '../components/school.vue'
+import ConcernConcern from '../components/concern-concern.vue'
+import ConcernFans from '../components/concern-fans.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +35,16 @@ export default new Router({
             path:'/school',
             name:'school',
             component:School
+        },
+        {
+            path:'/concern-concern',
+            name:'concern-concern',
+            component:ConcernConcern
+        },
+        {
+            path:'/concern-fans',
+            name:'concern-fans',
+            component:ConcernFans
         }
     ]
 })
