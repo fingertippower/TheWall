@@ -33,7 +33,9 @@
         margin: 0 10%;
     }
     .headNavigation{
-
+        top: 0;
+        left: 0;
+        right: 0;
         position: fixed;
         margin-top: px2rem(122px);
         background-color: antiquewhite;
@@ -49,7 +51,6 @@
         float: left;
     }
     .headNavigationBtn{
-
         width: px2rem(135px);
         height: px2rem(38px);
         border: 1px solid #fff;

@@ -1,10 +1,35 @@
 <template>
     <div class="foot">
         <ul class="foot-ul">
-            <li><img src="../assets/img/btn4.png"><p>主页</p></li><div class="verticalLine"></div>
-            <li><img src="../assets/img/btn6.png"><p>搜索</p></li><div class="verticalLine"></div>
-            <li><img src="../assets/img/btn7.png"><p>读书</p></li><div class="verticalLine"></div>
-            <li><img src="../assets/img/btn5.png"><p>个人</p></li>
+            <li class="foot-li" @click="letterDisplay">
+                <div class="foot-li-div">
+                    <div class="foot-logo" v-show="letterLogoImg">
+                        <img  class="foot-logo-img" src="../assets/img/letter.png">
+                    </div>
+                    <img  class="foot-letter-img" src="../assets/img/letter.png" v-show="letterImg">
+                    <p class="foot-msg letter-msg-color" v-show="letterMsg">信件</p>
+                </div>
+            </li>
+            <div class="foot-vertical-line"></div>
+            <li class="foot-li" @click="indexDisplay">
+                <div class="foot-li-div">
+                    <div class="foot-logo" v-show="indexLogoImg">
+                        <img  class="foot-logo-img" src="../assets/img/index.png">
+                    </div>
+                    <img  class="foot-letter-img" src="../assets/img/index.png" v-show="indexImg">
+                    <p class="foot-msg index-msg-color" v-show="indexMsg">主页</p>
+                </div>
+            </li>
+            <div class="foot-vertical-line"></div>
+            <li class="foot-li" @click="personalDisplay">
+                <div class="foot-li-div">
+                    <div class="foot-logo" v-show="personalLogoImg">
+                        <img  class="foot-logo-img" src="../assets/img/personal.png">
+                    </div>
+                    <img  class="foot-letter-img" src="../assets/img/personal.png" v-show="personalImg">
+                    <p class="foot-msg personal-msg-color" v-show="personalMsg">个人</p>
+                </div>
+            </li>
         </ul>
     </div>
 </template>
@@ -14,7 +39,56 @@
     export default {
         data() {
             return {
-
+                letterLogoImg:false,
+                letterMsg:false,
+                letterImg:true,
+                indexLogoImg:true,
+                indexMsg:true,
+                indexImg:false,
+                personalLogoImg:false,
+                personalMsg:false,
+                personalImg:true
+            }
+        },
+        methods:{
+            letterDisplay(){
+                if(this.letterLogoImg == false){
+                    this.letterLogoImg = true,
+                    this.letterMsg = true,
+                    this.letterImg = false,
+                    this.indexLogoImg =false,
+                    this.indexMsg = false,
+                    this.indexImg = true,
+                    this.personalLogoImg =false,
+                    this.personalMsg = false,
+                    this.personalImg = true
+                }
+            },
+            indexDisplay(){
+                if(this.indexLogoImg == false){
+                    this.letterLogoImg = false,
+                    this.letterMsg = false,
+                    this.letterImg = true,
+                    this.indexLogoImg =true,
+                    this.indexMsg = true,
+                    this.indexImg = false,
+                    this.personalLogoImg =false,
+                    this.personalMsg = false,
+                    this.personalImg = true
+                }
+            },
+            personalDisplay(){
+                if(this.personalLogoImg == false){
+                    this.letterLogoImg = false,
+                    this.letterMsg = false,
+                    this.letterImg = true,
+                    this.indexLogoImg =false,
+                    this.indexMsg = false,
+                    this.indexImg = true,
+                    this.personalLogoImg =true,
+                    this.personalMsg = true,
+                    this.personalImg = false
+                }
             }
         }
     }
@@ -22,40 +96,66 @@
 
 <style lang="scss" scoped>
     @import '../assets/css/function.scss';
+    a{text-decoration: none}
     .foot{
+        border: 1px solid rgba(89,89,89,0.1);
         width: 100%;
-        height: px2rem(98px);
-        background-color: #E5E5E5;
+        height: px2rem(104px);
+        background-color: antiquewhite;
         position: fixed;
         bottom: 0;
     }
+    .foot-letter-img{
+        width: px2rem(55px);
+        height: px2rem(55px);
+    }
     .foot-ul{
-        float: left;
-        list-style: none;
         width: 100%;
+        height: px2rem(104px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .foot-ul li{
+    .foot-li{
         float: left;
-        width: 24.7%;
-        height: auto;
+    }
+    .foot-li-div{
+        margin-top: px2rem(22px);
         text-align: center;
-        padding-top: px2rem(8px);
+        width: px2rem(244px);
+        height: px2rem(75px);
     }
-    .foot-ul img{
-        width: px2rem(34px);
-        height: px2rem(44px);
+    .foot-msg{
+        font-size: px2rem(26px);
     }
-    .foot p{
-        font-size: px2rem(30px);
-        font-family:"Comic Sans MS","幼圆","黑体",sans-serif;
-        color: #FCFCFC;
-        margin-top: px2rem(-2px);
+    .letter-msg-color{
+        color: rgba(96,209,255,1);
     }
-    .verticalLine{
-        background-color: #C1C1C1;
+    .index-msg-color{
+        color: rgba(254,182,32,1);
+    }
+    .personal-msg-color{
+        color: rgba(108,203,109,1);
+    }
+    .foot-vertical-line{
         width: px2rem(2px);
-        height: px2rem(76px);
+        height: px2rem(79px);
+        background-color: rgba(89,89,89,0.3);
         float: left;
-        margin-top: px2rem(8px);
+        margin-top: px2rem(12px);
+    }
+    .foot-logo{
+        margin: px2rem(-150px) auto 0 auto;
+        width: px2rem(119px);
+        height: px2rem(119px);
+        background-color: antiquewhite;
+        border-radius: px2rem(80px);
+        border: 1px solid rgba(89,89,89,0.1);
+        border-bottom: 0;
+    }
+    .foot-logo-img{
+        width: px2rem(66px);
+        height: px2rem(66px);
+        margin-top: px2rem(30px);
     }
 </style>

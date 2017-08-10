@@ -13,37 +13,34 @@ export default new Router({
     routes: [
         {
             path: '/register',
-            name: 'register',
             component: Register
         },
         {
             path: '/login',
-            name: 'login',
             component: Login
         },
         {
+            path: '/',
+            component: Index
+        },
+        {
             path: '/index',
-            name: 'index',
             component: Index
         },
         {
             path:'/personal',
-            name:'personal',
             component:Personal
         },
         {
             path:'/school',
-            name:'school',
             component:School
         },
         {
             path:'/concern-concern',
-            name:'concern-concern',
             component:ConcernConcern
         },
         {
             path:'/concern-fans',
-            name:'concern-fans',
             component:ConcernFans
         }
     ]
