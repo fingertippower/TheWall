@@ -33,7 +33,9 @@
         margin: 0 10%;
     }
     .headNavigation{
-
+        top: 0;
+        left: 0;
+        right: 0;
         position: fixed;
         margin-top: px2rem(122px);
         background-color: antiquewhite;
