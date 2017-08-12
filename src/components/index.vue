@@ -15,6 +15,7 @@
         name: 'app',
         data () {
             return {
+
             }
         },
         components:{
