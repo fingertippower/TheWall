@@ -8,6 +8,7 @@ import School from '../components/school.vue'
 import ConcernConcern from '../components/concern-concern.vue'
 import ConcernFans from '../components/concern-fans.vue'
 import Collect from '../components/collect.vue'
+import IndexPersonalMsg from '../components/index-personal-msg.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -46,8 +47,11 @@ export default new Router({
         },
         {
             path:'/collect',
-            name:'collect',
             component:Collect
+        },
+        {
+            path:'/index-personal-msg',
+            component:IndexPersonalMsg
         }
     ]
 })
