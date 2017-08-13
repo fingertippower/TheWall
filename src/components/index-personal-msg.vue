@@ -8,7 +8,6 @@
                 <img class="goBack" src="../assets/img/click.png">
             </div>
             <div class="body">
-
             </div>
             <div class="foot">
                 <div class="focusOn">
