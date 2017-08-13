@@ -5,8 +5,8 @@
             <p>学校信息</p>
         </div>
         <div class="message">
-            <span class="school1">学校</span>
-            <input class="school2" type="text">
+            <span >学校</span>
+            <input type="text">
             <br/>
             <span>学院</span>
             <input type="text">
@@ -68,12 +68,13 @@
     }
     .message{
         width: 100%;
-        height:100%;
+        height: px2rem(450px);
         text-align: center;
+        position: relative;
     }
     .message input{
         width: px2rem(685.4658px);
-        height: px2rem(120px);
+        height: px2rem(89px);
         border: px2rem(1px) solid;
         border-top-style: none;
         border-left-style: none;
@@ -81,11 +82,14 @@
         border-color: #B8B8B8;
         color: #B8B8B8;
         font-size: px2rem(34px);
+        padding-left: px2rem(120px);
+        padding-top: px2rem(30px);
+        margin-left: px2rem(31px);
     }
     .message span{
         font-size: px2rem(34px);
-        margin-left: px2rem(22.499px);
-        margin-top: px2rem(62px);
+        margin-left: px2rem(62px);
+        margin-top: px2rem(52px);
         position: absolute;
     }
     .save{
@@ -94,7 +98,7 @@
     button{
         width: px2rem(306px);
         height: px2rem(67.45px);
-        margin-top: px2rem(140.9131px);
+        margin-top: px2rem(280.9131px);
         background-color: #F4AD12;
         color: #fff;
         border: none;
