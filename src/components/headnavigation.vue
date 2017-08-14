@@ -38,7 +38,7 @@
         right: 0;
         position: fixed;
         margin-top: px2rem(122px);
-        background-color: antiquewhite;
+        /*background-color: antiquewhite;*/
     }
     .headNavigationUl{
         width: 100%;

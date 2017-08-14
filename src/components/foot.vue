@@ -101,7 +101,7 @@
         border: 1px solid rgba(89,89,89,0.1);
         width: 100%;
         height: px2rem(104px);
-        background-color: antiquewhite;
+        background-color: rgba(255,255,255,1);
         position: fixed;
         bottom: 0;
     }
@@ -148,7 +148,7 @@
         margin: px2rem(-150px) auto 0 auto;
         width: px2rem(119px);
         height: px2rem(119px);
-        background-color: antiquewhite;
+        background-color: rgba(255,255,255,1);
         border-radius: px2rem(80px);
         border: 1px solid rgba(89,89,89,0.1);
         border-bottom: 0;

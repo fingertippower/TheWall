@@ -8,6 +8,11 @@
                 <img class="goBack" src="../assets/img/click.png">
             </div>
             <div class="body">
+                <p class="bodyMsg">回忆专用小马甲</p>
+                <p class="bodyMsg position">签名：</p>
+                <p class="bodyMsg position">学院：</p>
+                <p class="bodyMsg position">QQ：</p>
+                <p class="bodyMsg position">姓名：</p>
             </div>
             <div class="foot">
                 <div class="focusOn">
@@ -69,9 +74,18 @@
         }
     }
     .body{
-        width: 100%;
+        width: 90%;
         height: px2rem(423px);
         background-color: #fff;
+        padding-left: 10%;
+        .bodyMsg{
+            position: relative;
+            top: 10%;
+            color: rgba(142,141,141,1);
+        }
+        .position{
+            margin-top: 10%;
+        }
     }
     .foot{
         width: 100%;

@@ -18,7 +18,7 @@
         height: px2rem(122px);
         position: fixed;
         top: 0;
-        background-color: #E5E5E5;
+        /*background-color: #E5E5E5;*/
         z-index: 2;
     }
     .headNotice{
