@@ -6,6 +6,16 @@
         </div>
         <button class="concern">关注</button>
         <button class="fans">粉丝</button>
+        <div class="people">
+            <img src="../assets/img/head.png">
+            <span>啦啦啦</span>
+            <hr/>
+        </div>
+        <div class="people1">
+            <img src="../assets/img/head.png">
+            <span>啦啦啦</span>
+            <hr/>
+        </div>
     </div>
 </template>
 
@@ -19,7 +29,6 @@
         width:100%;
         height:px2rem(109.1172px);
         background-color: #F4AD12;
-        position: relative;
     }
     .head img{
         width:px2rem(23px);
@@ -53,5 +62,35 @@
         border: none;
         margin-left: 50%;
         color: #939292;
+    }
+    .people img{
+        width: px2rem(68px);
+        height: px2rem(68px);
+        margin-top: px2rem(87.45px);
+        margin-left: px2rem(32px);
+    }
+    .people span{
+        font-size: px2rem(28px);
+        margin-left: px2rem(22px);
+        margin-top: px2rem(107.45px);
+        position: absolute;
+    }
+    .people hr{
+        margin-top: px2rem(20px);
+    }
+    .people1 img{
+        width: px2rem(68px);
+        height: px2rem(68px);
+        margin-top: px2rem(20px);
+        margin-left: px2rem(32px);
+    }
+    .people1 span{
+        font-size: px2rem(28px);
+        margin-left: px2rem(22px);
+        margin-top: px2rem(30px);
+        position: absolute;
+    }
+    .people1 hr{
+        margin-top: px2rem(20px);
     }
 </style>
