@@ -41,10 +41,6 @@ export default new Router({
             component:School
         },
         {
-            path:'/concern-fans',
-            component:ConcernFans
-        },
-        {
             path:'/collect',
             component:Collect
         },
@@ -63,7 +59,13 @@ export default new Router({
         {
             path:'/concern',
             component:Concern,
-            children:[{path:'concern-concern',component:ConcernConcern}]
+            children:[{
+                path: 'concern-concern',
+                component: ConcernConcern
+            },{
+                path:'concern-fans',
+                component:ConcernFans
+            }]
         }
     ]
 })

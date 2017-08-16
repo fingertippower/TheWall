@@ -1,11 +1,5 @@
 <template>
     <div>
-        <div class="head">
-            <img src="../assets/img/return.png">
-            <p>关注</p>
-        </div>
-        <button class="concern">关注</button>
-        <button class="fans">粉丝</button>
         <div class="people">
             <img src="../assets/img/head.png">
             <span>啦啦啦</span>

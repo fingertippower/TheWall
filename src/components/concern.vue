@@ -7,7 +7,9 @@
         <router-link to="/concern/concern-concern">
             <button class="concern">关注</button>
         </router-link>
-        <button class="fans">粉丝</button>
+        <router-link to="/concern/concern-fans">
+            <button class="fans">粉丝</button>
+        </router-link>
         <router-view></router-view>
     </div>
 </template>
@@ -18,6 +20,14 @@
 
 <style lang="scss">
     @import '../assets/css/function.scss';
+    .router-link-exact-active router-link-active button{
+        border-bottom: #F4AD12;
+        color: #000;
+    }
+    .onclick{
+        border-bottom: #F4AD12;
+        color: #000;
+    }
     .head{
         width:100%;
         height:px2rem(109.1172px);
@@ -45,6 +55,7 @@
         font-size: px2rem(42px);
         position: absolute;
         border: none;
+        color: #939292;
     }
     .fans{
         margin-left: 50%;
