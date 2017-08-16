@@ -10,6 +10,7 @@ import ConcernFans from '../components/concern-fans.vue'
 import Collect from '../components/collect.vue'
 import IndexPersonalMsg from '../components/index-personal-msg.vue'
 import IndexPen from '../components/index-pen.vue'
+import Concern from '../components/concern.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -57,6 +58,14 @@ export default new Router({
         {
             path:'/index-pen',
             component:IndexPen
+        },
+        {
+            path:'/concern',
+            component:Concern,
+            children:[{
+                path:'concern-fans',
+                component:ConcernFans
+            }]
         }
     ]
 })
