@@ -4,8 +4,8 @@
             <img src="../assets/img/return.png">
             <p>关注</p>
         </div>
-        <router-link to="concern-fans">
-        <button class="concern">关注</button>
+        <router-link to="/concern/concern-concern">
+            <button class="concern">关注</button>
         </router-link>
         <button class="fans">粉丝</button>
         <router-view></router-view>

@@ -18,10 +18,12 @@
                     <div class="listWordFoot">
                         <ul class="listWordFootUl">
                             <li class="listWordFootLi">
-                                <div>
-                                    <span class="listWordFootLiTalk">1223</span>
-                                    <img class="listWordFootLiTalkImg" src="../assets/img/talk.png">
-                                </div>
+                                <router-link to="/talk">
+                                    <div>
+                                        <span class="listWordFootLiTalk">1223</span>
+                                        <img class="listWordFootLiTalkImg" src="../assets/img/talk.png">
+                                    </div>
+                                </router-link>
                             </li>
                             <li class="listWordFootLi">
                                 <div>

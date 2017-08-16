@@ -10,6 +10,7 @@ import ConcernFans from '../components/concern-fans.vue'
 import Collect from '../components/collect.vue'
 import IndexPersonalMsg from '../components/index-personal-msg.vue'
 import IndexPen from '../components/index-pen.vue'
+import Talk from '../components/idnex-talk.vue'
 import Concern from '../components/concern.vue'
 Vue.use(Router)
 
@@ -40,10 +41,6 @@ export default new Router({
             component:School
         },
         {
-            path:'/concern-concern',
-            component:ConcernConcern
-        },
-        {
             path:'/concern-fans',
             component:ConcernFans
         },
@@ -60,12 +57,13 @@ export default new Router({
             component:IndexPen
         },
         {
+            path:'/talk',
+            component:Talk
+        },
+        {
             path:'/concern',
             component:Concern,
-            children:[{
-                path:'concern-fans',
-                component:ConcernFans
-            }]
+            children:[{path:'concern-concern',component:ConcernConcern}]
         }
     ]
 })
