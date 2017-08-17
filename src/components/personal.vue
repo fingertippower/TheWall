@@ -12,9 +12,24 @@
         <img class="public" id="school" src="../assets/img/school.png">
         <span>学校信息</span>
         <hr class="short-hr">
+        <span>
+            <img class="hide" src="../assets/img/hide.png">
+        </span>
         <img class="public" id="name" src="../assets/img/name.png">
         <span>真实姓名</span>
         <hr class="short-hr">
+        <img class="public" id="birthday" src="../assets/img/birthday.png">
+        <span>生日</span>
+        <hr class="short-hr">
+        <img class="public" id="news" src="../assets/img/news.png">
+        <span>消息</span>
+        <hr class="short-hr">
+        <img class="public" id="follow" src="../assets/img/follow.png">
+        <span>我关注的</span>
+        <div class="foot">
+            <button class="border">检查更新</button>
+            <button>系统设置</button>
+        </div>
     </div>
 </template>
 
@@ -67,7 +82,19 @@
     #name{
         width: px2rem(21px);
         height: px2rem(32px);
-        margin-left: px2rem(110.5px);
+        margin-left: px2rem(58.01px);
+    }
+    #birthday{
+        width: px2rem(32px);
+        height: px2rem(32px);
+    }
+    #news{
+        width: px2rem(30px);
+        height: px2rem(32px);
+    }
+    #follow{
+        width: px2rem(30px);
+        height: px2rem(32px);
     }
     span{
         color: #8E8D8D;
@@ -79,5 +106,26 @@
         margin-left: px2rem(100px);
         margin-top: px2rem(29.2397px);
     }
-
+    .hide{
+        width: px2rem(61.99px);
+        height: px2rem(61.99px);
+        float: right;
+        margin-right: px2rem(36px);
+        margin-top: px2rem(11.2495px);
+    }
+    button{
+        width: px2rem(140px);
+        font-size: px2rem(24px);
+        background-color: transparent;
+        color: #8E8D8D;
+        border: none;
+        margin-top: px2rem(215.3311px);
+    }
+    .border{
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+        border-right: px2rem(1px) solid #8E8D8D;
+        margin-left: px2rem(53px);
+    }
 </style>
