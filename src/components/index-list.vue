@@ -10,10 +10,14 @@
                         <img class="listWordHeadFork" src="../assets/img/delete.png">
                     </div>
                     <div class="listWordBody">
-                        <p>
+                        <p class="listWordBodyMsg">
                             就啊好担心卡萨诺夏洛克撒娇小卢卡斯你看了下，阿奎罗新疆阿克苏垃圾箱内卡上，
                             打开私信卡拉斯科潇洒看。潇洒快乐就行啊说
                         </p>
+                        <div class="imgBox">
+                            <img class="listImg" src="../assets/img/coment/1.jpg">
+                            <img class="listImg" src="../assets/img/coment/2.png">
+                        </div>
                     </div>
                     <div class="listWordFoot">
                         <ul class="listWordFootUl">
@@ -86,12 +90,14 @@
                     overflow: hidden;
                 }
                 .nickname{
+                    font-size: px2rem(23px);
                     position: relative;
                     top: px2rem(10px);
                     margin-left: px2rem(94px);
                     color: rgba(142,141,141,1);
                 }
                 .time{
+                    font-size: px2rem(12px);
                     position: relative;
                     top: px2rem(15px);
                     margin-left: px2rem(94px);
@@ -106,9 +112,20 @@
                 }
             }
             .listWordBody{
-                margin-top: px2rem(20px);
-                margin-left: px2rem(55px);
-                margin-bottom: px2rem(20px);
+                margin: px2rem(20px) px2rem(55px);
+                .listWordBodyMsg{
+                    font-size: px2rem(24px);
+                    color: rgba(142,141,141,1);
+                }
+                .imgBox{
+                    width: 100%;
+                    max-height: px2rem(700px);
+                    margin-top: px2rem(10px);
+                    .listImg{
+                        width: px2rem(183px);
+                        height: px2rem(183px);
+                    }
+                }
             }
             .listWordFoot{
                 width: 100%;

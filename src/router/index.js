@@ -10,7 +10,7 @@ import ConcernFans from '../components/concern-fans.vue'
 import Collect from '../components/collect.vue'
 import IndexPersonalMsg from '../components/index-personal-msg.vue'
 import IndexPen from '../components/index-pen.vue'
-import Talk from '../components/idnex-talk.vue'
+import Talk from '../components/index-talk.vue'
 import Concern from '../components/concern.vue'
 Vue.use(Router)
 
