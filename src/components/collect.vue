@@ -5,7 +5,9 @@
             <p>收藏</p>
         </div>
         <div class="collect">
-            <p>五点二十分中央大街</p>
+            <p class="title">五点二十分中央大街</p>
+            <p class="text">你快回家就能看金碧辉煌你看</p>
+            <p class="time">2017-08-18</p>
             <img src="../assets/img/background.png">
         </div>
     </div>
@@ -54,11 +56,23 @@
         background-color: rgba(255,255,255,0.5);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }
-    .collect p{
+    .collect .title{
         font-size: px2rem(26px);
-        margin-top: px2rem(107px);
+        margin-top: px2rem(108px);
         margin-left: px2rem(25px);
         position: absolute;
+    }
+    .collect .text{
+        margin-top: px2rem(151px);
+        margin-left: px2rem(25px);
+        position: absolute;
+        color: #CDCCCB;
+    }
+    .collect .time{
+        margin-top: px2rem(233px);
+        margin-left: px2rem(25px);
+        position: absolute;
+        color: #CDCCCB;
     }
     .collect img{
         width: px2rem(194px);
