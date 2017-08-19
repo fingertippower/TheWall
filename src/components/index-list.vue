@@ -17,6 +17,7 @@
                         <div class="imgBox">
                             <img class="listImg" src="../assets/img/coment/1.jpg">
                             <img class="listImg" src="../assets/img/coment/2.png">
+                            <img class="listImg" src="../assets/img/coment/2.png">
                         </div>
                     </div>
                     <div class="listWordFoot">
