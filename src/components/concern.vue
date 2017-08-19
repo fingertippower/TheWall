@@ -20,10 +20,6 @@
 
 <style lang="scss">
     @import '../assets/css/function.scss';
-    .router-link-exact-active router-link-active button{
-        border-bottom: #F4AD12;
-        color: #000;
-    }
     .onclick{
         border-bottom: #F4AD12;
         color: #000;
