@@ -8,26 +8,11 @@
             </div>
             <div class="sendM-time">
                 <ul class="sendM-time-box">
-                    <li>
+                    <li v-for="(item, index) in times" v-on:click="changeImg(index)">
                         <div>
-                            <span class="m">7月</span><span class="d">01</span><span class="zero"></span>
+                            <span class="m">{{item.moth}}月</span><span class="d">{{item.days}}</span><span class="zero"></span>
                         </div>
-                    </li>
-                    <li>
-                        <div>
-                            <span class="m">7月</span><span class="d">05</span><span class="zero"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="sedM-time-sel">
-                            <span class="m m-s">7月</span><span class="d d-s">12</span><span class="zero zero-s"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <span class="m">7月</span><span class="d">15</span><span class="zero"></span>
-                        </div>
-                    </li>
+                     </li>
                 </ul>
             </div>
             <div class="sendM-content">
@@ -79,6 +64,15 @@
     html, body {
         height: 100%;
         width: 100%;
+    }
+    .m-s {
+        color: white;
+    }
+    .d-s {
+        color: white;
+    }
+    .zero-s {
+        background: greenyellow;
     }
 
     #sendM {
@@ -159,12 +153,6 @@
                         }
                         .sedM-time-sel {
                             background: #FF7677;
-                            .m-s, .d-s {
-                                color: white;
-                            }
-                            .zero-s {
-                                background: greenyellow;
-                            }
                         }
                     }
                     li:after {
@@ -248,18 +236,57 @@
 </style>
 <script>
     export default{
-//        data(){
-//            return{
-//
-//            }
-//        }
-    }
-    let aLi = document.querySelectorAll('.sendM-time-box li');
-    let length = aLi.length;
-    for (let i = 0; i < length; i++) {
-        aLi[i].onclick =function () {
-            alert(i)
+        data(){
+            return{
+                times :
+                    [{
+                        "moth" : "7",
+                        "days" : "01"
+                    },{
+                        "moth" : "7",
+                        "days" : "05"
+                    },{
+                        "moth" : "7",
+                        "days" : "12"
+                    },{
+                        "moth" : "7",
+                        "days" : "15"
+                    }],
+                aLi : '',
+                aSpan : ''
+            }
+        },
+        methods:{
+            changeImg:function (index) {
+                this.initThings(index)
+                this.changeLi(index);
+
+            },
+            changeLi:function (index) {
+                   this.resetCss(index);
+                   this.aLi[index].querySelector('div').style.background="#FF7677";
+                   this.aSpan[0].classList.remove('m-s');
+                   this.aSpan[1].classList.remove('d-s');
+                   this.aSpan[2].classList.remove('zero-s');
+            },
+            resetCss : function () {
+                for(let i=0 ; i<this.aLi.length;i++){
+                    this.aLi[i].querySelector('div').style.background="#FFFFFF";
+                    console.log(this.aSpan);
+                    this.aSpan[0].classList.add('m-s');
+                    this.aSpan[1].classList.add('d-s');
+                    this.aSpan[2].classList.add('zero-s');
+                }
+
+            },
+            initThings :function (index) {
+                this.aLi = document.querySelectorAll('.sendM-time-box li');
+                this.aSpan= this.aLi[index].querySelectorAll('span');
+               }
+        },
+        computed :{
+
+
         }
     }
-
 </script>
