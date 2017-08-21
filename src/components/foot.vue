@@ -3,31 +3,31 @@
         <ul class="foot-ul">
             <li class="foot-li" @click="letterDisplay">
                 <div class="foot-li-div">
-                    <div class="foot-logo" v-show="letterLogoImg">
+                    <div class="foot-logo" v-show="display.letterLogoImg">
                         <img  class="foot-logo-img" src="../assets/img/letter.png">
                     </div>
-                    <img  class="foot-letter-img" src="../assets/img/letter.png" v-show="letterImg">
-                    <p class="foot-msg letter-msg-color" v-show="letterMsg">信件</p>
+                    <img  class="foot-letter-img" src="../assets/img/letter.png" v-show="display.letterImg">
+                    <p class="foot-msg letter-msg-color" v-show="display.letterMsg">信件</p>
                 </div>
             </li>
             <div class="foot-vertical-line"></div>
             <li class="foot-li" @click="indexDisplay">
                 <div class="foot-li-div">
-                    <div class="foot-logo" v-show="indexLogoImg">
+                    <div class="foot-logo" v-show="display.indexLogoImg">
                         <img  class="foot-logo-img" src="../assets/img/index.png">
                     </div>
-                    <img  class="foot-letter-img" src="../assets/img/index.png" v-show="indexImg">
-                    <p class="foot-msg index-msg-color" v-show="indexMsg">主页</p>
+                    <img  class="foot-letter-img" src="../assets/img/index.png" v-show="display.indexImg">
+                    <p class="foot-msg index-msg-color" v-show="display.indexMsg">主页</p>
                 </div>
             </li>
             <div class="foot-vertical-line"></div>
             <li class="foot-li" @click="personalDisplay">
                 <div class="foot-li-div">
-                    <div class="foot-logo" v-show="personalLogoImg">
+                    <div class="foot-logo" v-show="display.personalLogoImg">
                         <img  class="foot-logo-img" src="../assets/img/personal.png">
                     </div>
-                    <img  class="foot-letter-img" src="../assets/img/personal.png" v-show="personalImg">
-                    <p class="foot-msg personal-msg-color" v-show="personalMsg">个人</p>
+                    <img  class="foot-letter-img" src="../assets/img/personal.png" v-show="display.personalImg">
+                    <p class="foot-msg personal-msg-color" v-show="display.personalMsg">个人</p>
                 </div>
             </li>
         </ul>
@@ -36,61 +36,17 @@
 
 
 <script>
+    import { mapGetters,mapActions } from 'vuex'
     export default {
         data() {
             return {
-                letterLogoImg:false,
-                letterMsg:false,
-                letterImg:true,
-                indexLogoImg:true,
-                indexMsg:true,
-                indexImg:false,
-                personalLogoImg:false,
-                personalMsg:false,
-                personalImg:true
+
             }
         },
-        methods:{
-            letterDisplay(){
-                if(this.letterLogoImg == false){
-                    this.letterLogoImg = true,
-                    this.letterMsg = true,
-                    this.letterImg = false,
-                    this.indexLogoImg =false,
-                    this.indexMsg = false,
-                    this.indexImg = true,
-                    this.personalLogoImg =false,
-                    this.personalMsg = false,
-                    this.personalImg = true
-                }
-            },
-            indexDisplay(){
-                if(this.indexLogoImg == false){
-                    this.letterLogoImg = false,
-                    this.letterMsg = false,
-                    this.letterImg = true,
-                    this.indexLogoImg =true,
-                    this.indexMsg = true,
-                    this.indexImg = false,
-                    this.personalLogoImg =false,
-                    this.personalMsg = false,
-                    this.personalImg = true
-                }
-            },
-            personalDisplay(){
-                if(this.personalLogoImg == false){
-                    this.letterLogoImg = false,
-                    this.letterMsg = false,
-                    this.letterImg = true,
-                    this.indexLogoImg =false,
-                    this.indexMsg = false,
-                    this.indexImg = true,
-                    this.personalLogoImg =true,
-                    this.personalMsg = true,
-                    this.personalImg = false
-                }
-            }
-        }
+        //display是vuex中的返回数组，数组中相应的值控制indexFoot中的logo和文字展示与否
+        computed:mapGetters(['display']),
+        //这里返回的三个事件是vuex中的事件，用来控制点击后display中的对应值的变化
+        methods:mapActions(['letterDisplay','indexDisplay','personalDisplay'])
     }
 </script>
 

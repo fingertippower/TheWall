@@ -80,11 +80,11 @@
             }
             .nickname{
                 font-size: px2rem(30px);
-                margin-left: px2rem(112px);
+                margin-left: px2rem(132px);
             }
             .listMsg{
                 font-size: px2rem(28px);
-                margin-left: px2rem(112px);
+                margin-left: px2rem(132px);
                 margin-right: px2rem(30px);
                 margin-top: px2rem(20px);
             }
