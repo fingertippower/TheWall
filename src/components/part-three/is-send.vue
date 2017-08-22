@@ -8,7 +8,7 @@
             </div>
             <div class="sendM-time">
                 <ul class="sendM-time-box">
-                    <li v-for="(item, index) in times" v-on:click="changeImg(index)">
+                    <li v-for="(item, index) in times" v-on:click="changeInf(index)">
                         <div>
                             <span class="m">{{item.moth}}月</span><span class="d">{{item.days}}</span><span class="zero"></span>
                         </div>
@@ -60,7 +60,6 @@
 
 <style lang="scss" scoped>
     @import 'src/assets/css/function.scss';
-
     html, body {
         height: 100%;
         width: 100%;
@@ -249,6 +248,10 @@
             }
         },
         methods:{
+            changeInf:function (index) {
+                this.initThings(index);
+                this.changeLi(index);
+            },
             Next:function () {
                 this.iNow = (++this.iNow) % this.aLi.length;
                 this.changContentImg(this.iNow);
@@ -262,12 +265,6 @@
                 }
                 this.changContentImg(this.iNow);
                 this.changeLi(this.iNow);
-            },
-            changeImg:function (index) {
-
-                this.initThings(index);
-                this.changeLi(index);
-
             },
             changContentImg : function () {
                 for(let i=0 ; i<this.aLi.length;i++){
@@ -284,6 +281,7 @@
                    this.iNow = index;
                    this.changContentImg();
             },
+            //重置Li的css样式
             resetCss : function () {
                 for(let i=0 ; i<this.aLi.length;i++){
                     this.aLi[i].querySelector('div').style.background="#FFFFFF";
@@ -294,6 +292,7 @@
                 }
 
             },
+            //初始化函数的各项值
             initThings :function (index) {
                 this.aLi = document.querySelectorAll('.sendM-time-box li');
                 this.aSpan= this.aLi[index].querySelectorAll('span');
