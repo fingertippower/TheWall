@@ -16,10 +16,10 @@
                 </ul>
             </div>
             <div class="sendM-content">
-                <img src="src/assets/img/part-three/left.png" alt="">
+                <img v-on:click="Pre()" src="src/assets/img/part-three/left.png" alt="">
                 <div class="sendM-content-box">
                     <div class="item item-s">
-                        <span class="sendM-content-title">表白情书</span>
+                        <span class="sendM-content-title">表白情书1</span>
                         <p class="sendM-content-p">
                             爱上了你，坏男孩我才领略思念的滋味、分离的愁苦和妒忌的煎熬，还有那无休止的占有欲.为什么你的一举一动都让我心潮起伏?为什么我总害怕时光飞逝而无法与你终生厮守?
                             你一直走进我的生命，我正为你准备好一生一世。
@@ -27,7 +27,7 @@
                         <div class="read">阅读</div>
                     </div>
                     <div class="item">
-                        <span class="sendM-content-title">表白情书</span>
+                        <span class="sendM-content-title">表白情书2</span>
                         <p class="sendM-content-p">
                             爱上了你，坏男孩我才领略思念的滋味、分离的愁苦和妒忌的煎熬，还有那无休止的占有欲.为什么你的一举一动都让我心潮起伏?为什么我总害怕时光飞逝而无法与你终生厮守?
                             你一直走进我的生命，我正为你准备好一生一世。
@@ -35,7 +35,7 @@
                         <div class="read">阅读</div>
                     </div>
                     <div class="item">
-                        <span class="sendM-content-title">表白情书</span>
+                        <span class="sendM-content-title">表白情书3</span>
                         <p class="sendM-content-p">
                             爱上了你，坏男孩我才领略思念的滋味、分离的愁苦和妒忌的煎熬，还有那无休止的占有欲.为什么你的一举一动都让我心潮起伏?为什么我总害怕时光飞逝而无法与你终生厮守?
                             你一直走进我的生命，我正为你准备好一生一世。
@@ -43,7 +43,7 @@
                         <div class="read">阅读</div>
                     </div>
                     <div class="item">
-                        <span class="sendM-content-title">表白情书</span>
+                        <span class="sendM-content-title">表白情书4</span>
                         <p class="sendM-content-p">
                             爱上了你，坏男孩我才领略思念的滋味、分离的愁苦和妒忌的煎熬，还有那无休止的占有欲.为什么你的一举一动都让我心潮起伏?为什么我总害怕时光飞逝而无法与你终生厮守?
                             你一直走进我的生命，我正为你准备好一生一世。
@@ -51,7 +51,7 @@
                         <div class="read">阅读</div>
                     </div>
                 </div>
-                <img src="src/assets/img/part-three/right.png" alt="">
+                <img v-on:click="Next()" src="src/assets/img/part-three/right.png" alt="">
             </div>
         </div>
     </div>
@@ -65,16 +65,6 @@
         height: 100%;
         width: 100%;
     }
-    .m-s {
-        color: white;
-    }
-    .d-s {
-        color: white;
-    }
-    .zero-s {
-        background: greenyellow;
-    }
-
     #sendM {
         .sendM-top {
             width: 100%;
@@ -253,35 +243,61 @@
                         "days" : "15"
                     }],
                 aLi : '',
-                aSpan : ''
+                aSpan : '',
+                aContentImg : '',
+                iNow:'',
             }
         },
         methods:{
+            Next:function () {
+                this.iNow = (++this.iNow) % this.aLi.length;
+                this.changContentImg(this.iNow);
+                this.changeLi(this.iNow);
+            },
+            Pre: function () {
+                if (this.iNow) {
+                    this.iNow--;
+                } else {
+                    this.iNow = this.aLi.length - 1;
+                }
+                this.changContentImg(this.iNow);
+                this.changeLi(this.iNow);
+            },
             changeImg:function (index) {
-                this.initThings(index)
+
+                this.initThings(index);
                 this.changeLi(index);
 
+            },
+            changContentImg : function () {
+                for(let i=0 ; i<this.aLi.length;i++){
+                    this.aContentImg[i].classList.remove('item-s')
+                }
+                this.aContentImg[this.iNow].classList.add('item-s')
             },
             changeLi:function (index) {
                    this.resetCss(index);
                    this.aLi[index].querySelector('div').style.background="#FF7677";
-                   this.aSpan[0].classList.remove('m-s');
-                   this.aSpan[1].classList.remove('d-s');
-                   this.aSpan[2].classList.remove('zero-s');
+                   this.aSpan[0].style.color = "white";
+                   this.aSpan[1].style.color = "white";
+                   this.aSpan[2].style.background="greenyellow";
+                   this.iNow = index;
+                   this.changContentImg();
             },
             resetCss : function () {
                 for(let i=0 ; i<this.aLi.length;i++){
                     this.aLi[i].querySelector('div').style.background="#FFFFFF";
-                    console.log(this.aSpan);
-                    this.aSpan[0].classList.add('m-s');
-                    this.aSpan[1].classList.add('d-s');
-                    this.aSpan[2].classList.add('zero-s');
+                    let  ThatAspan =  this.aLi[i].querySelectorAll('span');
+                    ThatAspan[0].style.color = "";
+                    ThatAspan[1].style.color = "";
+                    ThatAspan[2].style.background= "";
                 }
 
             },
             initThings :function (index) {
                 this.aLi = document.querySelectorAll('.sendM-time-box li');
                 this.aSpan= this.aLi[index].querySelectorAll('span');
+                this.aContentImg = document.querySelectorAll('.sendM-content-box .item');
                }
         },
         computed :{
