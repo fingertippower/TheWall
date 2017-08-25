@@ -1,7 +1,7 @@
 <template>
     <div class="talk">
         <div class="head">
-            <img class="gotoBack" src="../assets/img/gotoBack.png">
+            <img class="gotoBack" src="../assets/img/gotoBack.png" @click="goBack">
             <span class="headMsg">评论</span>
         </div>
 
@@ -43,6 +43,14 @@
 </template>
 
 <script>
+
+    export default{
+        methods:{
+            goBack:function(){
+                this.$router.go(-1);
+            }
+        }
+    }
 
 </script>
 
