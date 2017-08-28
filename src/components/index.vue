@@ -34,9 +34,13 @@
 <style lang="scss">
     @import '../assets/css/function.scss';
     #index{
+        position: absolute;
+        top: 0;
         width: 100%;
         height: px2rem(1334px);
-        background: url("../assets/img/indexBackground.png");
-        background-size: 100% px2rem(1334px);
+        background-image: url("../assets/img/indexBackground.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
     }
 </style>
