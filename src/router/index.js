@@ -12,10 +12,15 @@ import IndexPersonalMsg from '../components/index-personal-msg.vue'
 import IndexPen from '../components/index-pen.vue'
 import Talk from '../components/index-talk.vue'
 import Concern from '../components/concern.vue'
+import IsSend from '../components/part-three/is-send.vue'
 Vue.use(Router)
 
 export default new Router({
     routes: [
+        {
+            path: '/is-send',
+            component:IsSend
+        },
         {
             path: '/register',
             component: Register

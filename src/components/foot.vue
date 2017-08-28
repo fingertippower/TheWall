@@ -3,11 +3,13 @@
         <ul class="foot-ul">
             <li class="foot-li" @click="letterDisplay">
                 <div class="foot-li-div">
-                    <div class="foot-logo" v-show="display.letterLogoImg">
-                        <img  class="foot-logo-img" src="../assets/img/letter.png">
-                    </div>
-                    <img  class="foot-letter-img" src="../assets/img/letter.png" v-show="display.letterImg">
-                    <p class="foot-msg letter-msg-color" v-show="display.letterMsg">信件</p>
+                    <router-link to="/is-send">
+                        <div class="foot-logo" v-show="display.letterLogoImg">
+                            <img  class="foot-logo-img" src="../assets/img/letter.png">
+                        </div>
+                        <img  class="foot-letter-img" src="../assets/img/letter.png" v-show="display.letterImg">
+                        <p class="foot-msg letter-msg-color" v-show="display.letterMsg">信件</p>
+                    </router-link>
                 </div>
             </li>
             <div class="foot-vertical-line"></div>
