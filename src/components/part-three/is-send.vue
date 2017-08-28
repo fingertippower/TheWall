@@ -244,7 +244,7 @@
                 aLi : '',
                 aSpan : '',
                 aContentImg : '',
-                iNow:2,
+                iNow: 0,
             }
         },
         methods:{
@@ -287,8 +287,6 @@
                 this.aSpan[2].style.background="greenyellow";
             },
             changeLi:function (index) {
-//                   this.resetCss(index);
-
                    this.changContentImg(index);
             },
             //初始化函数的各项值
