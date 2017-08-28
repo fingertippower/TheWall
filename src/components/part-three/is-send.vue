@@ -244,18 +244,22 @@
                 aLi : '',
                 aSpan : '',
                 aContentImg : '',
-                iNow:'',
+                iNow:2,
             }
         },
         methods:{
             changeInf:function (index) {
                 this.initThings(index);
                 this.changeLi(index);
+                this.iNow = index ;
             },
-            Next:function () {
-                this.iNow = (++this.iNow) % this.aLi.length;
+            Next:function (i) {
+                console.log(this.iNow);
+                console.log(this.aLi.length);
+                this.iNow = (++this.iNow) % 4;
+                this.initThings(this.iNow);
+                console.log(this.iNow);
                 this.changContentImg(this.iNow);
-                this.changeLi(this.iNow);
             },
             Pre: function () {
                 if (this.iNow) {
@@ -263,37 +267,33 @@
                 } else {
                     this.iNow = this.aLi.length - 1;
                 }
+                console.log(this.iNow);
+                this.initThings(this.iNow);
                 this.changContentImg(this.iNow);
-                this.changeLi(this.iNow);
             },
-            changContentImg : function () {
+            changContentImg : function (iNow) {
                 for(let i=0 ; i<this.aLi.length;i++){
-                    this.aContentImg[i].classList.remove('item-s')
-                }
-                this.aContentImg[this.iNow].classList.add('item-s')
-            },
-            changeLi:function (index) {
-                   this.resetCss(index);
-                   this.aLi[index].querySelector('div').style.background="#FF7677";
-                   this.aSpan[0].style.color = "white";
-                   this.aSpan[1].style.color = "white";
-                   this.aSpan[2].style.background="greenyellow";
-                   this.iNow = index;
-                   this.changContentImg();
-            },
-            //重置Li的css样式
-            resetCss : function () {
-                for(let i=0 ; i<this.aLi.length;i++){
+                    this.aContentImg[i].classList.remove('item-s');
                     this.aLi[i].querySelector('div').style.background="#FFFFFF";
                     let  ThatAspan =  this.aLi[i].querySelectorAll('span');
                     ThatAspan[0].style.color = "";
                     ThatAspan[1].style.color = "";
                     ThatAspan[2].style.background= "";
                 }
+                this.aContentImg[iNow].classList.add('item-s');
+                this.aLi[iNow].querySelector('div').style.background="#FF7677";
+                this.aSpan[0].style.color = "white";
+                this.aSpan[1].style.color = "white";
+                this.aSpan[2].style.background="greenyellow";
+            },
+            changeLi:function (index) {
+//                   this.resetCss(index);
 
+                   this.changContentImg(index);
             },
             //初始化函数的各项值
             initThings :function (index) {
+                index = index || this.iNow;
                 this.aLi = document.querySelectorAll('.sendM-time-box li');
                 this.aSpan= this.aLi[index].querySelectorAll('span');
                 this.aContentImg = document.querySelectorAll('.sendM-content-box .item');
