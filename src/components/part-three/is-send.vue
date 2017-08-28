@@ -296,10 +296,6 @@
                 this.aSpan= this.aLi[index].querySelectorAll('span');
                 this.aContentImg = document.querySelectorAll('.sendM-content-box .item');
                }
-        },
-        computed :{
-
-
         }
     }
 </script>
