@@ -7,10 +7,14 @@
         </p>
         <hr class="long-hr">
         <img class="public" id="collection" src="../assets/img/collection.png">
-        <span>我的收藏</span>
+        <router-link to="/collect">
+            <span>我的收藏</span>
+        </router-link>
         <hr class="short-hr">
         <img class="public" id="school" src="../assets/img/school.png">
-        <span>学校信息</span>
+        <router-link to="/school">
+            <span>学校信息</span>
+        </router-link>
         <hr class="short-hr">
         <span>
             <img class="hide" src="../assets/img/hide.png">
@@ -25,7 +29,9 @@
         <span>消息</span>
         <hr class="short-hr">
         <img class="public" id="follow" src="../assets/img/follow.png">
-        <span>我关注的</span>
+        <router-link to="concern">
+            <span>我关注的</span>
+        </router-link>
         <div class="foot">
             <button class="border">检查更新</button>
             <button>系统设置</button>
