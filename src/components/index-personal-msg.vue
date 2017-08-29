@@ -5,7 +5,7 @@
                 <div class="headImg">
                     <img class="headImgMsg" src="../assets/img/head.png">
                 </div>
-                <img class="goBack" src="../assets/img/click.png">
+                <img @click="goBack" class="goBack" src="../assets/img/click.png">
             </div>
             <div class="body">
                 <p class="bodyMsg">回忆专用小马甲</p>
@@ -29,12 +29,21 @@
 </template>
 
 <script>
-
+    export default{
+        methods:{
+            goBack:function(){
+                this.$router.go(-1);
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
     @import '../assets/css/function.scss';
     .background{
+        z-index: 6;
+        position: fixed;
+        top: px2rem(0px);
         width: 100%;
         height: px2rem(1334px);
         background-color: rgba(0,0,0,.15);

@@ -35,7 +35,11 @@ export default new Router({
         },
         {
             path: '/index',
-            component: Index
+            component: Index,
+            children:[{
+                path:'index-personal-msg',
+                component:IndexPersonalMsg
+            }]
         },
         {
             path:'/personal',
@@ -48,10 +52,6 @@ export default new Router({
         {
             path:'/collect',
             component:Collect
-        },
-        {
-            path:'/index-personal-msg',
-            component:IndexPersonalMsg
         },
         {
             path:'/index-pen',

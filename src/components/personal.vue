@@ -50,12 +50,12 @@
         padding: 0;
     }
     .background{
-        width: px2rem(561.271px);
-        height: 100%;
+        width: px2rem(568px);
+        height: px2rem(1334px);
         background-color: tan;
         position: fixed;
-        border-top-right-radius: px2rem(218.9893px) 50%;
-        border-bottom-right-radius: px2rem(218.9893px) 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
     }
     .people{
         width: px2rem(152.344px);

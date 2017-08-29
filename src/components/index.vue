@@ -3,6 +3,7 @@
         <v-headnotice></v-headnotice>
         <v-headnavigation></v-headnavigation>
         <v-list></v-list>
+        <router-view></router-view>
         <v-pen></v-pen>
         <v-foot></v-foot>
     </div>
@@ -37,10 +38,8 @@
         position: absolute;
         top: 0;
         width: 100%;
-        height: px2rem(1334px);
-        background-image: url("../assets/img/indexBackground.png");
+        background-image: url("../assets/img/indexBackground2.png");
         background-size: 100% 100%;
-        background-repeat: no-repeat;
         background-attachment:fixed;
     }
 </style>

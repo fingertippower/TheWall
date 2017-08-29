@@ -15,11 +15,13 @@
     @import '../assets/css/function.scss';
     .head{
         width: 100%;
-        height: px2rem(122px);
+        height: px2rem(216px);
         position: fixed;
         top: 0;
         /*background-color: #E5E5E5;*/
         z-index: 2;
+        background-image: url("../assets/img/indexBackground1.png");
+        background-size: 100% 100%;
     }
     .headNotice{
         width: px2rem(702px);
