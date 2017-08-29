@@ -10,6 +10,12 @@
             <p class="time">2017-08-18</p>
             <img src="../assets/img/background.png">
         </div>
+        <div class="collect">
+            <p class="title">五点二十分中央大街</p>
+            <p class="text">你快回家就能看金碧辉煌你看</p>
+            <p class="time">2017-08-18</p>
+            <img src="../assets/img/background.png">
+        </div>
     </div>
 </template>
 
