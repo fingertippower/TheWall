@@ -13,21 +13,23 @@
                 <span class="span1">
                     <img class="img1" src="../assets/img/phone.png">
                 </span>
-                <input class="text1" type="text" placeholder="输入手机号">
+                <input id="ip1" class="text1" type="text" placeholder="输入手机号">
                 <span class="span2">
-                    <img class="img2" src="../assets/img/delete.png">
+                    <img class="img2" src="../assets/img/delete.png" @click="clearInput1()">
                 </span>
             </div>
             <div class="password">
                 <span class="span1">
                     <img class="img3" src="../assets/img/password.png">
                 </span>
-                <input class="text2" type="password" placeholder="输入密码">
+                <input id="ip2" class="text2" type="password" placeholder="输入密码">
                 <span class="span2">
-                    <img class="img2" src="../assets/img/delete.png">
+                    <img class="img2" src="../assets/img/delete.png" @click="clearInput2()">
                 </span>
             </div>
-            <button class="btn1">立即注册</button>
+            <router-link to="/register">
+                <button class="btn1">立即注册</button>
+            </router-link>
             <button class="btn2">忘记密码</button>
             <button class="btn3">登录</button>
             <div class="div2">
@@ -44,7 +46,21 @@
 </template>
 
 <script>
+    export default{
+        data(){
+            return{
 
+            }
+        },
+        methods:{
+            clearInput1:function () {
+                document.getElementById('ip1').value='';
+            },
+            clearInput2:function () {
+                document.getElementById('ip2').value='';
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

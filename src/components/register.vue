@@ -22,9 +22,9 @@
                 <span class="span1">
                     <img class="img1" src="../assets/img/password.png">
                 </span>
-                <input class="text2" type="password" placeholder="输入密码">
+                <input id="ip" class="text2" type="password" placeholder="输入密码">
                 <span class="span2">
-                    <img class="img2" src="../assets/img/delete.png">
+                    <img class="img2" src="../assets/img/delete.png" @click="clearInput()">
                 </span>
             </div>
             <button class="btn1">立即注册</button>
@@ -45,7 +45,18 @@
 </template>
 
 <script>
+    export default{
+        data(){
+            return{
 
+            }
+        },
+        methods:{
+            clearInput:function () {
+                document.getElementById('ip').value='';
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
