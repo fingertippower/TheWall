@@ -5,7 +5,7 @@
             <p>学校信息</p>
         </div>
         <div class="message">
-            <span >学校</span>
+            <span>学校</span>
             <input type="text">
             <br/>
             <span>学院</span>
@@ -73,7 +73,7 @@
         position: relative;
     }
     .message input{
-        width: px2rem(685.4658px);
+        width: px2rem(550px);
         height: px2rem(89px);
         border: px2rem(1px) solid;
         border-top-style: none;
@@ -84,11 +84,10 @@
         font-size: px2rem(34px);
         padding-left: px2rem(120px);
         padding-top: px2rem(30px);
-        margin-left: px2rem(31px);
     }
     .message span{
         font-size: px2rem(34px);
-        margin-left: px2rem(62px);
+        margin-left: px2rem(31px);
         margin-top: px2rem(52px);
         position: absolute;
     }
@@ -129,6 +128,7 @@
         font-size: px2rem(18px);
         color: #8C8C8B;
         margin:px2rem(238px) px2rem(-54.5px);
+        margin-bottom: 0;
         position: absolute;
         text-align:center;
         background-color: transparent;
