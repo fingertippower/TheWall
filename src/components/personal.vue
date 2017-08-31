@@ -16,7 +16,7 @@
             <span>学校信息</span>
         </router-link>
         <hr class="short-hr">
-        <span>
+        <span id="hideIt">
             <img class="hide" src="../assets/img/hide.png">
         </span>
         <img class="public" id="name" src="../assets/img/name.png">
@@ -75,6 +75,7 @@
     }
     .long-hr{
         margin-top: px2rem(35px);
+        width: px2rem(537px);
     }
     .public{
         width: px2rem(32px);
