@@ -13,6 +13,7 @@ import IndexPen from '../components/index-pen.vue'
 import Talk from '../components/index-talk.vue'
 import Concern from '../components/concern.vue'
 import IsSend from '../components/part-three/is-send.vue'
+import NotLike from '../components/index-not-like.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -39,6 +40,9 @@ export default new Router({
             children:[{
                 path:'index-personal-msg',
                 component:IndexPersonalMsg
+            },{
+                path:'index-not-like',
+                component:NotLike
             }]
         },
         {
