@@ -14,6 +14,9 @@ import Talk from '../components/index-talk.vue'
 import Concern from '../components/concern.vue'
 import IsSend from '../components/part-three/is-send.vue'
 import NotLike from '../components/index-not-like.vue'
+import IndexHome from '../components/index-home.vue'
+import Letter from '../components/letter.vue'
+import LetterPut from '../components/letter-put.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -32,17 +35,28 @@ export default new Router({
         },
         {
             path: '/',
-            component: Index
+            component: IndexHome
         },
         {
             path: '/index',
             component: Index,
             children:[{
-                path:'index-personal-msg',
-                component:IndexPersonalMsg
+                path: 'index-home',
+                component:IndexHome,
+                children:[{
+                    path:'index-personal-msg',
+                    component:IndexPersonalMsg
+                },{
+                    path:'index-not-like',
+                    component:NotLike
+                }]
             },{
-                path:'index-not-like',
-                component:NotLike
+                path: 'letter',
+                component:Letter,
+                children:[{
+                    path: 'letter-put',
+                    component:LetterPut
+                }]
             }]
         },
         {

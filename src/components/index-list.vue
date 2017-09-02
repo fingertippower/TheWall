@@ -4,12 +4,12 @@
             <li class="li">
                 <div class="listWord">
                     <div class="listWordHead">
-                        <router-link to="/index/index-personal-msg">
+                        <router-link to="/index/index-home/index-personal-msg">
                             <img class="listWordHeadImg" src="../assets/img/head.png">
                         </router-link>
                         <p class="nickname">回忆中的血蔷薇</p>
                         <p class="time">2017年8月8日</p>
-                        <router-link to="/index/index-not-like">
+                        <router-link to="/index/index-home/index-not-like">
                             <img class="listWordHeadFork" src="../assets/img/delete.png">
                         </router-link>
                     </div>
@@ -53,12 +53,110 @@
             <li class="li">
                 <div class="listWord">
                     <div class="listWordHead">
-                        <router-link to="/index/index-personal-msg">
+                        <router-link to="/index/index-home/index-personal-msg">
                             <img class="listWordHeadImg" src="../assets/img/head.png">
                         </router-link>
                         <p class="nickname">回忆中的血蔷薇</p>
                         <p class="time">2017年8月8日</p>
-                        <router-link to="/index/index-not-like">
+                        <router-link to="/index/index-home/index-not-like">
+                            <img class="listWordHeadFork" src="../assets/img/delete.png">
+                        </router-link>
+                    </div>
+                    <div class="listWordBody">
+                        <p class="listWordBodyMsg">
+                            就啊好担心卡萨诺夏洛克撒娇小卢卡斯你看了下，阿奎罗新疆阿克苏垃圾箱内卡上，
+                            打开私信卡拉斯科潇洒看。潇洒快乐就行啊说
+                        </p>
+                        <div class="imgBox">
+                            <img class="listImg" src="../assets/img/coment/1.jpg">
+                            <img class="listImg" src="../assets/img/coment/2.png">
+                            <img class="listImg" src="../assets/img/coment/2.png">
+                        </div>
+                    </div>
+                    <div class="listWordFoot">
+                        <ul class="listWordFootUl">
+                            <li class="listWordFootLi">
+                                <router-link to="/talk">
+                                    <div>
+                                        <span class="listWordFootLiTalk">1223</span>
+                                        <img class="listWordFootLiTalkImg" src="../assets/img/talk.png">
+                                    </div>
+                                </router-link>
+                            </li>
+                            <li class="listWordFootLi">
+                                <div>
+                                    <span class="listWordFootLiLetter">25</span>
+                                    <img class="listWordFootLiLetterImg" src="../assets/img/theLetter.png">
+                                </div>
+                            </li>
+                            <li class="listWordFootLi">
+                                <div>
+                                    <span class="listWordFootLiGood">25</span>
+                                    <img class="listWordFootLiGoodImg" src="../assets/img/good.png">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="li">
+                <div class="listWord">
+                    <div class="listWordHead">
+                        <router-link to="/index/index-home/index-personal-msg">
+                            <img class="listWordHeadImg" src="../assets/img/head.png">
+                        </router-link>
+                        <p class="nickname">回忆中的血蔷薇</p>
+                        <p class="time">2017年8月8日</p>
+                        <router-link to="/index/index-home/index-not-like">
+                            <img class="listWordHeadFork" src="../assets/img/delete.png">
+                        </router-link>
+                    </div>
+                    <div class="listWordBody">
+                        <p class="listWordBodyMsg">
+                            就啊好担心卡萨诺夏洛克撒娇小卢卡斯你看了下，阿奎罗新疆阿克苏垃圾箱内卡上，
+                            打开私信卡拉斯科潇洒看。潇洒快乐就行啊说
+                        </p>
+                        <div class="imgBox">
+                            <img class="listImg" src="../assets/img/coment/1.jpg">
+                            <img class="listImg" src="../assets/img/coment/2.png">
+                            <img class="listImg" src="../assets/img/coment/2.png">
+                        </div>
+                    </div>
+                    <div class="listWordFoot">
+                        <ul class="listWordFootUl">
+                            <li class="listWordFootLi">
+                                <router-link to="/talk">
+                                    <div>
+                                        <span class="listWordFootLiTalk">1223</span>
+                                        <img class="listWordFootLiTalkImg" src="../assets/img/talk.png">
+                                    </div>
+                                </router-link>
+                            </li>
+                            <li class="listWordFootLi">
+                                <div>
+                                    <span class="listWordFootLiLetter">25</span>
+                                    <img class="listWordFootLiLetterImg" src="../assets/img/theLetter.png">
+                                </div>
+                            </li>
+                            <li class="listWordFootLi">
+                                <div>
+                                    <span class="listWordFootLiGood">25</span>
+                                    <img class="listWordFootLiGoodImg" src="../assets/img/good.png">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="li">
+                <div class="listWord">
+                    <div class="listWordHead">
+                        <router-link to="/index/index-home/index-personal-msg">
+                            <img class="listWordHeadImg" src="../assets/img/head.png">
+                        </router-link>
+                        <p class="nickname">回忆中的血蔷薇</p>
+                        <p class="time">2017年8月8日</p>
+                        <router-link to="/index/index-home/index-not-like">
                             <img class="listWordHeadFork" src="../assets/img/delete.png">
                         </router-link>
                     </div>

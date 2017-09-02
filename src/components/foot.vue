@@ -3,7 +3,7 @@
         <ul class="foot-ul">
             <li class="foot-li" @click="letterDisplay">
                 <div class="foot-li-div">
-                    <router-link to="/is-send">
+                    <router-link to="/index/letter">
                         <div class="foot-logo" v-show="display.letterLogoImg">
                             <img  class="foot-logo-img" src="../assets/img/letter.png">
                         </div>
@@ -15,11 +15,13 @@
             <div class="foot-vertical-line"></div>
             <li class="foot-li" @click="indexDisplay">
                 <div class="foot-li-div">
-                    <div class="foot-logo" v-show="display.indexLogoImg">
-                        <img  class="foot-logo-img" src="../assets/img/index.png">
-                    </div>
-                    <img  class="foot-letter-img" src="../assets/img/index.png" v-show="display.indexImg">
-                    <p class="foot-msg index-msg-color" v-show="display.indexMsg">主页</p>
+                    <router-link to="/index/index-home">
+                        <div class="foot-logo" v-show="display.indexLogoImg">
+                            <img  class="foot-logo-img" src="../assets/img/index.png">
+                        </div>
+                        <img  class="foot-letter-img" src="../assets/img/index.png" v-show="display.indexImg">
+                        <p class="foot-msg index-msg-color" v-show="display.indexMsg">主页</p>
+                    </router-link>
                 </div>
             </li>
             <div class="foot-vertical-line"></div>
