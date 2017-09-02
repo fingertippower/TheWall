@@ -5,25 +5,27 @@
             <p>关注</p>
         </div>
         <router-link to="/concern/concern-concern">
-            <button class="concern">关注</button>
+            <button class="concern">关注7</button>
+            <button class="concern-click" v-show="click.concernClick">关注7</button>
         </router-link>
         <router-link to="/concern/concern-fans">
-            <button class="fans">粉丝</button>
+            <button class="fans">粉丝3</button>
+            <button class="fans-click" v-show="click.fansClick">粉丝3</button>
         </router-link>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
-
+    import {mapGetters,mapActions} from 'vuex'
+    export default{
+        computed:mapGetters(['click']),
+        methods:mapActions(['concernClick','fansClick'])
+    }
 </script>
 
 <style lang="scss">
     @import '../assets/css/function.scss';
-    .onclick{
-        border-bottom: #F4AD12;
-        color: #000;
-    }
     .head{
         width:100%;
         height:px2rem(109.1172px);
@@ -50,10 +52,22 @@
         background-color: transparent;
         font-size: px2rem(42px);
         position: absolute;
-        border: none;
+        border-right: none;
+        border-top: none;
+        border-left: none;
+        border-bottom-color: transparent;
         color: #939292;
     }
     .fans{
         margin-left: 50%;
+    }
+    .fans-click{
+        margin-left: 50%;
+        border-bottom-color: #F4AD12;
+        color: #000;
+    }
+    .concern-click{
+        border-bottom-color: #F4AD12;
+        color: #000;
     }
 </style>
