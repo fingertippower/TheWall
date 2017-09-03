@@ -1,7 +1,7 @@
 <template>
     <div class="background">
         <div class="head">
-            <img src="../assets/img/return.png">
+            <img src="../assets/img/return.png" @click="goBack">
             <p>收藏</p>
         </div>
         <div class="collect">
@@ -20,7 +20,13 @@
 </template>
 
 <script>
-
+    export default{
+        methods:{
+            goBack:function(){
+                this.$router.go(-1);
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
