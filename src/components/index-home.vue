@@ -16,7 +16,6 @@
     import indexList from './index-list.vue'
     import indexPen from './index-pen.vue'
     export default {
-        name: 'app',
         data () {
             return {
 
