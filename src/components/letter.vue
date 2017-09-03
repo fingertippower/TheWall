@@ -1,25 +1,24 @@
 <template>
-    <div id="index">
+    <div>
+        <letter-head></letter-head>
         <router-view></router-view>
-        <v-foot></v-foot>
     </div>
 </template>
 
 <script>
-    import foot from './foot.vue'
+    import letterHead from './letter-head.vue'
     export default {
-        name: 'app',
         data () {
             return {
 
             }
         },
         components:{
-            'v-foot':foot
+            'letter-head':letterHead
         }
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @import '../assets/css/function.scss';
 </style>
