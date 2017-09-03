@@ -4,14 +4,18 @@
             <img src="../assets/img/return.png">
             <p>关注</p>
         </div>
-        <router-link to="/concern/concern-concern">
-            <button class="concern">关注7</button>
-            <button class="concern-click" v-show="click.concernClick">关注7</button>
-        </router-link>
-        <router-link to="/concern/concern-fans">
-            <button class="fans">粉丝3</button>
-            <button class="fans-click" v-show="click.fansClick">粉丝3</button>
-        </router-link>
+        <div @click="concernClick">
+            <router-link to="/concern/concern-concern">
+                <button class="concern">关注7</button>
+                <button class="concern-click" v-show="click.concernColor">关注7</button>
+            </router-link>
+        </div>
+        <div @click="fansClick">
+            <router-link to="/concern/concern-fans">
+                <button class="fans">粉丝3</button>
+                <button class="fans-click" v-show="click.fansColor">粉丝3</button>
+            </router-link>
+        </div>
         <router-view></router-view>
     </div>
 </template>
@@ -19,6 +23,10 @@
 <script>
     import {mapGetters,mapActions} from 'vuex'
     export default{
+        data(){
+            return{}
+
+        },
         computed:mapGetters(['click']),
         methods:mapActions(['concernClick','fansClick'])
     }
