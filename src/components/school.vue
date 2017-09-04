@@ -1,8 +1,8 @@
 <template>
     <div class="background">
         <div class="head">
-            <img src="../assets/img/return.png">
-            <p>学校信息</p>
+            <img src="../assets/img/return.png" @click="goBack">
+            <span>学校信息</span>
         </div>
         <div class="message">
             <span>学校</span>
@@ -36,7 +36,13 @@
 </template>
 
 <script>
-
+    export default{
+        methods:{
+            goBack:function () {
+                this.$router.go(-1);
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
@@ -57,13 +63,12 @@
         margin-left: px2rem(44.5859px);
         margin-top: px2rem(58.1196px);
     }
-    .head p{
+    .head span{
         font-size: px2rem(42px);
         color: #fff;
         text-align: center;
-        left:0;
-        right:0;
-        top:px2rem(55.4971px);
+        margin-left: px2rem(231px);
+        margin-top:px2rem(55.4971px);
         position: absolute;
     }
     .message{
