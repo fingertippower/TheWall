@@ -3,11 +3,11 @@
         <div class="letter-head"></div>
         <div class="letter-body">
             <div class="getOrPut">
-
-                    <div class="getLetter">
+                <router-link to="/index/letter/letter-get">
+                    <div class="getLetter" @click="letterGetStyle">
                         收件箱
                     </div>
-
+                </router-link>
                 <router-link to="/index/letter/letter-put">
                     <div class="putLetter">
                         已发送
@@ -19,7 +19,10 @@
 </template>
 
 <script>
-
+    import { mapActions } from 'vuex'
+    export default{
+        methods:mapActions(['letterGetStyle','letterPutStyle'])
+    }
 </script>
 
 <style lang="scss" scoped>

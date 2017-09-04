@@ -7,6 +7,7 @@
 
 <script>
     import letterHead from './letter-head.vue'
+    import letterPut from './letter-put.vue'
     export default {
         data () {
             return {
@@ -14,7 +15,8 @@
             }
         },
         components:{
-            'letter-head':letterHead
+            'letter-head':letterHead,
+            'letter-put':letterPut
         }
     }
 </script>
