@@ -2,7 +2,7 @@
     <div class="background">
         <div class="head">
             <img src="../assets/img/return.png" @click="goBack">
-            <p>收藏</p>
+            <span>收藏</span>
         </div>
         <div class="collect">
             <p class="title">五点二十分中央大街</p>
@@ -49,13 +49,12 @@
         margin-left: px2rem(44.5859px);
         margin-top: px2rem(58.1196px);
     }
-    .head p{
+    .head span{
         font-size: px2rem(42px);
         color: #fff;
         text-align: center;
-        left:0;
-        right:0;
-        top:px2rem(55.4971px);
+        margin-top:px2rem(55.4971px);
+        margin-left: px2rem(276.0039px);
         position: absolute;
     }
     .collect{
