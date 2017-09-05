@@ -27,11 +27,13 @@
             <div class="foot-vertical-line"></div>
             <li class="foot-li" @click="personalDisplay">
                 <div class="foot-li-div">
-                    <div class="foot-logo" v-show="display.personalLogoImg">
-                        <img  class="foot-logo-img" src="../assets/img/personal.png">
-                    </div>
-                    <img  class="foot-letter-img" src="../assets/img/personal.png" v-show="display.personalImg">
-                    <p class="foot-msg personal-msg-color" v-show="display.personalMsg">个人</p>
+                    <router-link to="/index/index-home/personal">
+                        <div class="foot-logo" v-show="display.personalLogoImg">
+                            <img  class="foot-logo-img" src="../assets/img/personal.png">
+                        </div>
+                        <img  class="foot-letter-img" src="../assets/img/personal.png" v-show="display.personalImg">
+                        <p class="foot-msg personal-msg-color" v-show="display.personalMsg">个人</p>
+                    </router-link>
                 </div>
             </li>
         </ul>

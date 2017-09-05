@@ -1,46 +1,54 @@
 <template>
-    <div class="background">
-        <img class="people" src="../assets/img/people.png">
-        <p>
-            回忆专用小马甲
-            <img class="woman" src="../assets/img/woman.png">
-        </p>
-        <hr class="long-hr">
-        <img class="public" id="collection" src="../assets/img/collection.png">
-        <router-link to="/collect">
-            <span>我的收藏</span>
-        </router-link>
-        <hr class="short-hr">
-        <img class="public" id="school" src="../assets/img/school.png">
-        <router-link to="/school">
-            <span>学校信息</span>
-        </router-link>
-        <hr class="short-hr">
-        <span id="hideIt">
-            <img class="hide" src="../assets/img/hide.png">
-        </span>
-        <img class="public" id="name" src="../assets/img/name.png">
-        <span>真实姓名</span>
-        <hr class="short-hr">
-        <img class="public" id="birthday" src="../assets/img/birthday.png">
-        <span>生日</span>
-        <hr class="short-hr">
-        <img class="public" id="news" src="../assets/img/news.png">
-        <span>消息</span>
-        <hr class="short-hr">
-        <img class="public" id="follow" src="../assets/img/follow.png">
-        <router-link to="concern">
-            <span>我关注的</span>
-        </router-link>
-        <div class="foot">
-            <button class="border">检查更新</button>
-            <button>系统设置</button>
+    <div class="personal">
+        <div class="background">
+            <img class="people" src="../assets/img/people.png">
+            <p>
+                回忆专用小马甲
+                <img class="woman" src="../assets/img/woman.png">
+            </p>
+            <hr class="long-hr">
+            <img class="public" id="collection" src="../assets/img/collection.png">
+            <router-link to="/collect">
+                <span>我的收藏</span>
+            </router-link>
+            <hr class="short-hr">
+            <img class="public" id="school" src="../assets/img/school.png">
+            <router-link to="/school">
+                <span>学校信息</span>
+            </router-link>
+            <hr class="short-hr">
+            <span id="hideIt" @click="goBack">
+                <img class="hide" src="../assets/img/hide.png">
+            </span>
+            <img class="public" id="name" src="../assets/img/name.png">
+            <span>真实姓名</span>
+            <hr class="short-hr">
+            <img class="public" id="birthday" src="../assets/img/birthday.png">
+            <span>生日</span>
+            <hr class="short-hr">
+            <img class="public" id="news" src="../assets/img/news.png">
+            <span>消息</span>
+            <hr class="short-hr">
+            <img class="public" id="follow" src="../assets/img/follow.png">
+            <router-link to="concern">
+                <span>我关注的</span>
+            </router-link>
+            <div class="foot">
+                <button class="border">检查更新</button>
+                <button>系统设置</button>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-
+    export default{
+        methods:{
+            goBack(){
+                this.$router.go(-1);
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
@@ -49,11 +57,25 @@
         margin: 0;
         padding: 0;
     }
+    .personal{
+        z-index: 6;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: px2rem(1334px);
+        background-color: rgba(0,0,0,0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .background{
+        z-index: 20;
         width: px2rem(568px);
         height: px2rem(1334px);
-        background-color: tan;
+        background-color: #fff;
         position: fixed;
+        top: 0;
+        left: 0;
         border-top-right-radius: 50%;
         border-bottom-right-radius: 50%;
     }

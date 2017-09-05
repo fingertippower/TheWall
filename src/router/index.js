@@ -49,6 +49,9 @@ export default new Router({
                 },{
                     path:'index-not-like',
                     component:NotLike
+                },{
+                    path:'personal',
+                    component:Personal
                 }]
             },{
                 path: 'letter',
@@ -58,10 +61,6 @@ export default new Router({
                     component:LetterPut
                 }]
             }]
-        },
-        {
-            path:'/personal',
-            component:Personal
         },
         {
             path:'/school',
