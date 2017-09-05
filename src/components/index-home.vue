@@ -36,6 +36,7 @@
     #index-home{
         position: absolute;
         top: 0;
+        min-height: px2rem(1334px);
         width: 100%;
         background-image: url("../assets/img/indexBackground2.png");
         background-size: 100% 100%;
