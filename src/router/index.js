@@ -17,6 +17,7 @@ import NotLike from '../components/index-not-like.vue'
 import IndexHome from '../components/index-home.vue'
 import Letter from '../components/letter.vue'
 import LetterPut from '../components/letter-put.vue'
+import LetterGet from '../components/letter-get.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -57,8 +58,14 @@ export default new Router({
                 path: 'letter',
                 component:Letter,
                 children:[{
+                    path: '/',
+                    component:LetterPut
+                },{
                     path: 'letter-put',
                     component:LetterPut
+                },{
+                    path: 'letter-get',
+                    component:LetterGet
                 }]
             }]
         },

@@ -29,6 +29,9 @@
     export default{
         computed:mapGetters(['letterMsg','letterTitle','letterBody']),
         methods:mapActions(['readLetter','previous','next']),
+        mounted:function () {
+            return this.$store.dispatch('getLetterMsg')
+        }
     }
 </script>
 

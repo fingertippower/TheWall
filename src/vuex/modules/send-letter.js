@@ -144,6 +144,14 @@ const mutations = {
         }else{
             state.letterIndex = state.letter.length;
         }
+    },
+    //在页面刚刚创建的时候将后台的第一个信件的标题和信息内容赋值给state.letterTitle
+    //并且在页面创建的时候第一个li的背景变颜色
+    [types.GET_LETTER_MSG](state){
+        state.letterTitle = state.letter[0].letterTitle;
+        state.letterBody = state.letter[0].letterBody;
+        let bgcolor = document.getElementsByClassName('time-box');
+        bgcolor[0].style.backgroundColor = "rgba(255,118,119,1)";
     }
 }
 
@@ -159,6 +167,11 @@ const actions = {
     //用户点击下一个信件的事件
     next({commit}){
         commit(types.LETTER_INDEX_NEXT)
+    },
+    //在页面刚刚创建的时候将后台的信件中的第一个数据赋值给state中对应的值，以免页面刚刚创建的时候信息体是空的
+    //并且在页面创建的时候第一个li的背景变颜色
+    getLetterMsg({commit}){
+        commit(types.GET_LETTER_MSG)
     }
 }
 

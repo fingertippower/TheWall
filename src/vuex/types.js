@@ -14,3 +14,5 @@ export const LETTER_MSG = 'LETTER_MSG';
 export const LETTER_INDEX_PREVIOUS = 'LETTER_INDEX_PREVIOUS'
 //点击事件，点击next时信件的index值会增加
 export const LETTER_INDEX_NEXT = 'LETTER_INDEX_NEXT'
+//发送信件页面刚刚创建的时候，将后台的数据中的第一个赋值给页面
+export const GET_LETTER_MSG = 'GET_LETTER_MSG'
