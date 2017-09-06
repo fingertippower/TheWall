@@ -33,26 +33,27 @@
                                 <router-link to="/talk">
                                     <div>
                                         <div class="listWordFootLiTalk">{{val.confessionLetterTalkNum}}</div>
-                                        <img class="listWordFootLiTalkImg" src="../assets/img/talk.png">
+                                        <img class="listWordFootLiTalkImg" src="../assets/img/comment_alt.png">
                                     </div>
                                 </router-link>
                             </li>
                             <li class="listWordFootLi">
                                 <div>
-                                    <div class="listWordFootLiLetter">{{val.confessionLetterGoodNum}}</div>
-                                    <img class="listWordFootLiLetterImg" src="../assets/img/theLetter.png">
+                                    <div class="listWordFootLiLetter">{{val.confessionLetterCollectionNum}}</div>
+                                    <img class="listWordFootLiLetterImg" src="../assets/img/heart_alt.png">
                                 </div>
                             </li>
-                            <li class="listWordFootLi">
+                            <li class="listWordFootLi" @click="like(index)">
                                 <div>
-                                    <div class="listWordFootLiPost">{{val.confessionLetterCollectionNum}}</div>
-                                    <img class="listWordFootLiPostImg" src="../assets/img/post.png">
+                                    <div class="listWordFootLiPost">{{val.confessionLetterGoodNum}}</div>
+                                    <img class="listWordFootLiPostImg" src="../assets/img/like.png">
+                                    <img class="aListWordFootLiPostImg" src="../assets/img/alike.png" v-show="false">
                                 </div>
                             </li>
                             <li class="listWordFootLi">
                                 <div>
                                     <div class="listWordFootLiGood">{{val.confessionLetterNotGoodNum}}</div>
-                                    <img class="listWordFootLiGoodImg" src="../assets/img/good.png">
+                                    <img class="listWordFootLiGoodImg" src="../assets/img/dislike.png">
                                 </div>
                             </li>
                         </ul>
@@ -60,17 +61,42 @@
                 </div>
             </li>
         </ul>
+        <div class="refreshImgBox" v-show="refresh">
+            <img src="../assets/img/refresh.gif" class="refreshImg">
+        </div>
     </div>
 </template>
 
 <script>
     import { mapGetters,mapActions } from 'vuex'
     export default{
-        computed:mapGetters(['getIndexConfessionLetterList','ConfessionLetterImgNull']),
-        methods:{
-
+        data(){
+            return{
+                scroll: '',
+                timer: null,
+                refresh: false
+            }
         },
-        created:function(){
+        computed:mapGetters(['getIndexConfessionLetterList']),
+        methods:{
+            ...mapActions(['like']),
+            //判断表白信件列表滚动条位置
+            menu:function(){
+                if(typeof this.timer === 'number'){
+                    clearTimeout(this.timer);
+                }
+                this.timer = setTimeout(()=>{
+                    this.scroll = document.body.scrollTop;
+                    if(this.scroll > 700){
+                        this.refresh = true;
+                        this.$store.dispatch('getIndexConfessionLetterList');
+                        setTimeout(()=>{this.refresh = false;}, 2000);
+                    }
+                },100);
+            }
+        },
+        mounted:function(){
+            window.addEventListener('scroll',this.menu,false);
             return this.$store.dispatch('getIndexConfessionLetterList');
         }
     }
@@ -82,6 +108,7 @@
         margin-top:px2rem(215px);
         width: 94%;
         margin-left: 3%;
+        margin-bottom: px2rem(100px);
     }
     .li{
         margin-top: px2rem(10px);
@@ -150,14 +177,14 @@
                     list-style: none;
                     .listWordFootLi{
                         float: left;
-                        margin-left: px2rem(20px);
+                        margin-left: px2rem(15px);
                         .listWordFootLiTalk{
                             float: left;
                             text-align: center;
                             width: px2rem(55px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
-                            color: rgba(108,203,109,1);
+                            color: rgba(217,213,213,1);
                         }
                         .listWordFootLiTalkImg{
                             position: relative;
@@ -171,12 +198,12 @@
                             width: px2rem(55px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
-                            color: rgba(253,106,105,1);
+                            color: rgba(217,213,213,1);
                         }
                         .listWordFootLiLetterImg{
                             position: relative;
                             top: px2rem(5px);
-                            width: px2rem(17px);
+                            width: px2rem(30px);
                             height: px2rem(28px);
                         }
                         .listWordFootLiPost{
@@ -185,9 +212,15 @@
                             width: px2rem(55px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
-                            color: rgba(159,112,122,1);
+                            color: rgba(217,213,213,1);
                         }
                         .listWordFootLiPostImg{
+                            position: relative;
+                            top: px2rem(5px);
+                            width: px2rem(31px);
+                            height: px2rem(28px);
+                        }
+                        .aListWordFootLiPostImg{
                             position: relative;
                             top: px2rem(5px);
                             width: px2rem(31px);
@@ -199,7 +232,7 @@
                             width: px2rem(55px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
-                            color: rgba(96,209,255,1);
+                            color: rgba(217,213,213,1);
                         }
                         .listWordFootLiGoodImg{
                             position: relative;
@@ -212,4 +245,18 @@
             }
         }
     }
+    .refreshImgBox{
+        z-index: 10;
+        background-color: #fff;
+        position: fixed;
+        left: px2rem(343px);
+        bottom: px2rem(82px);
+        height: px2rem(70px);
+        width: px2rem(70px);
+        .refreshImg{
+            height: px2rem(70px);
+            width: px2rem(70px);
+        }
+    }
+
 </style>

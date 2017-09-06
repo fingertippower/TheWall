@@ -4,7 +4,6 @@
             <img class="gotoBack" src="../assets/img/gotoBack.png" @click="goBack">
             <span class="headMsg">评论</span>
         </div>
-
         <div class="body">
             <ul>
                 <li class="li">
@@ -37,7 +36,25 @@
                     <p class="nickname">忧伤的蔷薇</p>
                     <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
                 </li>
+                <li class="li">
+                    <img class="listImg" src="../assets/img/head.png">
+                    <p class="nickname">忧伤的蔷薇</p>
+                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
+                </li>
+                <li class="li">
+                    <img class="listImg" src="../assets/img/head.png">
+                    <p class="nickname">忧伤的蔷薇</p>
+                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
+                </li>
+                <li class="li">
+                    <img class="listImg" src="../assets/img/head.png">
+                    <p class="nickname">忧伤的蔷薇</p>
+                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
+                </li>
             </ul>
+        </div>
+        <div class="foot">
+            期待你的评论...
         </div>
     </div>
 </template>
@@ -58,6 +75,9 @@
 <style lang="scss" scoped>
     @import '../assets/css/function.scss';
     .head{
+        z-index: 2;
+        position: fixed;
+        top: 0;
         width: 100%;
         height: px2rem(107px);
         background-color: rgba(244,173,18,1);
@@ -77,15 +97,21 @@
         }
     }
     .body{
+        position: absolute;
+        margin-top: px2rem(100px);
         width: 100%;
         height: auto;
         .li{
             margin-top: px2rem(30px);
+            border-bottom: 1px solid rgba(96,96,96,.1);
             .listImg{
                 float: left;
                 width: px2rem(92px);
                 height: px2rem(92px);
+                margin-top: px2rem(10px);
                 margin-left: px2rem(25px);
+                border-radius: 50%;
+                overflow: hidden;
             }
             .nickname{
                 font-size: px2rem(30px);
@@ -99,5 +125,17 @@
             }
         }
 
+    }
+    .foot{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        height: px2rem(100px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(244,173,18,1);
+        color: #fff;
+        font-size: px2rem(30px);
     }
 </style>

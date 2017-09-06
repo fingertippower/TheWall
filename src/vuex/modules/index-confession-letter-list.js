@@ -20,8 +20,8 @@ const state = {
             confessionLetterImg7: "",
             confessionLetterImg8: "",
             confessionLetterImg9: "",
-            confessionLetterTalkNum: "1000",
-            confessionLetterGoodNum: "1000",
+            confessionLetterTalkNum: "100",
+            confessionLetterGoodNum: "100",
             confessionLetterNotGoodNum: "1000",
             confessionLetterCollectionNum: "100"
         },
@@ -89,31 +89,45 @@ const state = {
             confessionLetterImg7: "/src/assets/img/coment/1.jpg",
             confessionLetterImg8: "/src/assets/img/coment/4.jpg",
             confessionLetterImg9: "/src/assets/img/coment/3.jpg",
-            confessionLetterTalkNum: "1000",
-            confessionLetterGoodNum: "1000",
+            confessionLetterTalkNum: "100",
+            confessionLetterGoodNum: "100",
             confessionLetterNotGoodNum: "1000",
             confessionLetterCollectionNum: "100"
         },
-    ]
+    ],
 }
 
 const mutations = {
     //从后台获取主页所有的表白信件，和后台对接上在写
     [types.GET_INDEX_CONFESSION_LETTER_LIST](state){
 
+    },
+    //用户点击喜欢的图标后，喜欢数值加一，并且改变喜欢的图片样式
+    [types.CONFESSION_LETTER_LIKE](state,index){
+        let goodImg = document.getElementsByClassName('listWordFootLiPostImg');
+        let agoodImg = document.getElementsByClassName('aListWordFootLiPostImg');
+        if(goodImg[index].style.display != "none"){
+            state.indexConfessionLetterList[index].confessionLetterGoodNum ++;
+            goodImg[index].style.display = "none";
+            agoodImg[index].style.display = "inline";
+        }
     }
 }
 const actions = {
     //从后台获取主页所有的表白信件，和后台对接上在写
     getIndexConfessionLetterList({commit}){
         commit(types.GET_INDEX_CONFESSION_LETTER_LIST);
+    },
+    //用户点击喜欢之后相应表白信件的喜欢数值会加一，并且传给后台
+    like({commit},index){
+        commit(types.CONFESSION_LETTER_LIKE,index);
     }
 }
 
 const getters = {
     getIndexConfessionLetterList(state){
         return state.indexConfessionLetterList;
-    }
+    },
 }
 export default {
     state,

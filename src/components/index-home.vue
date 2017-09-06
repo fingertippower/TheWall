@@ -35,7 +35,7 @@
     @import '../assets/css/function.scss';
     #index-home{
         position: absolute;
-        top: 0;
+        top: px2rem(-2px);
         min-height: px2rem(1334px);
         width: 100%;
         background-image: url("../assets/img/indexBackground2.png");
