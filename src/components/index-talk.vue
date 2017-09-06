@@ -8,7 +8,7 @@
         <div class="body">
             <ul>
                 <li class="li">
-                    <img class="listImg" src="../assets/img/head.png">
+                    <img class="listImg" src="../assets/img/head.png" @click="aaa">
                     <p class="nickname">忧伤的蔷薇</p>
                     <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
                 </li>
@@ -43,9 +43,10 @@
 </template>
 
 <script>
-
+    import { mapActions } from "vuex"
     export default{
         methods:{
+            ...mapActions(['aaa']),
             goBack:function(){
                 this.$router.go(-1);
             }

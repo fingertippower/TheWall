@@ -1,27 +1,30 @@
 <template>
     <div class="indexList">
         <ul class="ul">
-            <li class="li">
+            <li class="li" v-for="(val, index) in getIndexConfessionLetterList">
                 <div class="listWord">
                     <div class="listWordHead">
                         <router-link to="/index/index-home/index-personal-msg">
-                            <img class="listWordHeadImg" src="../assets/img/head.png">
+                            <img class="listWordHeadImg" :src="val.authorHeadImg">
                         </router-link>
-                        <p class="nickname">回忆中的血蔷薇</p>
-                        <p class="time">2017年8月8日</p>
+                        <p class="nickname">{{val.authorUsername}}</p>
+                        <p class="time">{{val.confessionLetterTime}}</p>
                         <router-link to="/index/index-home/index-not-like">
                             <img class="listWordHeadFork" src="../assets/img/delete.png">
                         </router-link>
                     </div>
                     <div class="listWordBody">
-                        <p class="listWordBodyMsg">
-                            就啊好担心卡萨诺夏洛克撒娇小卢卡斯你看了下，阿奎罗新疆阿克苏垃圾箱内卡上，
-                            打开私信卡拉斯科潇洒看。潇洒快乐就行啊说
-                        </p>
+                        <p class="listWordBodyMsg">{{val.confessionLetterMsg}}</p>
                         <div class="imgBox">
-                            <img class="listImg" src="../assets/img/coment/1.jpg">
-                            <img class="listImg" src="../assets/img/coment/2.png">
-                            <img class="listImg" src="../assets/img/coment/2.png">
+                            <img class="listImg" :src="val.confessionLetterImg1" onerror="this.style.display='none'">
+                            <img class="listImg" :src="val.confessionLetterImg2" onerror="this.style.display='none'">
+                            <img class="listImg" :src="val.confessionLetterImg3" onerror="this.style.display='none'">
+                            <img class="listImg" :src="val.confessionLetterImg4" onerror="this.style.display='none'">
+                            <img class="listImg" :src="val.confessionLetterImg5" onerror="this.style.display='none'">
+                            <img class="listImg" :src="val.confessionLetterImg6" onerror="this.style.display='none'">
+                            <img class="listImg" :src="val.confessionLetterImg7" onerror="this.style.display='none'">
+                            <img class="listImg" :src="val.confessionLetterImg8" onerror="this.style.display='none'">
+                            <img class="listImg" :src="val.confessionLetterImg9" onerror="this.style.display='none'">
                         </div>
                     </div>
                     <div class="listWordFoot">
@@ -29,167 +32,26 @@
                             <li class="listWordFootLi">
                                 <router-link to="/talk">
                                     <div>
-                                        <span class="listWordFootLiTalk">1223</span>
+                                        <div class="listWordFootLiTalk">{{val.confessionLetterTalkNum}}</div>
                                         <img class="listWordFootLiTalkImg" src="../assets/img/talk.png">
                                     </div>
                                 </router-link>
                             </li>
                             <li class="listWordFootLi">
                                 <div>
-                                    <span class="listWordFootLiLetter">25</span>
+                                    <div class="listWordFootLiLetter">{{val.confessionLetterGoodNum}}</div>
                                     <img class="listWordFootLiLetterImg" src="../assets/img/theLetter.png">
                                 </div>
                             </li>
                             <li class="listWordFootLi">
                                 <div>
-                                    <span class="listWordFootLiGood">25</span>
-                                    <img class="listWordFootLiGoodImg" src="../assets/img/good.png">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li class="li">
-                <div class="listWord">
-                    <div class="listWordHead">
-                        <router-link to="/index/index-home/index-personal-msg">
-                            <img class="listWordHeadImg" src="../assets/img/head.png">
-                        </router-link>
-                        <p class="nickname">回忆中的血蔷薇</p>
-                        <p class="time">2017年8月8日</p>
-                        <router-link to="/index/index-home/index-not-like">
-                            <img class="listWordHeadFork" src="../assets/img/delete.png">
-                        </router-link>
-                    </div>
-                    <div class="listWordBody">
-                        <p class="listWordBodyMsg">
-                            就啊好担心卡萨诺夏洛克撒娇小卢卡斯你看了下，阿奎罗新疆阿克苏垃圾箱内卡上，
-                            打开私信卡拉斯科潇洒看。潇洒快乐就行啊说
-                        </p>
-                        <div class="imgBox">
-                            <img class="listImg" src="../assets/img/coment/1.jpg">
-                            <img class="listImg" src="../assets/img/coment/2.png">
-                            <img class="listImg" src="../assets/img/coment/2.png">
-                        </div>
-                    </div>
-                    <div class="listWordFoot">
-                        <ul class="listWordFootUl">
-                            <li class="listWordFootLi">
-                                <router-link to="/talk">
-                                    <div>
-                                        <span class="listWordFootLiTalk">1223</span>
-                                        <img class="listWordFootLiTalkImg" src="../assets/img/talk.png">
-                                    </div>
-                                </router-link>
-                            </li>
-                            <li class="listWordFootLi">
-                                <div>
-                                    <span class="listWordFootLiLetter">25</span>
-                                    <img class="listWordFootLiLetterImg" src="../assets/img/theLetter.png">
+                                    <div class="listWordFootLiPost">{{val.confessionLetterCollectionNum}}</div>
+                                    <img class="listWordFootLiPostImg" src="../assets/img/post.png">
                                 </div>
                             </li>
                             <li class="listWordFootLi">
                                 <div>
-                                    <span class="listWordFootLiGood">25</span>
-                                    <img class="listWordFootLiGoodImg" src="../assets/img/good.png">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li class="li">
-                <div class="listWord">
-                    <div class="listWordHead">
-                        <router-link to="/index/index-home/index-personal-msg">
-                            <img class="listWordHeadImg" src="../assets/img/head.png">
-                        </router-link>
-                        <p class="nickname">回忆中的血蔷薇</p>
-                        <p class="time">2017年8月8日</p>
-                        <router-link to="/index/index-home/index-not-like">
-                            <img class="listWordHeadFork" src="../assets/img/delete.png">
-                        </router-link>
-                    </div>
-                    <div class="listWordBody">
-                        <p class="listWordBodyMsg">
-                            就啊好担心卡萨诺夏洛克撒娇小卢卡斯你看了下，阿奎罗新疆阿克苏垃圾箱内卡上，
-                            打开私信卡拉斯科潇洒看。潇洒快乐就行啊说
-                        </p>
-                        <div class="imgBox">
-                            <img class="listImg" src="../assets/img/coment/1.jpg">
-                            <img class="listImg" src="../assets/img/coment/2.png">
-                            <img class="listImg" src="../assets/img/coment/2.png">
-                        </div>
-                    </div>
-                    <div class="listWordFoot">
-                        <ul class="listWordFootUl">
-                            <li class="listWordFootLi">
-                                <router-link to="/talk">
-                                    <div>
-                                        <span class="listWordFootLiTalk">1223</span>
-                                        <img class="listWordFootLiTalkImg" src="../assets/img/talk.png">
-                                    </div>
-                                </router-link>
-                            </li>
-                            <li class="listWordFootLi">
-                                <div>
-                                    <span class="listWordFootLiLetter">25</span>
-                                    <img class="listWordFootLiLetterImg" src="../assets/img/theLetter.png">
-                                </div>
-                            </li>
-                            <li class="listWordFootLi">
-                                <div>
-                                    <span class="listWordFootLiGood">25</span>
-                                    <img class="listWordFootLiGoodImg" src="../assets/img/good.png">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li class="li">
-                <div class="listWord">
-                    <div class="listWordHead">
-                        <router-link to="/index/index-home/index-personal-msg">
-                            <img class="listWordHeadImg" src="../assets/img/head.png">
-                        </router-link>
-                        <p class="nickname">回忆中的血蔷薇</p>
-                        <p class="time">2017年8月8日</p>
-                        <router-link to="/index/index-home/index-not-like">
-                            <img class="listWordHeadFork" src="../assets/img/delete.png">
-                        </router-link>
-                    </div>
-                    <div class="listWordBody">
-                        <p class="listWordBodyMsg">
-                            就啊好担心卡萨诺夏洛克撒娇小卢卡斯你看了下，阿奎罗新疆阿克苏垃圾箱内卡上，
-                            打开私信卡拉斯科潇洒看。潇洒快乐就行啊说
-                        </p>
-                        <div class="imgBox">
-                            <img class="listImg" src="../assets/img/coment/1.jpg">
-                            <img class="listImg" src="../assets/img/coment/2.png">
-                            <img class="listImg" src="../assets/img/coment/2.png">
-                        </div>
-                    </div>
-                    <div class="listWordFoot">
-                        <ul class="listWordFootUl">
-                            <li class="listWordFootLi">
-                                <router-link to="/talk">
-                                    <div>
-                                        <span class="listWordFootLiTalk">1223</span>
-                                        <img class="listWordFootLiTalkImg" src="../assets/img/talk.png">
-                                    </div>
-                                </router-link>
-                            </li>
-                            <li class="listWordFootLi">
-                                <div>
-                                    <span class="listWordFootLiLetter">25</span>
-                                    <img class="listWordFootLiLetterImg" src="../assets/img/theLetter.png">
-                                </div>
-                            </li>
-                            <li class="listWordFootLi">
-                                <div>
-                                    <span class="listWordFootLiGood">25</span>
+                                    <div class="listWordFootLiGood">{{val.confessionLetterNotGoodNum}}</div>
                                     <img class="listWordFootLiGoodImg" src="../assets/img/good.png">
                                 </div>
                             </li>
@@ -202,7 +64,16 @@
 </template>
 
 <script>
+    import { mapGetters,mapActions } from 'vuex'
+    export default{
+        computed:mapGetters(['getIndexConfessionLetterList','ConfessionLetterImgNull']),
+        methods:{
 
+        },
+        created:function(){
+            return this.$store.dispatch('getIndexConfessionLetterList');
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
@@ -274,13 +145,17 @@
                 height: px2rem(32px);
                 .listWordFootUl{
                     height: px2rem(32px);
-                    width: 55%;
-                    margin-left: 52%;
+                    width: 65%;
+                    margin-left: 32%;
                     list-style: none;
                     .listWordFootLi{
                         float: left;
                         margin-left: px2rem(20px);
                         .listWordFootLiTalk{
+                            float: left;
+                            text-align: center;
+                            width: px2rem(55px);
+                            height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(108,203,109,1);
                         }
@@ -291,6 +166,10 @@
                             height: px2rem(27px);
                         }
                         .listWordFootLiLetter{
+                            float: left;
+                            text-align: center;
+                            width: px2rem(55px);
+                            height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(253,106,105,1);
                         }
@@ -301,6 +180,10 @@
                             height: px2rem(28px);
                         }
                         .listWordFootLiPost{
+                            float: left;
+                            text-align: center;
+                            width: px2rem(55px);
+                            height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(159,112,122,1);
                         }
@@ -311,6 +194,10 @@
                             height: px2rem(28px);
                         }
                         .listWordFootLiGood{
+                            float: left;
+                            text-align: center;
+                            width: px2rem(55px);
+                            height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(96,209,255,1);
                         }

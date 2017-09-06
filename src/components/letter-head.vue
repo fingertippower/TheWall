@@ -9,7 +9,7 @@
                     </div>
                 </router-link>
                 <router-link to="/index/letter/letter-put">
-                    <div class="putLetter">
+                    <div class="putLetter" @click="letterPutStyle">
                         已发送
                     </div>
                 </router-link>
@@ -53,7 +53,8 @@
                 width: px2rem(189px);
                 height: px2rem(53px);
                 border: 1px solid rgba(234,76,137,1);
-                color: rgba(234,76,137,1);
+                color: #fff;
+                background-color: rgba(234,76,137,1);
                 text-align: center;
                 font-size: px2rem(40px);
                 border-radius: px2rem(10px);
