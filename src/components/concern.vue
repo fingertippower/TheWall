@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="head">
-            <img src="../assets/img/return.png">
-            <p>关注</p>
+            <img src="../assets/img/return.png" @click="goBack">
+            <span>关注</span>
         </div>
         <div @click="concernClick">
             <router-link to="/concern/concern-concern">
@@ -28,8 +28,14 @@
 
         },
         computed:mapGetters(['click']),
-        methods:mapActions(['concernClick','fansClick'])
+        methods:{
+//            ...mapActions(['concernClick','fansClick']),
+            goBack:function(){
+                this.$router.go(-1);
+            }
+        }
     }
+
 </script>
 
 <style lang="scss">
@@ -45,13 +51,12 @@
         margin-left: px2rem(44.5859px);
         margin-top: px2rem(58.1196px);
     }
-    .head p{
+    .head span{
         font-size: px2rem(42px);
         color: #fff;
         text-align: center;
-        left:0;
-        right:0;
-        top:px2rem(55.4971px);
+        margin-top:px2rem(55.4971px);
+        margin-left: px2rem(276.0039px);
         position: absolute;
     }
     button{
