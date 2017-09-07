@@ -11,7 +11,7 @@ import Collect from '../components/collect.vue'
 import IndexPersonalMsg from '../components/index-personal-msg.vue'
 import IndexPen from '../components/index-pen.vue'
 import Talk from '../components/index-talk.vue'
-import Concern from '../components/concern.vue'
+import Schoolfellow from '../components/schoolfellow.vue'
 import IsSend from '../components/part-three/is-send.vue'
 import NotLike from '../components/index-not-like.vue'
 import IndexHome from '../components/index-home.vue'
@@ -86,15 +86,8 @@ export default new Router({
             component:Talk
         },
         {
-            path:'/concern',
-            component:Concern,
-            children:[{
-                path: 'concern-concern',
-                component: ConcernConcern
-            },{
-                path:'concern-fans',
-                component:ConcernFans
-            }]
+            path:'/schoolfellow',
+            component:Schoolfellow,
         }
     ]
 })

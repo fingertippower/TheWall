@@ -1,0 +1,92 @@
+<template>
+    <div>
+        <div class="head">
+            <img src="../assets/img/return.png" @click="goBack">
+            <span>校友</span>
+        </div>
+        <div class="people">
+            <img src="../assets/img/head.png">
+            <span>啦啦啦</span>
+            <hr/>
+        </div>
+        <div class="people1">
+            <img src="../assets/img/head.png">
+            <span>啦啦啦</span>
+            <hr/>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default{
+        data(){
+            return{}
+
+        },
+        methods:{
+            goBack:function(){
+                this.$router.go(-1);
+            }
+        }
+    }
+
+</script>
+
+<style lang="scss">
+    @import '../assets/css/function.scss';
+    .head{
+        width:100%;
+        height:px2rem(109.1172px);
+        background-color: #F4AD12;
+    }
+    .head img{
+        width:px2rem(23px);
+        height:px2rem(36px);
+        margin-left: px2rem(44.5859px);
+        margin-top: px2rem(58.1196px);
+    }
+    .head span{
+        font-size: px2rem(42px);
+        color: #fff;
+        text-align: center;
+        margin-top:px2rem(55.4971px);
+        margin-left: px2rem(276.0039px);
+        position: absolute;
+    }
+    .concern{
+        border-top-style: none;
+        border-left-style: none;
+        border-right-style: none;
+        border-color: #F4AD12;
+    }
+    .people img{
+        width: px2rem(68px);
+        height: px2rem(68px);
+        margin-top: px2rem(20px);
+        margin-left: px2rem(32px);
+    }
+    .people span{
+        font-size: px2rem(28px);
+        margin-left: px2rem(22px);
+        margin-top: px2rem(30px);
+        position: absolute;
+    }
+    .people hr{
+        margin-top: px2rem(20px);
+    }
+    .people1 img{
+        width: px2rem(68px);
+        height: px2rem(68px);
+        margin-top: px2rem(20px);
+        margin-left: px2rem(32px);
+    }
+    .people1 span{
+        font-size: px2rem(28px);
+        margin-left: px2rem(22px);
+        margin-top: px2rem(30px);
+        position: absolute;
+    }
+    .people1 hr{
+        margin-top: px2rem(20px);
+    }
+</style>
