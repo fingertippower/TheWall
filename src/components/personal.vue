@@ -2,7 +2,7 @@
     <div class="personal">
         <div class="background">
             <img class="people" src="../assets/img/people.png">
-            <p>
+            <p class="name">
                 回忆专用小马甲
                 <img class="woman" src="../assets/img/woman.png">
             </p>
@@ -30,8 +30,8 @@
             <span>消息</span>
             <hr class="short-hr">
             <img class="public" id="follow" src="../assets/img/follow.png">
-            <router-link to="concern">
-                <span>我关注的</span>
+            <router-link to="/schoolfellow">
+                <span>我的校友</span>
             </router-link>
             <div class="foot">
                 <button class="border">检查更新</button>
@@ -78,6 +78,11 @@
         left: 0;
         border-top-right-radius: 50%;
         border-bottom-right-radius: 50%;
+        animation: slip 2s ;
+    }
+    @keyframes slip {
+        from{left:px2rem(-568px)}
+        to{left:0}
     }
     .people{
         width: px2rem(152.344px);
@@ -85,7 +90,7 @@
         margin-top: px2rem(123px);
         margin-left: px2rem(162px);
     }
-    p{
+    .name{
         font-size: px2rem(23px);
         color: #8E8D8D;
         margin-left: px2rem(140px);
