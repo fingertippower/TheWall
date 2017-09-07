@@ -29,7 +29,7 @@
         },
         computed:mapGetters(['click']),
         methods:{
-//            ...mapActions(['concernClick','fansClick']),
+            ...mapActions(['concernClick','fansClick']),
             goBack:function(){
                 this.$router.go(-1);
             }
