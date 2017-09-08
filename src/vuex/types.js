@@ -24,3 +24,7 @@ export const LETTER_GET_BUTTON_STYLE = 'LETTER_GET_BUTTON_STYLE'
 export const GET_INDEX_CONFESSION_LETTER_LIST = 'GET_INDEX_CONFESSION_LETTER_LIST'
 //用户点击主页表白信件的喜欢按钮后，其对应的喜欢数值将会加一
 export const CONFESSION_LETTER_LIKE = 'CONFESSION_LETTER_LIKE'
+//用户店家主页表白信件的不喜欢按钮后，其对应的数值将会加一并且图片样式会改变
+export const CONFESSION_LETTER_DISLIKE = 'CONFESSION_LETTER_DISLIKE'
+//用户点击主页表白信件下面的收藏按钮之后，用户会收藏此信件并且收藏数值会加一
+export const CONFESSION_LETTER_HEART = 'CONFESSION_LETTER_HEART'

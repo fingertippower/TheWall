@@ -37,23 +37,25 @@
                                     </div>
                                 </router-link>
                             </li>
-                            <li class="listWordFootLi">
+                            <li class="listWordFootLi" @click="heart(index)">
                                 <div>
                                     <div class="listWordFootLiLetter">{{val.confessionLetterCollectionNum}}</div>
-                                    <img class="listWordFootLiLetterImg" src="../assets/img/heart_alt.png">
+                                    <img class="listWordFootLiLetterImg" src="../assets/img/heart_alt.png"  v-show="val.heart">
+                                    <img class="aListWordFootLiLetterImg" src="../assets/img/aheart_alt.png"   v-show="val.aheart">
                                 </div>
                             </li>
                             <li class="listWordFootLi" @click="like(index)">
                                 <div>
                                     <div class="listWordFootLiPost">{{val.confessionLetterGoodNum}}</div>
-                                    <img class="listWordFootLiPostImg" src="../assets/img/like.png">
-                                    <img class="aListWordFootLiPostImg" src="../assets/img/alike.png" v-show="false">
+                                    <img class="listWordFootLiPostImg" src="../assets/img/like.png" v-show="val.likeDisplay">
+                                    <img class="aListWordFootLiPostImg" src="../assets/img/alike.png" v-show="val.alikeDisplay">
                                 </div>
                             </li>
-                            <li class="listWordFootLi">
+                            <li class="listWordFootLi" @click="dislike(index)">
                                 <div>
                                     <div class="listWordFootLiGood">{{val.confessionLetterNotGoodNum}}</div>
-                                    <img class="listWordFootLiGoodImg" src="../assets/img/dislike.png">
+                                    <img class="listWordFootLiGoodImg" src="../assets/img/dislike.png" v-show="val.dislikeDisplay">
+                                    <img class="aListWordFootLiGoodImg" src="../assets/img/adislike.png" v-show="val.adislikeDisplay">
                                 </div>
                             </li>
                         </ul>
@@ -79,7 +81,7 @@
         },
         computed:mapGetters(['getIndexConfessionLetterList']),
         methods:{
-            ...mapActions(['like']),
+            ...mapActions(['like','dislike','heart']),
             //判断表白信件列表滚动条位置
             menu:function(){
                 if(typeof this.timer === 'number'){
@@ -206,6 +208,12 @@
                             width: px2rem(30px);
                             height: px2rem(28px);
                         }
+                        .aListWordFootLiLetterImg{
+                            position: relative;
+                            top: px2rem(5px);
+                            width: px2rem(30px);
+                            height: px2rem(28px);
+                        }
                         .listWordFootLiPost{
                             float: left;
                             text-align: center;
@@ -240,13 +248,19 @@
                             width: px2rem(29px);
                             height: px2rem(29px);
                         }
+                        .aListWordFootLiGoodImg{
+                            position: relative;
+                            top: px2rem(5px);
+                            width: px2rem(29px);
+                            height: px2rem(29px);
+                        }
                     }
                 }
             }
         }
     }
     .refreshImgBox{
-        z-index: 10;
+        z-index: 5;
         background-color: #fff;
         position: fixed;
         left: px2rem(343px);

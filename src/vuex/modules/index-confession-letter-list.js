@@ -20,10 +20,16 @@ const state = {
             confessionLetterImg7: "",
             confessionLetterImg8: "",
             confessionLetterImg9: "",
-            confessionLetterTalkNum: "100",
-            confessionLetterGoodNum: "100",
-            confessionLetterNotGoodNum: "1000",
-            confessionLetterCollectionNum: "100"
+            confessionLetterTalkNum: "999",
+            confessionLetterGoodNum: "9999",
+            confessionLetterNotGoodNum: "1",
+            confessionLetterCollectionNum: "100",
+            likeDisplay: true,
+            alikeDisplay: false,
+            dislikeDisplay: true,
+            adislikeDisplay: false,
+            heart:true,
+            aheart:false
         },
         {
             confessionLetterIndex: 0,
@@ -46,7 +52,13 @@ const state = {
             confessionLetterTalkNum: "1000",
             confessionLetterGoodNum: "1000",
             confessionLetterNotGoodNum: "1000",
-            confessionLetterCollectionNum: "100"
+            confessionLetterCollectionNum: "100",
+            likeDisplay: true,
+            alikeDisplay: false,
+            dislikeDisplay: true,
+            adislikeDisplay: false,
+            heart:true,
+            aheart:false
         },
         {
             confessionLetterIndex: 0,
@@ -69,7 +81,13 @@ const state = {
             confessionLetterTalkNum: "1000",
             confessionLetterGoodNum: "1000",
             confessionLetterNotGoodNum: "1000",
-            confessionLetterCollectionNum: "100"
+            confessionLetterCollectionNum: "100",
+            likeDisplay: true,
+            alikeDisplay: false,
+            dislikeDisplay: true,
+            adislikeDisplay: false,
+            heart:true,
+            aheart:false
         },
         {
             confessionLetterIndex: 0,
@@ -92,7 +110,13 @@ const state = {
             confessionLetterTalkNum: "100",
             confessionLetterGoodNum: "100",
             confessionLetterNotGoodNum: "1000",
-            confessionLetterCollectionNum: "100"
+            confessionLetterCollectionNum: "100",
+            likeDisplay: true,
+            alikeDisplay: false,
+            dislikeDisplay: true,
+            adislikeDisplay: false,
+            heart:true,
+            aheart:false
         },
     ],
 }
@@ -105,11 +129,44 @@ const mutations = {
     //用户点击喜欢的图标后，喜欢数值加一，并且改变喜欢的图片样式
     [types.CONFESSION_LETTER_LIKE](state,index){
         let goodImg = document.getElementsByClassName('listWordFootLiPostImg');
+        let aNotGoodImg = document.getElementsByClassName('aListWordFootLiGoodImg');
+        if(aNotGoodImg[index].style.display == "none"){
+            if(goodImg[index].style.display != "none"){
+                if(state.indexConfessionLetterList[index].confessionLetterGoodNum == 9999){
+                    state.indexConfessionLetterList[index].confessionLetterGoodNum = "1万";
+                }else{
+                    state.indexConfessionLetterList[index].confessionLetterGoodNum ++;
+                }
+                state.indexConfessionLetterList[index].likeDisplay = false;
+                state.indexConfessionLetterList[index].alikeDisplay = true;
+            }
+        }
+    },
+    [types.CONFESSION_LETTER_DISLIKE](state,index){
+        let notGoodImg = document.getElementsByClassName('listWordFootLiGoodImg');
         let agoodImg = document.getElementsByClassName('aListWordFootLiPostImg');
-        if(goodImg[index].style.display != "none"){
-            state.indexConfessionLetterList[index].confessionLetterGoodNum ++;
-            goodImg[index].style.display = "none";
-            agoodImg[index].style.display = "inline";
+        if(agoodImg[index].style.display == "none"){
+            if(notGoodImg[index].style.display != "none"){
+                if(state.indexConfessionLetterList[index].confessionLetterNotGoodNum == 9999){
+                    state.indexConfessionLetterList[index].confessionLetterNotGoodNum = "1万";
+                }else{
+                    state.indexConfessionLetterList[index].confessionLetterNotGoodNum ++;
+                }
+                state.indexConfessionLetterList[index].dislikeDisplay = false;
+                state.indexConfessionLetterList[index].adislikeDisplay = true;
+            }
+        }
+    },
+    [types.CONFESSION_LETTER_HEART](state,index){
+        let heart = document.getElementsByClassName('listWordFootLiLetterImg');
+        if(heart[index].style.display != "none"){
+            if(state.indexConfessionLetterList[index].confessionLetterCollectionNum == 9999){
+                state.indexConfessionLetterList[index].confessionLetterCollectionNum = "1万";
+            }else{
+                state.indexConfessionLetterList[index].confessionLetterCollectionNum ++;
+            }
+            state.indexConfessionLetterList[index].heart = false;
+            state.indexConfessionLetterList[index].aheart = true;
         }
     }
 }
@@ -121,6 +178,14 @@ const actions = {
     //用户点击喜欢之后相应表白信件的喜欢数值会加一，并且传给后台
     like({commit},index){
         commit(types.CONFESSION_LETTER_LIKE,index);
+    },
+    //用户点击喜欢之后相应表白信件的喜欢数值会加一，并且传给后台
+    dislike({commit},index){
+        commit(types.CONFESSION_LETTER_DISLIKE,index);
+    },
+    //用户点击主页表白信件下面的收藏按钮之后，用户会收藏此信件并且收藏数值会加一
+    heart({commit},index){
+        commit(types.CONFESSION_LETTER_HEART,index);
     }
 }
 

@@ -26,14 +26,12 @@
             </li>
             <div class="foot-vertical-line"></div>
             <li class="foot-li" @click="personalDisplay">
-                <div class="foot-li-div">
-                    <router-link to="/index/index-home/personal">
-                        <div class="foot-logo" v-show="display.personalLogoImg">
-                            <img  class="foot-logo-img" src="../assets/img/personal.png">
-                        </div>
-                        <img  class="foot-letter-img" src="../assets/img/personal.png" v-show="display.personalImg">
-                        <p class="foot-msg personal-msg-color" v-show="display.personalMsg">个人</p>
-                    </router-link>
+                <div class="foot-li-div" @click="goto">
+                    <div class="foot-logo" v-show="display.personalLogoImg">
+                        <img  class="foot-logo-img" src="../assets/img/personal.png">
+                    </div>
+                    <img  class="foot-letter-img" src="../assets/img/personal.png" v-show="display.personalImg">
+                    <p class="foot-msg personal-msg-color" v-show="display.personalMsg">个人</p>
                 </div>
             </li>
         </ul>
@@ -52,7 +50,21 @@
         //display是vuex中的返回数组，数组中相应的值控制indexFoot中的logo和文字展示与否
         computed:mapGetters(['display']),
         //这里返回的三个事件是vuex中的事件，用来控制点击后display中的对应值的变化
-        methods:mapActions(['letterDisplay','indexDisplay','personalDisplay'])
+        methods:{
+            ...mapActions(['letterDisplay','indexDisplay','personalDisplay']),
+            //个人信息页面的跳转路由，因为个人中心页面需要在其余的页面上面显示
+            goto:function(){
+                if(this.$route.path == "/index/index-home"){
+                    this.$router.push({path: '/index/index-home/personal'});
+                }else if(this.$route.path == "/index/letter"){
+                    this.$router.push({path: '/index/letter/letter-put/personal'});
+                }else if(this.$route.path == "/index/letter/letter-get"){
+                    this.$router.push({path: '/index/letter/letter-get/personal'});
+                }else{
+                    this.$router.push({path: '/index/index-home/personal'});
+                }
+            }
+        }
     }
 </script>
 

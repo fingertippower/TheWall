@@ -1,5 +1,6 @@
 <template>
     <div class="letter-put">
+        <router-view></router-view>
         <div class="time">
             <ul class="time-ul">
                 <li class="time-li" v-for="(val, index) in letterMsg">

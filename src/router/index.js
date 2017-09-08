@@ -62,10 +62,21 @@ export default new Router({
                     component:LetterPut
                 },{
                     path: 'letter-put',
-                    component:LetterPut
+                    component:LetterPut,
+                    children:[{
+                        path:'personal',
+                        component:Personal
+                    }]
                 },{
                     path: 'letter-get',
-                    component:LetterGet
+                    component:LetterGet,
+                    children:[{
+                        path:'personal',
+                        component:Personal
+                    }]
+                },{
+                    path:'personal',
+                    component:Personal
                 }]
             }]
         },
