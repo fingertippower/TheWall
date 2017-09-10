@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import IndexFoot from './modules/indexFoot'
-import Concern from './modules/concern'
 import SendLetter from './modules/send-letter'
 import LetterHeadStyle from './modules/letter-head-style'
 import IndexConfessionLetterList from './modules/index-confession-letter-list'
@@ -12,7 +11,6 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     modules:{
         IndexFoot,
-        Concern,
         SendLetter,
         LetterHeadStyle,
         IndexConfessionLetterList,

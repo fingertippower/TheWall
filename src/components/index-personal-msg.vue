@@ -8,17 +8,16 @@
                 <img @click="goBack" class="goBack" src="../assets/img/click.png">
             </div>
             <div class="body">
-                <p class="bodyMsg">回忆专用小马甲</p>
-                <p class="bodyMsg position">签名：</p>
-                <p class="bodyMsg position">学院：</p>
-                <p class="bodyMsg position">QQ：</p>
-                <p class="bodyMsg position">姓名：</p>
+                <div class="bodyMsg">{{putIndexConfessionLetterMsg[0].username}}
+                    <span><img src="../assets/img/woman.png" class="genderImgWoman" v-show="girl"></span>
+                    <span><img src="../assets/img/man.png" class="genderImgMan" v-show="boy"></span>
+                </div>
+                <p class="bodyMsg position">姓名：</p><span class="msg">{{putIndexConfessionLetterMsg[0].name}}</span>
+                <p class="bodyMsg position">手机：</p><span class="msg">{{putIndexConfessionLetterMsg[0].phone}}</span>
+                <p class="bodyMsg position">学院：</p><span class="msg">{{putIndexConfessionLetterMsg[0].college}}</span>
+                <p class="bodyMsg position">年级：</p><span class="msg">{{putIndexConfessionLetterMsg[0].grade}}</span>
             </div>
             <div class="foot">
-                <div class="focusOn">
-                    <img  class="focusOnImg" src="../assets/img/focusOn.png">
-                    <span class="focusOnMsg">关注</span>
-                </div>
                 <div class="postLetter">
                     <img  class="postLetterImg" src="../assets/img/postLetter.png">
                     <span class="postLetterMsg">发私信</span>
@@ -29,10 +28,27 @@
 </template>
 
 <script>
+    import { mapGetters,mapActions } from 'vuex'
     export default{
-        methods:{
-            goBack:function(){
+        data(){
+          return{
+                boy:false,
+                girl:false
+          }
+        },
+        computed:{
+            ...mapGetters(['putIndexConfessionLetterMsg']),
+        },
+        methods: {
+            goBack: function () {
                 this.$router.go(-1);
+            }
+        },
+        mounted(){
+            let gender = this.$store.state.IndexConfessionLetterList.putIndexConfessionLetterMsg[0].gender;
+            if(gender == "男"){
+                this.boy = true;
+                console.log(this.boy);
             }
         }
     }
@@ -89,11 +105,27 @@
         padding-left: 10%;
         .bodyMsg{
             position: relative;
-            top: 10%;
+            top: 8%;
             color: rgba(142,141,141,1);
         }
         .position{
-            margin-top: 10%;
+            margin-top: 3%;
+        }
+        .msg{
+            color: rgba(142,141,141,1);
+            margin-left: px2rem(80px);
+        }
+        .genderImgWoman{
+            position: absolute;
+            margin-left: px2rem(10px);
+            width: px2rem(29px);
+            height: px2rem(33px);
+        }
+        .genderImgMan{
+            position: absolute;
+            margin-left: px2rem(10px);
+            width: px2rem(29px);
+            height: px2rem(33px);
         }
     }
     .foot{
@@ -105,25 +137,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .focusOn{
-            width: px2rem(117px);
-            height: px2rem(41px);
-            color: #fff;
-            border: 1px solid #fff;
-            margin-right: 10%;
-            border-radius: px2rem(10px);
-            text-align: center;
-            .focusOnImg{
-                position: relative;
-                top: px2rem(5px);
-                width: px2rem(22px);
-                height: px2rem(22px);
-            }
-            .focusOnMsg{
-                position: relative;
-                top: px2rem(4px);
-            }
-        }
         .postLetter{
             width: px2rem(117px);
             height: px2rem(41px);

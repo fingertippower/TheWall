@@ -32,7 +32,7 @@ const state = {
             aheart:false
         },
         {
-            confessionLetterIndex: 0,
+            confessionLetterIndex: 1,
             authorHeadImg: "/src/assets/img/head.png",
             authorUsername: "回忆中的血蔷薇",
             confessionLetterTime: "2017年2月2日",
@@ -61,7 +61,7 @@ const state = {
             aheart:false
         },
         {
-            confessionLetterIndex: 0,
+            confessionLetterIndex: 2,
             authorHeadImg: "/src/assets/img/head.png",
             authorUsername: "回忆中的血蔷薇",
             confessionLetterTime: "2017年2月2日",
@@ -90,7 +90,7 @@ const state = {
             aheart:false
         },
         {
-            confessionLetterIndex: 0,
+            confessionLetterIndex: 3,
             authorHeadImg: "/src/assets/img/head.png",
             authorUsername: "回忆中的血蔷薇",
             confessionLetterTime: "2017年2月2日",
@@ -118,6 +118,16 @@ const state = {
             heart:true,
             aheart:false
         },
+    ],
+    putIndexConfessionLetterMsg:[{
+            personalImg:"/src/assets/img/head.png",
+            username: "你说的血蔷薇",
+            gender: "男",
+            name: "王涛",
+            phone: "18846927777",
+            college: "数据科学与技术学院",
+            grade: "2015"
+        }
     ],
 }
 
@@ -168,6 +178,10 @@ const mutations = {
             state.indexConfessionLetterList[index].heart = false;
             state.indexConfessionLetterList[index].aheart = true;
         }
+    },
+    //用户点击主页表白信用户头像后将从后台获取的对应用户的信息存储在state中的putIndexConfessionLetterMsg中
+    [types.CONFESSION_LETTER_PERSONAL_MSG](state,index){
+
     }
 }
 const actions = {
@@ -186,6 +200,10 @@ const actions = {
     //用户点击主页表白信件下面的收藏按钮之后，用户会收藏此信件并且收藏数值会加一
     heart({commit},index){
         commit(types.CONFESSION_LETTER_HEART,index);
+    },
+    //用户点击主页表白信件相应发件人的头像后会获取到相应发件人的信息
+    personalMsg({commit},index){
+        commit(types.CONFESSION_LETTER_PERSONAL_MSG,index);
     }
 }
 
@@ -193,6 +211,9 @@ const getters = {
     getIndexConfessionLetterList(state){
         return state.indexConfessionLetterList;
     },
+    putIndexConfessionLetterMsg(state){
+        return state.putIndexConfessionLetterMsg;
+    }
 }
 export default {
     state,

@@ -5,7 +5,7 @@
                 <div class="listWord">
                     <div class="listWordHead">
                         <router-link to="/index/index-home/index-personal-msg">
-                            <img class="listWordHeadImg" :src="val.authorHeadImg">
+                            <img class="listWordHeadImg" :src="val.authorHeadImg" @click="personalMsg(index)">
                         </router-link>
                         <p class="nickname">{{val.authorUsername}}</p>
                         <p class="time">{{val.confessionLetterTime}}</p>
@@ -81,7 +81,7 @@
         },
         computed:mapGetters(['getIndexConfessionLetterList']),
         methods:{
-            ...mapActions(['like','dislike','heart']),
+            ...mapActions(['like','dislike','heart','personalMsg']),
             //判断表白信件列表滚动条位置
             menu:function(){
                 if(typeof this.timer === 'number'){
