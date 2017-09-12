@@ -44,7 +44,6 @@
     export default {
         data() {
             return {
-
             }
         },
         //display是vuex中的返回数组，数组中相应的值控制indexFoot中的logo和文字展示与否
