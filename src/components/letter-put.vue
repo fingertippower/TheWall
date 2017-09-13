@@ -44,6 +44,7 @@
     }
     .letter-put{
         width: 100%;
+        margin-top: px2rem(230px);
         .time{
             width: 100%;
             height: px2rem(86px);
@@ -130,9 +131,9 @@
                 }
                 .read{
                     position: absolute;
-                    margin-top: px2rem(60px);
-                    margin-left: px2rem(-30px);
-                    width: px2rem(562px);
+                    margin-top: px2rem(85px);
+                    margin-left: px2rem(-32px);
+                    width: px2rem(564px);
                     height: px2rem(145px);
                     background-color: rgba(244,173,18,1);
                     border-bottom-right-radius: px2rem(20px);

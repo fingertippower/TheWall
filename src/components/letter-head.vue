@@ -27,13 +27,19 @@
 
 <style lang="scss" scoped>
     @import '../assets/css/function.scss';
+    .letter{
+        position: fixed;
+        top: 0;
+        z-index: 5;
+    }
     .letter-head{
-        width: 100%;
+        width: px2rem(750px);
         height: px2rem(107px);
         background-color: rgba(244,173,18,1);
     }
     .letter-body{
-        width: 100%;
+        width: px2rem(750px);
+        background-color:#fff;
         .getOrPut{
             width: 100%;
             height: px2rem(105px);
