@@ -16,6 +16,8 @@ import IndexHome from '../components/index-home.vue'
 import Letter from '../components/letter.vue'
 import LetterPut from '../components/letter-put.vue'
 import LetterGet from '../components/letter-get.vue'
+import LetterGetMsg from '../components/letter-get-msg.vue'
+import LetterMsg from '../components/letter-msg.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -71,6 +73,9 @@ export default new Router({
                     children:[{
                         path:'personal',
                         component:Personal
+                    },{
+                        path: 'letter-get-msg',
+                        component:LetterGetMsg
                     }]
                 },{
                     path:'personal',
@@ -97,6 +102,10 @@ export default new Router({
         {
             path:'/schoolfellow',
             component:Schoolfellow,
+        },
+        {
+            path:'/letter-msg',
+            component:LetterMsg
         }
     ]
 })
