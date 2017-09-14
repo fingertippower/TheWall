@@ -73,8 +73,6 @@
         background: url("../assets/img/background.png");
         width: 100%;
         height: 100%;
-        margin: 0;
-        padding: 0;
         position: fixed;
     }
     .up{
@@ -86,7 +84,6 @@
         border-radius: px2rem(10px) px2rem(10px) 0 0;
         position: relative;
         text-align: center;
-        background-color: transparent;
         background-color: rgba(255,255,255,0.85);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }
@@ -238,7 +235,6 @@
     }
     .down .span3{
         width: px2rem(130px);
-        background-color: #ffffff;
         font-size: px2rem(24px);
         color: #DA9128;
         margin:px2rem(116px) px2rem(-65px);

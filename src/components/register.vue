@@ -69,8 +69,6 @@
         background: url("../assets/img/background.png");
         width: 100%;
         height: 100%;
-        margin: 0;
-        padding: 0;
         position: fixed;
     }
     .up{
@@ -82,7 +80,6 @@
         border-radius: px2rem(10px) px2rem(10px) 0 0;
         position: relative;
         text-align: center;
-        background-color: transparent;
         background-color: rgba(255,255,255,0.85);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }
@@ -214,7 +211,6 @@
         height: px2rem(20px);
         font-size: px2rem(10px);
         font-family: 宋体;
-        background-color: transparent;
         border: none;
         background-color: #DA9128;
         color: #ffffff;
@@ -242,7 +238,6 @@
         margin-right: px2rem(66.6616px);
     }
     .down button.btn3{
-        background-color: transparent;
         border: none;
         font-size: px2rem(60px);
         color: #ffffff;
@@ -269,8 +264,6 @@
     }
     .down .span3{
         width: px2rem(130px);
-        /*background-color: rgba(255, 255, 255, 1);*/
-        background-color: #fff;
         font-size: px2rem(24px);
         color: #DA9128;
         margin:px2rem(107px) px2rem(-65px);
