@@ -63,7 +63,6 @@
         margin: px2rem(6px) auto;
         margin-bottom: px2rem(340px);
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
-        background-color: transparent;
         background-color: rgba(255,255,255,0.5);
         box-shadow:0 0 px2rem(4px) dimgrey;
     }

@@ -129,7 +129,6 @@
     }
     .shave span{
         width: px2rem(109px);
-        background-color: #ffffff;
         font-size: px2rem(18px);
         color: #8C8C8B;
         margin:px2rem(238px) px2rem(-54.5px);
