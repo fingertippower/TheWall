@@ -62,11 +62,8 @@
         position: fixed;
         top: 0;
         width: 100%;
-        height: px2rem(1334px);
+        height: 100%;
         background-color: rgba(0,0,0,0.4);
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .background{
         z-index: 20;
