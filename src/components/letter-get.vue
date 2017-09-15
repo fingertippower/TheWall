@@ -6,84 +6,126 @@
                 <div class="imgBox">
                     <img src="../assets/img/1.png" class="img">
                 </div>
-                <div class="title">
-                    <p>我要对你表白</p>
-                </div>
+                <router-link to="/letter-msg">
+                    <div class="title">
+                        <p>我要对你表白</p>
+                    </div>
+                </router-link>
                 <div class="sendLetterMsg">
                     <div class="time">
                        2017.12.20
                     </div>
-                    <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    <router-link to="/index/letter/letter-get/letter-get-msg">
+                            <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    </router-link>
                 </div>
             </li>
             <li class="listLi">
                 <div class="imgBox">
                     <img src="../assets/img/1.png" class="img">
                 </div>
-                <div class="title">
-                    <p>我要对你表白</p>
-                </div>
+                <router-link to="/letter-msg">
+                    <div class="title">
+                        <p>我要对你表白</p>
+                    </div>
+                </router-link>
                 <div class="sendLetterMsg">
                     <div class="time">
                         2017.12.20
                     </div>
-                    <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    <router-link to="/index/letter/letter-get/letter-get-msg">
+                        <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    </router-link>
                 </div>
             </li>
             <li class="listLi">
                 <div class="imgBox">
                     <img src="../assets/img/1.png" class="img">
                 </div>
-                <div class="title">
-                    <p>我要对你表白</p>
-                </div>
+                <router-link to="/letter-msg">
+                    <div class="title">
+                        <p>我要对你表白</p>
+                    </div>
+                </router-link>
                 <div class="sendLetterMsg">
                     <div class="time">
                         2017.12.20
                     </div>
-                    <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    <router-link to="/index/letter/letter-get/letter-get-msg">
+                        <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    </router-link>
                 </div>
             </li>
             <li class="listLi">
                 <div class="imgBox">
                     <img src="../assets/img/1.png" class="img">
                 </div>
-                <div class="title">
-                    <p>我要对你表白</p>
-                </div>
+                <router-link to="/letter-msg">
+                    <div class="title">
+                        <p>我要对你表白</p>
+                    </div>
+                </router-link>
                 <div class="sendLetterMsg">
                     <div class="time">
                         2017.12.20
                     </div>
-                    <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    <router-link to="/index/letter/letter-get/letter-get-msg">
+                        <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    </router-link>
                 </div>
             </li>
             <li class="listLi">
                 <div class="imgBox">
                     <img src="../assets/img/1.png" class="img">
                 </div>
-                <div class="title">
-                    <p>我要对你表白</p>
-                </div>
+                <router-link to="/letter-msg">
+                    <div class="title">
+                        <p>我要对你表白</p>
+                    </div>
+                </router-link>
                 <div class="sendLetterMsg">
                     <div class="time">
                         2017.12.20
                     </div>
-                    <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    <router-link to="/index/letter/letter-get/letter-get-msg">
+                        <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    </router-link>
                 </div>
             </li>
             <li class="listLi">
                 <div class="imgBox">
                     <img src="../assets/img/1.png" class="img">
                 </div>
-                <div class="title">
-                    <p>我要对你表白</p>
-                </div>
+                <router-link to="/letter-msg">
+                    <div class="title">
+                        <p>我要对你表白</p>
+                    </div>
+                </router-link>
                 <div class="sendLetterMsg">
                     <div class="time">
                         2017.12.20
                     </div>
-                    <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    <router-link to="/index/letter/letter-get/letter-get-msg">
+                        <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    </router-link>
+                </div>
+            </li>
+            <li class="listLi">
+                <div class="imgBox">
+                    <img src="../assets/img/1.png" class="img">
+                </div>
+                <router-link to="/letter-msg">
+                    <div class="title">
+                        <p>我要对你表白</p>
+                    </div>
+                </router-link>
+                <div class="sendLetterMsg">
+                    <div class="time">
+                        2017.12.20
+                    </div>
+                    <router-link to="/index/letter/letter-get/letter-get-msg">
+                        <img src="../assets/img/news.png" class="sendLetterMsgImg">
+                    </router-link>
                 </div>
             </li>
         </ul>
@@ -92,6 +134,9 @@
 
 <script>
     export default{
+        methods:{
+
+        },
         mounted:function(){
             let imgBox = document.getElementsByClassName('imgBox');
             let img = document.getElementsByClassName('img');
@@ -111,7 +156,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" rel="stylesheet/scss" scoped>
     @import '../assets/css/function.scss';
     .list{
         margin-top: px2rem(230px);
@@ -142,18 +187,22 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 50%;
+                width: 48%;
                 height: px2rem(180px);
                 float: left;
+                position: absolute;
+                margin-left: px2rem(240px);
             }
             .sendLetterMsg{
-                float: right;
-                width: 16.5%;
+                position: absolute;
+                margin-left: 81%;
+                float: left;
+                min-width: 12.5%;
                 height: px2rem(180px);
                 text-align: center;
                 .time{
                     margin-left: px2rem(-10px);
-                    width: px2rem(125px);
+                    width: px2rem(145px);
                     height: px2rem(33px);
                     background-color: rgba(174,231,244,1);
                     font-size: px2rem(18px);
@@ -161,6 +210,8 @@
                     text-align: center;
                 }
                 .sendLetterMsgImg{
+                    position: absolute;
+                    margin-left: px2rem(-30px);
                     width: px2rem(50px);
                     height: px2rem(50px);
                     margin-top: px2rem(30px);
