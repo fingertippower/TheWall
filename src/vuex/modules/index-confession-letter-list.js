@@ -1,3 +1,4 @@
+import axios from '../../fetch/api'
 import * as types from '../types'
 
 const state = {
@@ -186,6 +187,14 @@ const mutations = {
 }
 const actions = {
     //从后台获取主页所有的表白信件，和后台对接上在写
+    aa(){
+        axios({
+            method: 'get',
+            url: 'webapp/travelList'
+        }).then((res)=>{
+            console.log(res);
+        })
+    },
     getIndexConfessionLetterList({commit}){
         commit(types.GET_INDEX_CONFESSION_LETTER_LIST);
     },

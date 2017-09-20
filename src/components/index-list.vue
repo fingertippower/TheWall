@@ -66,6 +66,7 @@
         <div class="refreshImgBox" v-show="refresh">
             <img src="../assets/img/refresh.gif" class="refreshImg">
         </div>
+        <button @click="aa">231651351</button>
     </div>
 </template>
 
@@ -81,7 +82,7 @@
         },
         computed:mapGetters(['getIndexConfessionLetterList']),
         methods:{
-            ...mapActions(['like','dislike','heart','personalMsg']),
+            ...mapActions(['like','dislike','heart','personalMsg','aa']),
             //判断表白信件列表滚动条位置
             menu:function(){
                 if(typeof this.timer === 'number'){
