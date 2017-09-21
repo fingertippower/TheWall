@@ -72,6 +72,7 @@
 
 <script>
     import { mapGetters,mapActions } from 'vuex'
+    import axios from 'axios'
     export default{
         data(){
             return{
@@ -83,6 +84,19 @@
         computed:mapGetters(['getIndexConfessionLetterList']),
         methods:{
             ...mapActions(['like','dislike','heart','personalMsg','aa']),
+            /*aa(){
+                alert(11);
+                //axios.get('http://192.168.223.1:8080/webapp/hello.json/1').then(m=>console.log(m.data));
+                axios({
+                    method:'get',
+                    url:'http://192.168.223.1:8080/webapp/hello.json/1',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    }
+                }).then(function(res){
+                    return res.data;
+                });
+            },*/
             //判断表白信件列表滚动条位置
             menu:function(){
                 if(typeof this.timer === 'number'){

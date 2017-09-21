@@ -6,7 +6,7 @@ import qs from 'qs'
 //axios.defaults.timeout = 5000;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 axios.defaults.baseURL = 'http://192.168.223.1:8080';
-//axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 
 //POST传参序列化
 axios.interceptors.request.use((config) => {
@@ -33,5 +33,23 @@ axios.interceptors.response.use((res) =>{
     // alert("网络异常");
     return Promise.reject(error);
 });
+
+/*axios.interceptors.response.use(
+    config=>{
+      const token = getCookie('session');
+      config.data = JSON.stringify(config.data)
+      config.headers = {
+          'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'
+      }
+      if(token){
+          config.params = {'token':token}
+      }
+      return config;
+    },
+    err=>{
+        return Promise.reject(err);
+    }
+
+);*/
 
 export default axios;

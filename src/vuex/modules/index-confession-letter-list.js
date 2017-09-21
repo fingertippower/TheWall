@@ -190,9 +190,12 @@ const actions = {
     aa(){
         axios({
             method: 'get',
-            url: 'webapp/travelList'
+            url: 'webapp/hello.json/1',
+            // params:{
+            //     "id":1
+            // }
         }).then((res)=>{
-            console.log(res);
+            console.log(res.data);
         })
     },
     getIndexConfessionLetterList({commit}){
