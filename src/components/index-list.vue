@@ -66,7 +66,6 @@
         <div class="refreshImgBox" v-show="refresh">
             <img src="../assets/img/refresh.gif" class="refreshImg">
         </div>
-        <button @click="aa">231651351</button>
     </div>
 </template>
 
@@ -83,13 +82,13 @@
         },
         computed:mapGetters(['getIndexConfessionLetterList']),
         methods:{
-            ...mapActions(['like','dislike','heart','personalMsg','aa']),
+            ...mapActions(['like','dislike','heart','personalMsg']),
             /*aa(){
                 alert(11);
-                //axios.get('http://192.168.223.1:8080/webapp/hello.json/1').then(m=>console.log(m.data));
+                //axios.get('http://172.20.10.2:8080/webapp/hello.json/1').then(m=>console.log(m.data));
                 axios({
                     method:'get',
-                    url:'http://192.168.223.1:8080/webapp/hello.json/1',
+                    url:'http://172.20.10.2:8080/webapp/hello.json/1',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
                     }
