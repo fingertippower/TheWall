@@ -65,6 +65,7 @@
         </ul>
         <div class="refreshImgBox" v-show="refresh">
             <img src="../assets/img/refresh.gif" class="refreshImg">
+
         </div>
     </div>
 </template>
