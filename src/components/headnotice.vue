@@ -2,13 +2,23 @@
     <div class="head">
         <div class="headNotice">
             <img src="../assets/img/horn.png" class="headNoticeImg">
-            <span class="headNoticeMsg">恭喜回忆的小马甲对失去的爱表白成功</span>
+            <marquee class="headNoticeMsg" v-html="getNotice"></marquee>
         </div>
     </div>
 </template>
 
 <script>
+    import { mapGetters,mapActions } from 'vuex'
+    import axios from 'axios'
+    export default{
+        computed:mapGetters(['getNotice']),
+        methods: {
 
+        },
+        mounted:function(){
+            return this.$store.dispatch('notice');
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

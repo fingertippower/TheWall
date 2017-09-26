@@ -6,50 +6,10 @@
         </div>
         <div class="body">
             <ul>
-                <li class="li">
-                    <img class="listImg" src="../assets/img/head.png" @click="aaa">
-                    <p class="nickname">忧伤的蔷薇</p>
-                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
-                </li>
-                <li class="li">
-                    <img class="listImg" src="../assets/img/head.png">
-                    <p class="nickname">忧伤的蔷薇</p>
-                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
-                </li>
-                <li class="li">
-                    <img class="listImg" src="../assets/img/head.png">
-                    <p class="nickname">忧伤的蔷薇</p>
-                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
-                </li>
-                <li class="li">
-                    <img class="listImg" src="../assets/img/head.png">
-                    <p class="nickname">忧伤的蔷薇</p>
-                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
-                </li>
-                <li class="li">
-                    <img class="listImg" src="../assets/img/head.png">
-                    <p class="nickname">忧伤的蔷薇</p>
-                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
-                </li>
-                <li class="li">
-                    <img class="listImg" src="../assets/img/head.png">
-                    <p class="nickname">忧伤的蔷薇</p>
-                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
-                </li>
-                <li class="li">
-                    <img class="listImg" src="../assets/img/head.png">
-                    <p class="nickname">忧伤的蔷薇</p>
-                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
-                </li>
-                <li class="li">
-                    <img class="listImg" src="../assets/img/head.png">
-                    <p class="nickname">忧伤的蔷薇</p>
-                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
-                </li>
-                <li class="li">
-                    <img class="listImg" src="../assets/img/head.png">
-                    <p class="nickname">忧伤的蔷薇</p>
-                    <p class="listMsg">这句话说的，已下载就说到了电子上去了字的萨科简单。</p>
+                <li class="li" v-for="(val, index) in getTalkMsg">
+                    <img class="listImg" :src="val.personalHeadImg">
+                    <p class="nickname">{{val.personalNickname}}</p>
+                    <p class="listMsg">{{val.talkMsg}}</p>
                 </li>
             </ul>
         </div>
@@ -60,10 +20,11 @@
 </template>
 
 <script>
-    import { mapActions } from "vuex"
+    import { mapGetters,mapActions } from "vuex"
     export default{
+        computed:mapGetters(['getTalkMsg']),
         methods:{
-            ...mapActions(['aaa']),
+            ...mapActions([]),
             goBack:function(){
                 this.$router.go(-1);
             }

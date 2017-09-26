@@ -65,7 +65,6 @@
         </ul>
         <div class="refreshImgBox" v-show="refresh">
             <img src="../assets/img/refresh.gif" class="refreshImg">
-
         </div>
     </div>
 </template>
@@ -84,19 +83,6 @@
         computed:mapGetters(['getIndexConfessionLetterList']),
         methods:{
             ...mapActions(['like','dislike','heart','personalMsg']),
-            /*aa(){
-                alert(11);
-                //axios.get('http://172.20.10.2:8080/webapp/hello.json/1').then(m=>console.log(m.data));
-                axios({
-                    method:'get',
-                    url:'http://172.20.10.2:8080/webapp/hello.json/1',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    }
-                }).then(function(res){
-                    return res.data;
-                });
-            },*/
             //判断表白信件列表滚动条位置
             menu:function(){
                 if(typeof this.timer === 'number'){
