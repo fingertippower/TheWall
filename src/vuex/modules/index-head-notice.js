@@ -6,8 +6,7 @@ const state = {
 
 const mutations = {
     [types.INDEX_NOTICE](state){
-        state.notice += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-        state.notice += "这又是一个表白成功的例子"
+
     }
 }
 
