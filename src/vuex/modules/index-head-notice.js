@@ -6,7 +6,6 @@ const state = {
 
 const mutations = {
     [types.INDEX_NOTICE](state){
-
     }
 }
 
