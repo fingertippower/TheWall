@@ -12,6 +12,7 @@ const mutations = {
 const actions = {
     notice({commit}){
         commit(types.INDEX_NOTICE);
+
     }
 }
 
