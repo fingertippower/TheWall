@@ -14,7 +14,9 @@
             </ul>
         </div>
         <div class="foot">
-            期待你的评论...
+            <p v-show="talk" @click="sendTalk">期待你的评论...</p>
+            <textarea v-show="input" class="talk-input" rows="3" cols="20"id="input"></textarea>
+            <button v-show="input" class="send" @click="sendTheTalk">发送</button>
         </div>
     </div>
 </template>
@@ -22,18 +24,28 @@
 <script>
     import { mapGetters,mapActions } from "vuex"
     export default{
+        data(){
+            return{
+                talk:true,
+                input:false
+            }
+        },
         computed:mapGetters(['getTalkMsg']),
         methods:{
-            ...mapActions([]),
+            ...mapActions(['sendTheTalk']),
             goBack:function(){
                 this.$router.go(-1);
+            },
+            sendTalk:function(){
+                this.talk = false;
+                this.input = true;
             }
         }
     }
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" rel="stylesheet/scss" scoped>
     @import '../assets/css/function.scss';
     .head{
         z-index: 2;
@@ -91,12 +103,29 @@
         position: fixed;
         bottom: 0px;
         width: 100%;
-        height: px2rem(100px);
+        min-height: px2rem(100px);
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: rgba(244,173,18,1);
         color: #fff;
         font-size: px2rem(30px);
+        .talk-input{
+            width: 75%;
+            min-height: px2rem(20px);
+            margin-right:px2rem(10px);
+            border: 1px solid rgba(244,173,18,1);
+            border-radius: px2rem(20px);
+            padding: 0 px2rem(20px);
+            font-size: px2rem(30px);
+            overflow:hidden;
+        }
+        .send{
+            width: px2rem(100px);
+            height: px2rem(60px);
+            background-color: antiquewhite;
+            border: 1px solid rgba(244,173,18,1);
+            border-radius: px2rem(20px);
+        }
     }
 </style>

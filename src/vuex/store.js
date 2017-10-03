@@ -4,7 +4,6 @@ import IndexFoot from './modules/indexFoot'
 import SendLetter from './modules/send-letter'
 import LetterHeadStyle from './modules/letter-head-style'
 import IndexConfessionLetterList from './modules/index-confession-letter-list'
-import ConfessionLetterTalk from './modules/confession-letter-talk'
 import IndexHeadNotice from './modules/index-head-notice'
 
 Vue.use(Vuex);
@@ -15,7 +14,6 @@ export default new Vuex.Store({
         SendLetter,
         LetterHeadStyle,
         IndexConfessionLetterList,
-        ConfessionLetterTalk,
         IndexHeadNotice
     }
 })

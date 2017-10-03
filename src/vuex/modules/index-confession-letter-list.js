@@ -32,6 +32,64 @@ const state = {
             adislikeDisplay: false,
             heart:true,
             aheart:false
+        },
+        {
+            confessionLetterIndex: 0,
+            authorUsername: "回忆中的血蔷薇",
+            confessionLetterTime: "2017年2月2日",
+            authorHeadImg: "/src/assets/img/head.png",
+            confessionLetterMsg: "0当你看到这封情书时，可以告诉你的是，我已经喜欢你很久了。" +
+            "至于为什么喜欢你，这个问题我沉思了很久，最终我也想不清楚.也许是那一刻你的回眸一笑，" +
+            "也许是与你擦身而过时无意间嗅到的你的芳香，" +
+            "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。",
+            confessionLetterImg1: "/src/assets/img/coment/1.jpg",
+            confessionLetterImg2: "/src/assets/img/coment/4.jpg",
+            confessionLetterImg3: "/src/assets/img/coment/3.jpg",
+            confessionLetterImg4: "/src/assets/img/coment/1.jpg",
+            confessionLetterImg5: "/src/assets/img/coment/4.jpg",
+            confessionLetterImg6: "/src/assets/img/coment/3.jpg",
+            confessionLetterImg7: "",
+            confessionLetterImg8: "",
+            confessionLetterImg9: "",
+            confessionLetterTalkNum: "999",
+            confessionLetterGoodNum: "9999",
+            confessionLetterNotGoodNum: "1",
+            confessionLetterCollectionNum: "100",
+            likeDisplay: true,
+            alikeDisplay: false,
+            dislikeDisplay: true,
+            adislikeDisplay: false,
+            heart:true,
+            aheart:false
+        },
+        {
+            confessionLetterIndex: 0,
+            authorUsername: "回忆中的血蔷薇",
+            confessionLetterTime: "2017年2月2日",
+            authorHeadImg: "/src/assets/img/head.png",
+            confessionLetterMsg: "0当你看到这封情书时，可以告诉你的是，我已经喜欢你很久了。" +
+            "至于为什么喜欢你，这个问题我沉思了很久，最终我也想不清楚.也许是那一刻你的回眸一笑，" +
+            "也许是与你擦身而过时无意间嗅到的你的芳香，" +
+            "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。",
+            confessionLetterImg1: "/src/assets/img/coment/1.jpg",
+            confessionLetterImg2: "/src/assets/img/coment/4.jpg",
+            confessionLetterImg3: "/src/assets/img/coment/3.jpg",
+            confessionLetterImg4: "/src/assets/img/coment/1.jpg",
+            confessionLetterImg5: "/src/assets/img/coment/4.jpg",
+            confessionLetterImg6: "/src/assets/img/coment/3.jpg",
+            confessionLetterImg7: "",
+            confessionLetterImg8: "",
+            confessionLetterImg9: "",
+            confessionLetterTalkNum: "999",
+            confessionLetterGoodNum: "9999",
+            confessionLetterNotGoodNum: "1",
+            confessionLetterCollectionNum: "100",
+            likeDisplay: true,
+            alikeDisplay: false,
+            dislikeDisplay: true,
+            adislikeDisplay: false,
+            heart:true,
+            aheart:false
         }
     ],
     putIndexConfessionLetterMsg:[{
@@ -44,6 +102,28 @@ const state = {
             grade: "2015"
         }
     ],
+    talkList:[
+        {
+            personalHeadImg:"/src/assets/img/head.png",
+            personalNickname:"已经回不去",
+            talkMsg:"这句话说的，已下载就说到了电子上去了字的萨科简单。"
+        },
+        {
+            personalHeadImg:"/src/assets/img/head.png",
+            personalNickname:"已经回不去",
+            talkMsg:"这句话说的，已下载就说到了电子上去了字的萨科简单。"
+        },
+        {
+            personalHeadImg:"/src/assets/img/head.png",
+            personalNickname:"已经回不去",
+            talkMsg:"这句话说的，已下载就说到了电子上去了字的萨科简单。"
+        },
+        {
+            personalHeadImg:"/src/assets/img/head.png",
+            personalNickname:"已经回不去",
+            talkMsg:"这句话说的，已下载就说到了电子上去了字的萨科简单。"
+        },
+    ]
 }
 
 const mutations = {
@@ -129,7 +209,12 @@ const actions = {
     //用户点击主页表白信件相应发件人的头像后会获取到相应发件人的信息
     personalMsg({commit},index){
         commit(types.CONFESSION_LETTER_PERSONAL_MSG,index);
-    }
+    },
+    //用户在评论中评论完成后点击发送按钮，将用户的评论发送到后台
+    sendTheTalk(){
+        let input = document.getElementById('input').value;
+
+    },
 }
 
 const getters = {
@@ -138,6 +223,9 @@ const getters = {
     },
     putIndexConfessionLetterMsg(state){
         return state.putIndexConfessionLetterMsg;
+    },
+    getTalkMsg(state){
+        return state.talkList;
     }
 }
 export default {
