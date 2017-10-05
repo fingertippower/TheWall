@@ -46,8 +46,7 @@ const state = {
             "至于为什么喜欢你，这个问题我沉思了很久，最终我也想不清楚.也许是那一刻你的回眸一笑，" +
             "也许是与你擦身而过时无意间嗅到的你的芳香，" +
             "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。"
-        }
-        ,
+        },
         {
             timeMonth: "7月",
             timeDay: "05",
@@ -56,8 +55,7 @@ const state = {
             "至于为什么喜欢你，这个问题我沉思了很久，最终我也想不清楚.也许是那一刻你的回眸一笑，" +
             "也许是与你擦身而过时无意间嗅到的你的芳香，" +
             "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。"
-        }
-        ,
+        },
         {
             timeMonth: "7月",
             timeDay: "06",
@@ -69,11 +67,76 @@ const state = {
         }
     ],
     letterIndex: 0,//相应日期下的信件的索引，信件的主体会根据这个索引获取对应的信息信息
-    letterTitle: "你的情书",
-    letterBody: "当你看到这封情书时，可以告诉你的是，我已经喜欢你很久了。" +
-    "至于为什么喜欢你，这个问题我沉思了很久，最终我也想不清楚.也许是那一刻你的回眸一笑，" +
-    "也许是与你擦身而过时无意间嗅到的你的芳香，" +
-    "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。"
+    letterTitle: "",
+    letterBody: "",
+    letterGet:[
+        {
+            letterTitle:"这是一个新的表白",
+            letterDate:"2017.12.4"
+        },
+        {
+            letterTitle:"这是一个新的表白",
+            letterDate:"2017.12.4"
+        },
+        {
+            letterTitle:"这是一个新的表白",
+            letterDate:"2017.12.4"
+        },
+        {
+            letterTitle:"这是一个新的表白",
+            letterDate:"2017.12.4"
+        },
+        {
+            letterTitle:"这是一个新的表白",
+            letterDate:"2017.12.4"
+        },
+        {
+            letterTitle:"这是一个新的表白",
+            letterDate:"2017.12.4"
+        },
+        {
+            letterTitle:"这是一个新的表白",
+            letterDate:"2017.12.4"
+        },
+        {
+            letterTitle:"这是一个新的表白",
+            letterDate:"2017.12.4"
+        },
+    ],
+    letterGetPersonalMsg:[
+        {
+            personalImg:"/src/assets/img/head.png",
+            username: "你说的血蔷薇",
+            gender: "女",
+            name: "王涛",
+            phone: "18846927777",
+            college: "数据科学与技术学院",
+            grade: "2015"
+        }
+    ],
+    letterMsg:[
+        {
+            letterTitle:"这是我对你的真心",
+            letterBody:"论文是科学或者社会研究工作者在学术书籍或学术期刊上刊登的呈现自己研究成果的文章。"
+            +"论文往往强调原创性的工作总结，但当然也可以是对前人工作总结的回顾及做出评价，"
+            +"后者也往往被称为综述性文章（Review）。论文的出版正在经历着重大变化，"
+            +"出现了从传统的印刷版到网络上电子格式的兴起。"
+            +"论文就是用来进行科学研究和描述科研成果的文章，简称之为论文。"
+            +"它既是探讨问题进行科学研究的一种手段，又是描述科研成果进行学术交流的一种工具。"
+            +"它包括学年论文、毕业论文、学位论文、科技论文、成果论文等，总称为论文。",
+            letterAuthor:"你说的",
+            letterDate:"2015.6.6",
+            confessionLetterImg1: "/src/assets/img/coment/1.jpg",
+            confessionLetterImg2: "/src/assets/img/coment/4.jpg",
+            confessionLetterImg3: "/src/assets/img/coment/3.jpg",
+            confessionLetterImg4: "/src/assets/img/coment/1.jpg",
+            confessionLetterImg5: "/src/assets/img/coment/4.jpg",
+            confessionLetterImg6: "/src/assets/img/coment/3.jpg",
+            confessionLetterImg7: "",
+            confessionLetterImg8: "",
+            confessionLetterImg9: "",
+        }
+    ]
 }
 
 const mutations = {
@@ -185,6 +248,15 @@ const getters = {
     },
     letterBody(state){
         return state.letterBody;
+    },
+    getLetterList(state){
+        return state.letterGet;
+    },
+    getLetterPersonMsg(state){
+        return state.letterGetPersonalMsg;
+    },
+    getLetterMsg(state){
+        return state.letterMsg;
     }
 }
 

@@ -8,14 +8,14 @@
                 <img @click="goBack" class="goBack" src="../assets/img/click.png">
             </div>
             <div class="body">
-                <div class="bodyMsg">回忆中的血蔷薇
-                    <span><img src="../assets/img/woman.png" class="genderImgWoman" v-show="true"></span>
-                    <span><img src="../assets/img/man.png" class="genderImgMan" v-show="false"></span>
+                <div class="bodyMsg">{{getLetterPersonMsg[0].username}}
+                    <span><img src="../assets/img/woman.png" class="genderImgWoman" v-show="girl"></span>
+                    <span><img src="../assets/img/man.png" class="genderImgMan" v-show="boy"></span>
                 </div>
-                <p class="bodyMsg position">姓名：</p><span class="msg">王涛</span>
-                <p class="bodyMsg position">手机：</p><span class="msg">18846927659</span>
-                <p class="bodyMsg position">学院：</p><span class="msg">数据科学与技术学院</span>
-                <p class="bodyMsg position">年级：</p><span class="msg">2015</span>
+                <p class="bodyMsg position">姓名：</p><span class="msg">{{getLetterPersonMsg[0].name}}</span>
+                <p class="bodyMsg position">手机：</p><span class="msg">{{getLetterPersonMsg[0].phone}}</span>
+                <p class="bodyMsg position">学院：</p><span class="msg">{{getLetterPersonMsg[0].college}}</span>
+                <p class="bodyMsg position">年级：</p><span class="msg">{{getLetterPersonMsg[0].grade}}</span>
             </div>
             <div class="foot">
                 小的只知道这么多信息了，感觉到是谁了吗？
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+    import { mapGetters,mapActions } from 'vuex'
     export default{
         data(){
             return{
@@ -32,11 +33,20 @@
                 girl:false
             }
         },
+        computed:mapGetters(['getLetterPersonMsg']),
         methods: {
             goBack: function () {
                 this.$router.go(-1);
             }
         },
+        mounted(){
+            let gender = this.$store.state.SendLetter.letterGetPersonalMsg[0].gender;
+            if(gender == "男"){
+                this.boy = true;
+            }else{
+                this.girl = true;
+            }
+        }
     }
 </script>
 

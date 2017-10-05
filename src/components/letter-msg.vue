@@ -5,36 +5,30 @@
             <span class="headMsg">详情阅读</span>
         </div>
         <div class="body">
-            <p class="title">蔷薇之恋</p>
-            <p class="word">
-                论文是科学或者社会研究工作者在学术书籍或学术期刊上刊登的呈现自己研究成果的文章。
-                论文往往强调原创性的工作总结，但当然也可以是对前人工作总结的回顾及做出评价，
-                后者也往往被称为综述性文章（Review）。论文的出版正在经历着重大变化，
-                出现了从传统的印刷版到网络上电子格式的兴起。
-                论文就是用来进行科学研究和描述科研成果的文章，简称之为论文。
-                它既是探讨问题进行科学研究的一种手段，又是描述科研成果进行学术交流的一种工具。
-                它包括学年论文、毕业论文、学位论文、科技论文、成果论文等，总称为论文。
-            </p>
+            <p class="title">{{getLetterMsg[0].letterTitle}}</p>
+            <p class="word">{{getLetterMsg[0].letterBody}}</p>
             <div class="imgBox">
-                <img class="listImg" src="../assets/img/coment/1.jpg" onerror="this.style.display='none'">
-                <img class="listImg" src="../assets/img/coment/1.jpg" onerror="this.style.display='none'">
-                <img class="listImg" src="../assets/img/coment/1.jpg" onerror="this.style.display='none'">
-                <img class="listImg" src="../assets/img/coment/1.jpg" onerror="this.style.display='none'">
-                <img class="listImg" src="../assets/img/coment/1.jpg" onerror="this.style.display='none'">
-                <img class="listImg" src="../assets/img/coment/1.jpg" onerror="this.style.display='none'">
-                <img class="listImg" src="../assets/img/coment/1.jpg" onerror="this.style.display='none'">
-                <img class="listImg" src="../assets/img/coment/1.jpg" onerror="this.style.display='none'">
-                <img class="listImg" src="../assets/img/coment/1.jpg" onerror="this.style.display='none'">
+                <img class="listImg" :src="getLetterMsg[0].confessionLetterImg1" onerror="this.style.display='none'">
+                <img class="listImg" :src="getLetterMsg[0].confessionLetterImg2" onerror="this.style.display='none'">
+                <img class="listImg" :src="getLetterMsg[0].confessionLetterImg3" onerror="this.style.display='none'">
+                <img class="listImg" :src="getLetterMsg[0].confessionLetterImg4" onerror="this.style.display='none'">
+                <img class="listImg" :src="getLetterMsg[0].confessionLetterImg5" onerror="this.style.display='none'">
+                <img class="listImg" :src="getLetterMsg[0].confessionLetterImg6" onerror="this.style.display='none'">
+                <img class="listImg" :src="getLetterMsg[0].confessionLetterImg7" onerror="this.style.display='none'">
+                <img class="listImg" :src="getLetterMsg[0].confessionLetterImg8" onerror="this.style.display='none'">
+                <img class="listImg" :src="getLetterMsg[0].confessionLetterImg9" onerror="this.style.display='none'">
             </div>
-            <div class="author">血蔷薇</div>
-            <div class="time">2017.3.5</div>
+            <div class="author">{{getLetterMsg[0].letterAuthor}}</div>
+            <div class="time">{{getLetterMsg[0].letterDate}}</div>
         </div>
         <div class="foot"></div>
     </div>
 </template>
 
 <script>
+    import { mapGetters,mapActions } from 'vuex'
     export default{
+        computed:mapGetters(['getLetterMsg']),
         methods:{
             goBack:function(){
                 this.$router.go(-1);

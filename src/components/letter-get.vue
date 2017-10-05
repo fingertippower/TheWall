@@ -2,39 +2,21 @@
     <div>
         <router-view></router-view>
         <ul class="list">
-            <li class="listLi">
+            <li class="listLi" v-for="(val, index) in getLetterList">
                 <div class="imgBox">
                     <img src="../assets/img/1.png" class="img">
                 </div>
                 <router-link to="/letter-msg">
                     <div class="title">
-                        <p>我要对你表白</p>
+                        <p>{{val.letterTitle}}</p>
                     </div>
                 </router-link>
                 <div class="sendLetterMsg">
                     <div class="time">
-                       2017.12.20
+                       {{val.letterDate}}
                     </div>
                     <router-link to="/index/letter/letter-get/letter-get-msg">
                             <img src="../assets/img/news.png" class="sendLetterMsgImg">
-                    </router-link>
-                </div>
-            </li>
-            <li class="listLi">
-                <div class="imgBox">
-                    <img src="../assets/img/1.png" class="img">
-                </div>
-                <router-link to="/letter-msg">
-                    <div class="title">
-                        <p>我要对你表白</p>
-                    </div>
-                </router-link>
-                <div class="sendLetterMsg">
-                    <div class="time">
-                        2017.12.20
-                    </div>
-                    <router-link to="/index/letter/letter-get/letter-get-msg">
-                        <img src="../assets/img/news.png" class="sendLetterMsgImg">
                     </router-link>
                 </div>
             </li>
@@ -43,10 +25,12 @@
 </template>
 
 <script>
+    import { mapGetters,mapActions } from 'vuex'
     export default{
         methods:{
 
         },
+        computed:mapGetters(['getLetterList']),
         mounted:function(){
             let imgBox = document.getElementsByClassName('imgBox');
             let img = document.getElementsByClassName('img');
@@ -92,7 +76,7 @@
                 }
             }
             .title{
-                font-size: px2rem(42px);
+                font-size: px2rem(32px);
                 color: rgba(142,141,141,1);
                 display: flex;
                 justify-content: center;

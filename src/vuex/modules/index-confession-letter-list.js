@@ -95,7 +95,7 @@ const state = {
     putIndexConfessionLetterMsg:[{
             personalImg:"/src/assets/img/head.png",
             username: "你说的血蔷薇",
-            gender: "男",
+            gender: "女",
             name: "王涛",
             phone: "18846927777",
             college: "数据科学与技术学院",

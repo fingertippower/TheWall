@@ -48,7 +48,8 @@
             let gender = this.$store.state.IndexConfessionLetterList.putIndexConfessionLetterMsg[0].gender;
             if(gender == "男"){
                 this.boy = true;
-                console.log(this.boy);
+            }else{
+                this.girl = true;
             }
         }
     }
