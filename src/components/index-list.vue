@@ -78,6 +78,7 @@
                 scroll: '',
                 timer: null,
                 refresh: false
+
             }
         },
         computed:mapGetters(['getIndexConfessionLetterList']),
