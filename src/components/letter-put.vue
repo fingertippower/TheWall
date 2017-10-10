@@ -100,7 +100,7 @@
         .letter-body{
             position: absolute;
             width: 100%;
-            height: px2rem(930px);
+            height: px2rem(900px);
             background-color: rgba(255,118,119,1);
             margin-top: px2rem(8px);
             .previous{
@@ -111,11 +111,9 @@
                 margin-left: px2rem(20px);
             }
             .letter-msg{
-                padding-top: px2rem(30px);
-                padding-left: px2rem(30px);
-                padding-right: px2rem(30px);
+                padding: px2rem(30px) px2rem(30px) 0 px2rem(30px);
                 background-color: #fff;
-                height: px2rem(790px);
+                min-height: px2rem(760px);
                 width: px2rem(503px);
                 margin: px2rem(32px) auto auto auto;
                 border-radius: px2rem(20px);
@@ -131,7 +129,7 @@
                 }
                 .read{
                     position: absolute;
-                    margin-top: px2rem(85px);
+                    margin-top: px2rem(55px);
                     margin-left: px2rem(-32px);
                     width: px2rem(564px);
                     height: px2rem(145px);

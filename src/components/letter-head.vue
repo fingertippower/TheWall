@@ -33,7 +33,7 @@
         z-index: 5;
     }
     .letter-head{
-        width: px2rem(750px);
+        width: 100%;
         height: px2rem(107px);
         background-color: rgba(244,173,18,1);
     }

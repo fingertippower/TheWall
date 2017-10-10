@@ -1,6 +1,8 @@
 <template>
     <div class="pen">
-        <img class="penImg" src="../assets/img/indexPen.png">
+        <router-link to="/write-letter">
+            <img class="penImg" src="../assets/img/indexPen.png">
+        </router-link>
     </div>
 </template>
 

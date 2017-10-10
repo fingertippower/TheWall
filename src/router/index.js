@@ -18,6 +18,7 @@ import LetterPut from '../components/letter-put.vue'
 import LetterGet from '../components/letter-get.vue'
 import LetterGetMsg from '../components/letter-get-msg.vue'
 import LetterMsg from '../components/letter-msg.vue'
+import WriteLetter from '../components/writeLetter.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -106,6 +107,10 @@ export default new Router({
         {
             path:'/letter-msg',
             component:LetterMsg
+        },
+        {
+            path:'/write-letter',
+            component:WriteLetter
         }
     ]
 })
