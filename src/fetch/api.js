@@ -3,9 +3,9 @@ import qs from 'qs'
 /*
  * 此页面是对于axios的配置
  * */
-axios.defaults.timeout = 5000;
+//axios.defaults.timeout = 5000;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
-axios.defaults.baseURL = 'http://172.20.10.2:8080';
+axios.defaults.baseURL = 'http://192.168.43.183:8080';
 //axios.defaults.withCredentials = false;
 
 //POST传参序列化

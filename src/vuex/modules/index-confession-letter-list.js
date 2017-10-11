@@ -185,10 +185,10 @@ const actions = {
     getIndexConfessionLetterList({commit,state}){
         axios({
             method: 'get',
-            url: 'webapp/hello.json/' + state.page,
-            // params:{
-            //     "page":1
-            // }
+            url: 'webapp/hello.json/1',
+            /*params:{
+                "id":"{1}"
+            }*/
         }).then((res)=>{
             commit(types.GET_INDEX_CONFESSION_LETTER_LIST,res);
             console.log(res.data);
