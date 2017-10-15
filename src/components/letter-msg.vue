@@ -21,6 +21,7 @@
             <div class="author">{{getLetterMsg[0].letterAuthor}}</div>
             <div class="time">{{getLetterMsg[0].letterDate}}</div>
         </div>
+
         <div class="foot"></div>
     </div>
 </template>
