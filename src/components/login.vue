@@ -32,15 +32,6 @@
             </router-link>
             <button class="btn2">忘记密码</button>
             <button class="btn3">登录</button>
-            <div class="div2">
-                <hr class="hr1">
-                <hr class="hr2">
-                <span class="span3">快速登录</span>
-            </div>
-            <div class="div1">
-                <img class="QQ" src="../assets/img/QQ.png">
-                <img class="WeChat" src="../assets/img/WeChat.png">
-            </div>
         </div>
     </div>
 </template>
@@ -195,7 +186,7 @@
     .down button{
         font-size: px2rem(18px);
         height: px2rem(30px);
-        margin-top: px2rem(20px);
+        margin-top: px2rem(30px);
         background-color: transparent;
         border: none;
     }
@@ -210,52 +201,13 @@
         margin-right: px2rem(66.6616px);
     }
     .down button.btn3{
+        border: none;
         font-size: px2rem(60px);
         color: #ffffff;
         width: px2rem(415.3335px);
         height: px2rem(82.124px);
-        margin-top: px2rem(95px);
+        margin-top: px2rem(151.9541px);
         background-color: #503202;
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
-    }
-    .down .div2 hr{
-        width: px2rem(208px);
-        margin: px2rem(132.084px) auto;
-        margin-bottom: 0;
-        color: #A5A5A5;
-        position: relative;
-    }
-    .down .div2 .hr1{
-        float: left;
-        left: px2rem(29.1577px);
-    }
-    .down .div2 .hr2{
-        float: right;
-        right: px2rem(29.1577px);
-    }
-    .down .span3{
-        width: px2rem(130px);
-        font-size: px2rem(24px);
-        color: #DA9128;
-        margin:px2rem(116px) px2rem(-65px);
-        position: absolute;
-        text-align:center;
-        background-color: transparent;
-    }
-    .down .div1{
-        background-color: transparent;
-    }
-    .down .div1 img{
-        width: px2rem(70px);
-        height: px2rem(71px);
-        margin-top:px2rem(169px);
-        margin-bottom: 0;
-        background-color: transparent;
-    }
-    .down .div1 .QQ{
-        float: left;
-    }
-    .down .div1 .WeChat{
-        float: right;
     }
 </style>

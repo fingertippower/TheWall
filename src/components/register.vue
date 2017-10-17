@@ -13,33 +13,25 @@
                 <span class="span1">
                     <img src="../assets/img/phone.png">
                 </span>
-                <input class="text1" type="text" placeholder="输入手机号">
+                <input id="ip1" class="text1" type="text" placeholder="输入手机号">
                 <span class="span2">
-                    <button>获取验证码</button>
+                    <img class="img2" src="../assets/img/delete.png" @click="clearInput1()">
                 </span>
             </div>
             <div class="password">
                 <span class="span1">
                     <img class="img1" src="../assets/img/password.png">
                 </span>
-                <input id="ip" class="text2" type="password" placeholder="输入密码">
+                <input id="ip2" class="text2" type="password" placeholder="输入密码">
                 <span class="span2">
-                    <img class="img2" src="../assets/img/delete.png" @click="clearInput()">
+                    <img class="img2" src="../assets/img/delete.png" @click="clearInput2()">
                 </span>
             </div>
-            <button class="btn1">立即注册</button>
+            <router-link to="/login">
+                <button class="btn1">立即登录</button>
+            </router-link>
             <button class="btn2">忘记密码</button>
-            <input class="text3" type="text" placeholder="输入验证码">
             <button class="btn3">注册</button>
-            <div class="div2">
-                <hr class="hr1">
-                <hr class="hr2">
-                <span class="span3">快速登录</span>
-            </div>
-            <div class="div1">
-                <img class="QQ" src="../assets/img/QQ.png">
-                <img class="WeChat" src="../assets/img/WeChat.png">
-            </div>
         </div>
     </div>
 </template>
@@ -48,12 +40,16 @@
     export default{
         data(){
             return{
-
+                phone:"",
+                password:""
             }
         },
         methods:{
-            clearInput:function () {
-                document.getElementById('ip').value='';
+            clearInput1:function () {
+                document.getElementById('ip1').value='';
+            },
+            clearInput2:function () {
+                document.getElementById('ip2').value='';
             }
         }
     }
@@ -148,7 +144,7 @@
     .down input.text1::-webkit-input-placeholder,.down input.text2::-webkit-input-placeholder{
         color: #DA9128;
     }
-    .down .phone img{
+    .down .phone .span1 img{
         width: px2rem(20.792px);
         height: px2rem(34px);
         background-color: transparent;
@@ -159,8 +155,8 @@
         background-color: transparent;
     }
     .down .img2{
-        width: px2rem(22.4063px);
-        height: px2rem(22.4063px);
+        width: px2rem(24px);
+        height: px2rem(24px);
         background-color: transparent;
     }
     .down input.text1{
@@ -195,8 +191,8 @@
         border-color: #503202;
     }
     .down .phone .span2{
-        margin-left: px2rem(-116.667px);
-        margin-top: px2rem(46.333px);
+        margin-left: px2rem(-36.4063px);
+        margin-top: px2rem(107px);
         position: absolute;
         background-color: transparent;
     }
@@ -206,21 +202,10 @@
         position: absolute;
         background-color: transparent;
     }
-    .down .phone button{
-        width: px2rem(102.667px);
-        height: px2rem(20px);
-        font-size: px2rem(10px);
-        font-family: 宋体;
-        border: none;
-        background-color: #DA9128;
-        color: #ffffff;
-        border-radius: px2rem(4px) px2rem(4px) px2rem(4px) px2rem(4px);
-        margin-top: px2rem(62.5px);
-    }
     .down button.btn1{
         font-size: px2rem(18px);
         height: px2rem(30px);
-        margin-top: px2rem(20px);
+        margin-top: px2rem(30px);
         background-color: transparent;
         border: none;
         color: #FF006E;
@@ -230,7 +215,7 @@
     .down button.btn2{
         font-size: px2rem(18px);
         height: px2rem(30px);
-        margin-top: px2rem(20px);
+        margin-top: px2rem(30px);
         background-color: transparent;
         border: none;
         color: #727272;
@@ -243,48 +228,8 @@
         color: #ffffff;
         width: px2rem(415.3335px);
         height: px2rem(82.124px);
-        margin-top: px2rem(51.9541px);
+        margin-top: px2rem(151.9541px);
         background-color: #503202;
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
-    }
-    .down .div2 hr{
-        width: px2rem(208px);
-        margin: px2rem(121.5762px) auto;
-        margin-bottom: 0;
-        color: #A5A5A5;
-        position: relative;
-    }
-    .down .div2 .hr1{
-        float: left;
-        left: px2rem(29.1577px);
-    }
-    .down .div2 .hr2{
-        float: right;
-        right: px2rem(29.1577px);
-    }
-    .down .span3{
-        width: px2rem(130px);
-        font-size: px2rem(24px);
-        color: #DA9128;
-        margin:px2rem(107px) px2rem(-65px);
-        position: absolute;
-        text-align:center;
-        background-color: transparent;
-    }
-    .down .div1{
-        background-color: transparent;
-    }
-    .down .div1 img{
-        width: px2rem(70px);
-        height: px2rem(70px);
-        margin-top: px2rem(158.5762px);
-        margin-bottom: 0;
-        background-color: transparent;
-    }
-    .down .div1 .QQ{
-        float: left;
-    }
-    .down .div1 .WeChat{
-        float: right;
     }
 </style>
