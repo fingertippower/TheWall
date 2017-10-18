@@ -22,10 +22,10 @@ const state = {
             confessionLetterImg7: "/src/assets/img/coment/3.jpg",
             confessionLetterImg8: "/src/assets/img/coment/3.jpg",
             confessionLetterImg9: "/src/assets/img/coment/3.jpg",
-            confessionLetterTalkNum: "999",
-            confessionLetterGoodNum: "9999",
-            confessionLetterNotGoodNum: "1",
-            confessionLetterCollectionNum: "100",
+            confessionLetterTalkNum: "18.1万",
+            confessionLetterGoodNum: "18.1万",
+            confessionLetterNotGoodNum: "17.1万",
+            confessionLetterCollectionNum: "12.1万",
             likeDisplay: true,
             alikeDisplay: false,
             dislikeDisplay: true,
@@ -329,6 +329,7 @@ const actions = {
     //用户在评论中评论完成后点击发送按钮，将用户的评论发送到后台
     sendTheTalk(){
         let input = document.getElementById('input').value;
+        console.log(input);
     },
 }
 

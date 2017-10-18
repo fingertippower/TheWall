@@ -188,8 +188,8 @@
                 height: px2rem(32px);
                 .listWordFootUl{
                     height: px2rem(32px);
-                    width: 65%;
-                    margin-left: 32%;
+                    width: 80%;
+                    margin-left: 20%;
                     list-style: none;
                     .listWordFootLi{
                         float: left;
@@ -197,7 +197,7 @@
                         .listWordFootLiTalk{
                             float: left;
                             text-align: center;
-                            width: px2rem(55px);
+                            width: px2rem(85px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(217,213,213,1);
@@ -211,7 +211,7 @@
                         .listWordFootLiLetter{
                             float: left;
                             text-align: center;
-                            width: px2rem(55px);
+                            width: px2rem(75px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(217,213,213,1);
@@ -231,7 +231,7 @@
                         .listWordFootLiPost{
                             float: left;
                             text-align: center;
-                            width: px2rem(55px);
+                            width: px2rem(85px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(217,213,213,1);
@@ -251,7 +251,7 @@
                         .listWordFootLiGood{
                             float: left;
                             text-align: center;
-                            width: px2rem(55px);
+                            width: px2rem(85px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(217,213,213,1);

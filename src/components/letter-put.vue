@@ -19,7 +19,9 @@
             <div class="letter-msg">
                 <p class="letter-msg-title">{{letterTitle}}</p>
                 <p class="letter-word">{{letterBody}}</p>
-                <div class="read">阅读</div>
+                <router-link to="/letter-msg">
+                    <div class="read">阅读</div>
+                </router-link>
             </div>
         </div>
     </div>
