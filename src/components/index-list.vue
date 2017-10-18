@@ -16,15 +16,15 @@
                     <div class="listWordBody">
                         <p class="listWordBodyMsg">{{val.confessionLetterMsg}}</p>
                         <div class="imgBox">
-                            <img class="listImg" :src="val.confessionLetterImg1" onerror="this.style.display='none'">
-                            <img class="listImg" :src="val.confessionLetterImg2" onerror="this.style.display='none'">
-                            <img class="listImg" :src="val.confessionLetterImg3" onerror="this.style.display='none'">
-                            <img class="listImg" :src="val.confessionLetterImg4" onerror="this.style.display='none'">
-                            <img class="listImg" :src="val.confessionLetterImg5" onerror="this.style.display='none'">
-                            <img class="listImg" :src="val.confessionLetterImg6" onerror="this.style.display='none'">
-                            <img class="listImg" :src="val.confessionLetterImg7" onerror="this.style.display='none'">
-                            <img class="listImg" :src="val.confessionLetterImg8" onerror="this.style.display='none'">
-                            <img class="listImg" :src="val.confessionLetterImg9" onerror="this.style.display='none'">
+                            <img class="listImg" :src="val.confessionLetterImg1" onerror="this.style.display='none'" @click="enlarge($event)">
+                            <img class="listImg" :src="val.confessionLetterImg2" onerror="this.style.display='none'" @click="enlarge($event)">
+                            <img class="listImg" :src="val.confessionLetterImg3" onerror="this.style.display='none'" @click="enlarge($event)">
+                            <img class="listImg" :src="val.confessionLetterImg4" onerror="this.style.display='none'" @click="enlarge($event)">
+                            <img class="listImg" :src="val.confessionLetterImg5" onerror="this.style.display='none'" @click="enlarge($event)">
+                            <img class="listImg" :src="val.confessionLetterImg6" onerror="this.style.display='none'" @click="enlarge($event)">
+                            <img class="listImg" :src="val.confessionLetterImg7" onerror="this.style.display='none'" @click="enlarge($event)">
+                            <img class="listImg" :src="val.confessionLetterImg8" onerror="this.style.display='none'" @click="enlarge($event)">
+                            <img class="listImg" :src="val.confessionLetterImg9" onerror="this.style.display='none'" @click="enlarge($event)">
                         </div>
                     </div>
                     <div class="listWordFoot">
@@ -63,6 +63,9 @@
                 </div>
             </li>
         </ul>
+        <div class="enlarge" v-show="big" @click="narrow">
+            <img src="" onerror="this.style.display='none'" class="enlargeImg" v-show="big">
+        </div>
         <div class="refreshImgBox" v-show="refresh">
             <img src="../assets/img/refresh.gif" class="refreshImg">
         </div>
@@ -77,7 +80,8 @@
             return{
                 scroll: '',
                 timer: null,
-                refresh: false
+                refresh: false,
+                big:false
 
             }
         },
@@ -97,6 +101,14 @@
                         setTimeout(()=>{this.refresh = false;}, 2000);
                     }
                 },100);
+            },
+            enlarge:function(event){
+                let oImg = document.getElementsByClassName('enlargeImg');
+                oImg[0].src = event.currentTarget.src;
+                this.big = true;
+            },
+            narrow:function(){
+                this.big = false;
             }
         },
         mounted:function(){
@@ -176,8 +188,8 @@
                 height: px2rem(32px);
                 .listWordFootUl{
                     height: px2rem(32px);
-                    width: 65%;
-                    margin-left: 32%;
+                    width: 80%;
+                    margin-left: 20%;
                     list-style: none;
                     .listWordFootLi{
                         float: left;
@@ -185,7 +197,7 @@
                         .listWordFootLiTalk{
                             float: left;
                             text-align: center;
-                            width: px2rem(55px);
+                            width: px2rem(85px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(217,213,213,1);
@@ -199,7 +211,7 @@
                         .listWordFootLiLetter{
                             float: left;
                             text-align: center;
-                            width: px2rem(55px);
+                            width: px2rem(75px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(217,213,213,1);
@@ -219,7 +231,7 @@
                         .listWordFootLiPost{
                             float: left;
                             text-align: center;
-                            width: px2rem(55px);
+                            width: px2rem(85px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(217,213,213,1);
@@ -239,7 +251,7 @@
                         .listWordFootLiGood{
                             float: left;
                             text-align: center;
-                            width: px2rem(55px);
+                            width: px2rem(85px);
                             height: px2rem(30px);
                             font-size: px2rem(8px);
                             color: rgba(217,213,213,1);
@@ -274,5 +286,20 @@
             width: px2rem(70px);
         }
     }
-
+    .enlarge{
+        width: 100%;
+        height: px2rem(1334px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .enlargeImg{
+            width: 100%;
+            vertical-align:middle;
+        }
+    }
 </style>

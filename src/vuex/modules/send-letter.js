@@ -3,6 +3,7 @@ import * as types from '../types'
 const state = {
     letter: [
         {
+            confessionLetterIndex: 0,
             timeMonth: "4月",
             timeDay: "00",
             letterTitle: "0表报按卡爱看",
@@ -12,6 +13,7 @@ const state = {
             "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。"
         },
         {
+            confessionLetterIndex: 0,
             timeMonth: "7月",
             timeDay: "01",
             letterTitle: "1表报按卡爱看",
@@ -21,6 +23,7 @@ const state = {
             "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。"
         },
         {
+            confessionLetterIndex: 0,
             timeMonth: "7月",
             timeDay: "02",
             letterTitle: "2表报按卡爱看",
@@ -30,6 +33,7 @@ const state = {
             "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。"
         },
         {
+            confessionLetterIndex: 0,
             timeMonth: "7月",
             timeDay: "03",
             letterTitle: "3表报按卡爱看",
@@ -39,6 +43,7 @@ const state = {
             "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。"
         },
         {
+            confessionLetterIndex: 0,
             timeMonth: "7月",
             timeDay: "04",
             letterTitle: "4表报按卡爱看",
@@ -48,6 +53,7 @@ const state = {
             "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。"
         },
         {
+            confessionLetterIndex: 0,
             timeMonth: "7月",
             timeDay: "05",
             letterTitle: "5表报按卡爱看",
@@ -57,6 +63,7 @@ const state = {
             "也许是你优雅且淑女的气质，也许就是那一刻的心动，于是，我便喜欢上你了。"
         },
         {
+            confessionLetterIndex: 0,
             timeMonth: "7月",
             timeDay: "06",
             letterTitle: "6表报按卡爱看",
@@ -71,34 +78,42 @@ const state = {
     letterBody: "",
     letterGet:[
         {
+            confessionLetterIndex: 0,
             letterTitle:"这是一个新的表白",
             letterDate:"2017.12.4"
         },
         {
+            confessionLetterIndex: 0,
             letterTitle:"这是一个新的表白",
             letterDate:"2017.12.4"
         },
         {
+            confessionLetterIndex: 0,
             letterTitle:"这是一个新的表白",
             letterDate:"2017.12.4"
         },
         {
+            confessionLetterIndex: 0,
             letterTitle:"这是一个新的表白",
             letterDate:"2017.12.4"
         },
         {
+            confessionLetterIndex: 0,
             letterTitle:"这是一个新的表白",
             letterDate:"2017.12.4"
         },
         {
+            confessionLetterIndex: 0,
             letterTitle:"这是一个新的表白",
             letterDate:"2017.12.4"
         },
         {
+            confessionLetterIndex: 0,
             letterTitle:"这是一个新的表白",
             letterDate:"2017.12.4"
         },
         {
+            confessionLetterIndex: 0,
             letterTitle:"这是一个新的表白",
             letterDate:"2017.12.4"
         },
