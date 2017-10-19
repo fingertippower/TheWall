@@ -4,10 +4,6 @@ export const LETTER_DISPLAY = 'LETTER_DISPLAY';
 export const INDEX_DISPLAY = 'INDEX_DISPLAY';
 //主页下面的个人中心的常量
 export const PERSONAL_DISPLAY = 'PERSONAL_DISPLAY';
-
-export const CONCERN_CLICK='CONCERN_CLICK';
-
-export const FANS_CLICK='FANS_CLICK';
 //发送信件页面读取对应日期下的信件
 export const LETTER_MSG = 'LETTER_MSG';
 //点击事件，点击previous时信件的index值会减少
@@ -32,3 +28,7 @@ export const CONFESSION_LETTER_HEART = 'CONFESSION_LETTER_HEART'
 export const CONFESSION_LETTER_PERSONAL_MSG = 'CONFESSION_LETTER_PERSONAL_MSG'
 //主页通知
 export const INDEX_NOTICE = 'INDEX_NOTICE'
+
+export const REGISTER='REGISTER'
+
+export const GET_COLLECT_LIST='GET_COLLECT_LIST'
