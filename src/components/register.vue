@@ -31,12 +31,14 @@
                 <button class="btn1">立即登录</button>
             </router-link>
             <button class="btn2">忘记密码</button>
-            <button class="btn3">注册</button>
+            <button class="btn3" @click="register(register)">注册</button>
         </div>
     </div>
 </template>
 
 <script>
+    import { mapGetters,mapActions } from 'vuex'
+    import axios from 'axios'
     export default{
         data(){
             return{
@@ -45,6 +47,7 @@
             }
         },
         methods:{
+            ...mapActions(['register']),
             clearInput1:function () {
                 document.getElementById('ip1').value='';
             },
