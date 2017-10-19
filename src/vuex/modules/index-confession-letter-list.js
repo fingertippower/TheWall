@@ -4,7 +4,7 @@ import * as types from '../types'
 const state = {
     page:1,
     indexConfessionLetterList:[
-        {
+        /*{
             confessionLetterIndex: 0,
             authorUsername: "回忆中的血蔷薇",
             confessionLetterTime: "2017年2月2日",
@@ -206,7 +206,7 @@ const state = {
             adislikeDisplay: false,
             heart:true,
             aheart:false
-        },
+        },*/
     ],
     putIndexConfessionLetterMsg:[{
             personalImg:"/src/assets/img/head.png",
@@ -245,7 +245,8 @@ const state = {
 const mutations = {
     //从后台获取主页所有的表白信件，和后台对接上在写
     [types.GET_INDEX_CONFESSION_LETTER_LIST](state,res){
-        state.indexConfessionLetterList.push(res.data);
+        let arr = state.indexConfessionLetterList.concat(res.data);
+        state.indexConfessionLetterList = arr;
         state.page++;
     },
     //用户点击喜欢的图标后，喜欢数值加一，并且改变喜欢的图片样式
