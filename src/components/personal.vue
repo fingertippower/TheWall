@@ -21,13 +21,10 @@
                 <img class="hide" src="../assets/img/hide.png">
             </span>
             <img class="public" id="name" src="../assets/img/name.png">
-            <span>真实姓名</span>
-            <hr class="short-hr">
-            <img class="public" id="birthday" src="../assets/img/birthday.png">
-            <span>生日</span>
+            <span>个人信息</span>
             <hr class="short-hr">
             <img class="public" id="news" src="../assets/img/news.png">
-            <span>消息</span>
+            <span>系统消息</span>
             <hr class="short-hr">
             <img class="public" id="follow" src="../assets/img/follow.png">
             <router-link to="/schoolfellow">
@@ -108,7 +105,7 @@
         margin-top: px2rem(29.2397px);
     }
     #collection{
-        margin-top: px2rem(123px);
+        margin-top: px2rem(173px);
     }
     #name{
         width: px2rem(21px);
