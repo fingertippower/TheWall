@@ -6,7 +6,6 @@ import LetterHeadStyle from './modules/letter-head-style'
 import IndexConfessionLetterList from './modules/index-confession-letter-list'
 import IndexHeadNotice from './modules/index-head-notice'
 import WriteLetter from './modules/write-letter'
-import Register from './modules/register'
 import Collect from './modules/collect'
 
 Vue.use(Vuex);
@@ -19,7 +18,6 @@ export default new Vuex.Store({
         IndexConfessionLetterList,
         IndexHeadNotice,
         WriteLetter,
-        Register,
         Collect
     }
 })
