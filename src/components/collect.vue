@@ -10,6 +10,9 @@
             <p class="time">{{val.collectTime}}</p>
             <img :src="val.collectImg" onerror="this.style.display='none'">
         </div>
+        <div class="refreshImgBox" v-show="refresh">
+            <img src="../assets/img/refresh.gif" class="refreshImg">
+        </div>
     </div>
 </template>
 
@@ -58,7 +61,6 @@
         width: 100%;
         height: 100%;
         background-color: #F6EDDC;
-        position: fixed;
     }
     .head{
         width:100%;
@@ -83,8 +85,8 @@
     .collect{
         width: px2rem(691px);
         height: px2rem(282.8843px);
-        margin: px2rem(6px) auto;
-        margin-bottom: px2rem(340px);
+        margin: px2rem(10px) auto;
+        margin-bottom: px2rem(200px);
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
         background-color: rgba(255,255,255,0.5);
         box-shadow:0 0 px2rem(4px) dimgrey;
