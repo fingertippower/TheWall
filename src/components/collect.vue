@@ -4,27 +4,50 @@
             <img src="../assets/img/return.png" @click="goBack">
             <span>收藏</span>
         </div>
-        <div class="collect">
-            <p class="title">五点二十分中央大街</p>
-            <p class="text">你快回家就能看金碧辉煌你看</p>
-            <p class="time">2017-08-18</p>
-            <img src="../assets/img/background.png">
-        </div>
-        <div class="collect">
-            <p class="title">五点二十分中央大街</p>
-            <p class="text">你快回家就能看金碧辉煌你看</p>
-            <p class="time">2017-08-18</p>
-            <img src="../assets/img/background.png">
+        <div class="collect" v-for="(val,collect) in getCollectList">
+            <p class="title">{{val.collectTitle}}</p>
+            <p class="text">{{val.collectText}}</p>
+            <p class="time">{{val.collectTime}}</p>
+            <img :src="val.collectImg" onerror="this.style.display='none'">
         </div>
     </div>
 </template>
 
 <script>
+    import {mapGetters} from 'vuex'
+    import axios from 'axios'
     export default{
+        data(){
+            return{
+                scroll:'',
+                timer:null,
+                refresh:false
+            }
+        },
+        computed:mapGetters(['getCollectList']),
         methods:{
             goBack:function(){
                 this.$router.go(-1);
+            },
+            menu:function () {
+                if(typeof this.timer==='number'){
+                    clearTimeout(this.timer)
+                }
+                this.timer=setTimeout(()=>{
+                    this.scroll=document.body.scrollTop;
+                    if(this.scroll>700){
+                        this.refresh=true;
+                        this.$store.dispatch('getCollectList');
+                        setTimeout(()=>{
+                            this.refresh=false;
+                        },2000)
+                    }
+                },100)
             }
+        },
+        mounted:function () {
+            window.addEventListener('scroll',this.menu,false);
+            return this.$store.dispatch('getCollectList');
         }
     }
 </script>
@@ -68,12 +91,13 @@
     }
     .collect .title{
         font-size: px2rem(26px);
-        margin-top: px2rem(108px);
+        margin-top: px2rem(58px);
         margin-left: px2rem(25px);
         position: absolute;
     }
     .collect .text{
-        margin-top: px2rem(151px);
+        width: px2rem(447px);
+        margin-top: px2rem(101px);
         margin-left: px2rem(25px);
         position: absolute;
         color: #CDCCCB;
