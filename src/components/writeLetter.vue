@@ -121,6 +121,7 @@
 
 <script>
     import { mapGetters,mapActions } from 'vuex'
+
     export default{
         methods:{
             ...mapActions(['getImg']),
