@@ -122,7 +122,6 @@
 <script>
     import { mapGetters,mapActions } from 'vuex'
     export default{
-
         methods:{
             ...mapActions(['getImg']),
             goBack:function(){
@@ -130,6 +129,7 @@
             },
         }
     }
+
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
