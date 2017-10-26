@@ -2,7 +2,6 @@ import axios from '../../fetch/api'
 import * as types from '../types'
 
 const state={
-    page:1,
     collectList:[
         {
             collectTitle:'五点二十分中央大街',
@@ -26,17 +25,14 @@ const state={
 };
 
 const mutations={
-    [types.GET_COLLECT_LIST](state,res){
-        state.collectList.push(res.data);
-        state.page++;
-    }
+
 };
 
 const actions={
     getCollectList({commit,state}){
         axios({
             method:'get',
-            url:''+state.page,
+            url:'',
         }).then((res)=>{
             commit(types.GET_COLLECT_LIST,res);
         })

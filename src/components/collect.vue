@@ -19,9 +19,7 @@
     export default{
         data(){
             return{
-                scroll:'',
-                timer:null,
-                refresh:false
+
             }
         },
         computed:mapGetters(['getCollectList']),
@@ -29,25 +27,6 @@
             goBack:function(){
                 this.$router.go(-1);
             },
-            menu:function () {
-                if(typeof this.timer==='number'){
-                    clearTimeout(this.timer)
-                }
-                this.timer=setTimeout(()=>{
-                    this.scroll=document.body.scrollTop;
-                    if(this.scroll>700){
-                        this.refresh=true;
-                        this.$store.dispatch('getCollectList');
-                        setTimeout(()=>{
-                            this.refresh=false;
-                        },2000)
-                    }
-                },100)
-            }
-        },
-        mounted:function () {
-            window.addEventListener('scroll',this.menu,false);
-            return this.$store.dispatch('getCollectList');
         }
     }
 </script>
@@ -58,13 +37,12 @@
         width: 100%;
         height: 100%;
         background-color: #F6EDDC;
-        position: fixed;
     }
     .head{
         width:100%;
         height:px2rem(109.1172px);
         background-color: #F4AD12;
-        position: relative;
+        position: fixed;
     }
     .head img{
         width:px2rem(23px);
@@ -78,13 +56,12 @@
         text-align: center;
         margin-top:px2rem(55.4971px);
         margin-left: px2rem(276.0039px);
-        position: absolute;
     }
     .collect{
         width: px2rem(691px);
         height: px2rem(282.8843px);
-        margin: px2rem(6px) auto;
-        margin-bottom: px2rem(340px);
+        margin: auto;
+        margin-bottom: px2rem(200px);
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
         background-color: rgba(255,255,255,0.5);
         box-shadow:0 0 px2rem(4px) dimgrey;
