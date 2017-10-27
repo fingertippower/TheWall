@@ -4,25 +4,24 @@
             <img src="../assets/img/return.png" @click="goBack">
             <span>校友</span>
         </div>
-        <div class="people">
-            <img src="../assets/img/head.png">
-            <span>啦啦啦</span>
-            <hr/>
-        </div>
-        <div class="people1">
-            <img src="../assets/img/head.png">
-            <span>啦啦啦</span>
+        <div class="people" v-for="(val,schoolfellow) in getSchoolfellowList">
+            <img :src="val.schoolfellowImg" onerror="this.style.display='none'">
+            <span>{{val.schoolfellowName}}</span>
             <hr/>
         </div>
     </div>
 </template>
 
 <script>
+    import {mapGetters} from 'vuex'
+    import axios from 'axios'
     export default{
         data(){
-            return{}
+            return{
 
+            }
         },
+        computed:mapGetters(['getSchoolfellowList']),
         methods:{
             goBack:function(){
                 this.$router.go(-1);
@@ -38,6 +37,7 @@
         width:100%;
         height:px2rem(109.1172px);
         background-color: #F4AD12;
+        position: fixed;
     }
     .head img{
         width:px2rem(23px);
@@ -53,12 +53,6 @@
         margin-left: px2rem(276.0039px);
         position: absolute;
     }
-    .concern{
-        border-top-style: none;
-        border-left-style: none;
-        border-right-style: none;
-        border-color: #F4AD12;
-    }
     .people img{
         width: px2rem(68px);
         height: px2rem(68px);
@@ -69,24 +63,8 @@
         font-size: px2rem(28px);
         margin-left: px2rem(22px);
         margin-top: px2rem(30px);
-        position: absolute;
     }
     .people hr{
-        margin-top: px2rem(20px);
-    }
-    .people1 img{
-        width: px2rem(68px);
-        height: px2rem(68px);
-        margin-top: px2rem(20px);
-        margin-left: px2rem(32px);
-    }
-    .people1 span{
-        font-size: px2rem(28px);
-        margin-left: px2rem(22px);
-        margin-top: px2rem(30px);
-        position: absolute;
-    }
-    .people1 hr{
         margin-top: px2rem(20px);
     }
 </style>
