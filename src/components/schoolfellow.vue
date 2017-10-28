@@ -53,6 +53,11 @@
         margin-left: px2rem(276.0039px);
         position: absolute;
     }
+    .people{
+        position: relative;
+        top:px2rem(110px);
+        z-index: -1;
+    }
     .people img{
         width: px2rem(68px);
         height: px2rem(68px);
