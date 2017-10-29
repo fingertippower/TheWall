@@ -44,10 +44,10 @@
                                     <img class="aListWordFootLiLetterImg" src="../assets/img/aheart_alt.png"   v-show="val.aheart">
                                 </div>
                             </li>
-                            <li class="listWordFootLi" @click="like(index)">
+                            <li class="listWordFootLi">
                                 <div>
                                     <div class="listWordFootLiPost">{{val.confessionLetterGoodNum}}</div>
-                                    <img class="listWordFootLiPostImg" src="../assets/img/like.png" v-show="val.likeDisplay">
+                                    <img class="listWordFootLiPostImg" src="../assets/img/like.png" v-show="val.likeDisplay" @click="like(index)">
                                     <img class="aListWordFootLiPostImg" src="../assets/img/alike.png" v-show="val.alikeDisplay">
                                 </div>
                             </li>

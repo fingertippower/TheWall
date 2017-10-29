@@ -4,7 +4,7 @@ import * as types from '../types'
 const state = {
     page:1,
     indexConfessionLetterList:[
-        /*{
+        {
             confessionLetterIndex: 0,
             authorUsername: "回忆中的血蔷薇",
             confessionLetterTime: "2017年2月2日",
@@ -20,8 +20,8 @@ const state = {
             confessionLetterImg5: "/src/assets/img/coment/4.jpg",
             confessionLetterImg6: "/src/assets/img/coment/3.jpg",
             confessionLetterImg7: "/src/assets/img/coment/3.jpg",
-            confessionLetterImg8: "/src/assets/img/coment/3.jpg",
-            confessionLetterImg9: "/src/assets/img/coment/3.jpg",
+            confessionLetterImg8: "",
+            confessionLetterImg9: "",
             confessionLetterTalkNum: "18.1万",
             confessionLetterGoodNum: "18.1万",
             confessionLetterNotGoodNum: "17.1万",
@@ -206,7 +206,7 @@ const state = {
             adislikeDisplay: false,
             heart:true,
             aheart:false
-        },*/
+        },
     ],
     putIndexConfessionLetterMsg:[{
             personalImg:"/src/assets/img/head.png",
@@ -257,6 +257,9 @@ const mutations = {
             if(goodImg[index].style.display != "none"){
                 if(state.indexConfessionLetterList[index].confessionLetterGoodNum == 9999){
                     state.indexConfessionLetterList[index].confessionLetterGoodNum = "1万";
+                }else if(state.indexConfessionLetterList[index].confessionLetterGoodNum == "1.0万"){
+                    state.indexConfessionLetterList[index].likeDisplay = false;
+                    state.indexConfessionLetterList[index].alikeDisplay = true;
                 }else{
                     state.indexConfessionLetterList[index].confessionLetterGoodNum ++;
                 }
@@ -284,7 +287,7 @@ const mutations = {
         let heart = document.getElementsByClassName('listWordFootLiLetterImg');
         if(heart[index].style.display != "none"){
             if(state.indexConfessionLetterList[index].confessionLetterCollectionNum == 9999){
-                state.indexConfessionLetterList[index].confessionLetterCollectionNum = "1万";
+                state.indexConfessionLetterList[index].confessionLetterCollectionNum = "1.0万";
             }else{
                 state.indexConfessionLetterList[index].confessionLetterCollectionNum ++;
             }
@@ -302,18 +305,21 @@ const actions = {
     getIndexConfessionLetterList({commit,state}){
         axios({
             method: 'get',
-            url: 'webapp/dongtaivisit.json/'+ state.page,
-            /*params:{
-                "id":"{1}"
-            }*/
+            url: 'webapp/dongtaivisit.json/page='+state.page,
         }).then((res)=>{
             commit(types.GET_INDEX_CONFESSION_LETTER_LIST,res);
-            console.log(res.data);
         })
     },
     //用户点击喜欢之后相应表白信件的喜欢数值会加一，并且传给后台
-    like({commit},index){
-        commit(types.CONFESSION_LETTER_LIKE,index);
+    like({commit,state},index){
+        let toIndex = state.indexConfessionLetterList[index].confessionLetterIndex;
+        console.log(toIndex);
+        axios({
+            method: 'get',
+            url: 'webapp/message.json/'+toIndex,
+        }).then((res)=>{
+            commit(types.CONFESSION_LETTER_LIKE,index);
+        })
     },
     //用户点击喜欢之后相应表白信件的喜欢数值会加一，并且传给后台
     dislike({commit},index){
