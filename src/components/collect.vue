@@ -43,6 +43,7 @@
         height:px2rem(109.1172px);
         background-color: #F4AD12;
         position: fixed;
+        z-index: 1;
     }
     .head img{
         width:px2rem(23px);
@@ -65,6 +66,8 @@
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
         background-color: rgba(255,255,255,0.5);
         box-shadow:0 0 px2rem(4px) dimgrey;
+        position: relative;
+        top: px2rem(150px);
     }
     .collect .title{
         font-size: px2rem(26px);
