@@ -13,7 +13,7 @@
                 <span class="span1">
                     <img class="img1" src="../assets/img/phone.png">
                 </span>
-                <input id="ip1" class="text1" type="text" placeholder="输入手机号">
+                <input id="inputPhone" class="text1" type="text" placeholder="输入手机号">
                 <span class="span2">
                     <img class="img2" src="../assets/img/delete.png" @click="clearInput1()">
                 </span>
@@ -22,7 +22,7 @@
                 <span class="span1">
                     <img class="img3" src="../assets/img/password.png">
                 </span>
-                <input id="ip2" class="text2" type="password" placeholder="输入密码">
+                <input id="inputPassword" class="text2" type="password" placeholder="输入密码">
                 <span class="span2">
                     <img class="img2" src="../assets/img/delete.png" @click="clearInput2()">
                 </span>
@@ -31,12 +31,13 @@
                 <button class="btn1">立即注册</button>
             </router-link>
             <button class="btn2">忘记密码</button>
-            <button class="btn3">登录</button>
+            <button class="btn3" @click="login()">登录</button>
         </div>
     </div>
 </template>
 
 <script>
+    import { mapActions } from 'vuex'
     export default{
         data(){
             return{
@@ -44,11 +45,12 @@
             }
         },
         methods:{
+            ...mapActions(['login']),
             clearInput1:function () {
-                document.getElementById('ip1').value='';
+                document.getElementById('inputPhone').value='';
             },
             clearInput2:function () {
-                document.getElementById('ip2').value='';
+                document.getElementById('inputPassword').value='';
             }
         }
     }
