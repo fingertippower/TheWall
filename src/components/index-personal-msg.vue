@@ -8,7 +8,8 @@
                 <img @click="goBack" class="goBack" src="../assets/img/click.png">
             </div>
             <div class="body">
-                <div class="bodyMsg">{{putIndexConfessionLetterMsg[0].username}}
+                <div class="bodyMsg">
+                    <span>{{putIndexConfessionLetterMsg[0].username}}</span>
                     <span><img src="../assets/img/woman.png" class="genderImgWoman" v-show="girl"></span>
                     <span><img src="../assets/img/man.png" class="genderImgMan" v-show="boy"></span>
                 </div>
@@ -33,7 +34,7 @@
         data(){
           return{
                 boy:false,
-                girl:false
+                girl:false,
           }
         },
         computed:{
@@ -45,12 +46,12 @@
             }
         },
         mounted(){
-            let gender = this.$store.state.IndexConfessionLetterList.putIndexConfessionLetterMsg[0].gender;
+            /*let gender = this.$store.state.IndexConfessionLetterList.putIndexConfessionLetterMsg[0].gender;
             if(gender == "男"){
                 this.boy = true;
             }else{
                 this.girl = true;
-            }
+            }*/
         }
     }
 </script>
@@ -108,6 +109,8 @@
             position: relative;
             top: 8%;
             color: rgba(142,141,141,1);
+            width: px2rem(420px);
+            height: px2rem(40px);
         }
         .position{
             margin-top: 3%;

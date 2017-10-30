@@ -32,3 +32,9 @@ export const INDEX_NOTICE = 'INDEX_NOTICE'
 export const GET_COLLECT_LIST='GET_COLLECT_LIST'
 
 export const GET_SCHOOLFELLOW_LIST='GET_SCHOOLFELLOW_LIST'
+//获取评论
+export const GET_THE_TALK = 'GET_THE_TALK'
+//用户获取收信箱信件信息
+export const GET_LETTER = 'GET_LETTER'
+//阅读信件
+export const LOOK_LETTER = 'LOOK_LETTER'

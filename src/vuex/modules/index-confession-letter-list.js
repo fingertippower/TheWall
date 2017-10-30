@@ -1,10 +1,11 @@
 import axios from '../../fetch/api'
 import * as types from '../types'
+import router from '../../router/index.js'
 
 const state = {
     page:1,
     indexConfessionLetterList:[
-        {
+       {
             confessionLetterIndex: 0,
             authorUsername: "回忆中的血蔷薇",
             confessionLetterTime: "2017年2月2日",
@@ -208,7 +209,8 @@ const state = {
             aheart:false
         },
     ],
-    putIndexConfessionLetterMsg:[{
+    putIndexConfessionLetterMsg:[
+        {
             personalImg:"/src/assets/img/head.png",
             username: "你说的血蔷薇",
             gender: "女",
@@ -216,10 +218,17 @@ const state = {
             phone: "18846927777",
             college: "数据科学与技术学院",
             grade: "2015"
+         /*  personalImg:"",
+             username: "",
+             gender: "",
+             name: "",
+             phone: "",
+             college: "",
+             grade: ""*/
         }
     ],
     talkList:[
-        {
+       /* {
             personalHeadImg:"/src/assets/img/head.png",
             personalNickname:"已经回不去",
             talkMsg:"这句话说的，已下载就说到了电子上去了字的萨科简单。"
@@ -238,8 +247,9 @@ const state = {
             personalHeadImg:"/src/assets/img/head.png",
             personalNickname:"已经回不去",
             talkMsg:"这句话说的，已下载就说到了电子上去了字的萨科简单。"
-        },
-    ]
+        },*/
+    ],
+    talkIndex:0
 }
 
 const mutations = {
@@ -275,6 +285,9 @@ const mutations = {
             if(notGoodImg[index].style.display != "none"){
                 if(state.indexConfessionLetterList[index].confessionLetterNotGoodNum == 9999){
                     state.indexConfessionLetterList[index].confessionLetterNotGoodNum = "1万";
+                }else if(state.indexConfessionLetterList[index].confessionLetterNotGoodNum == "1.0万"){
+                    state.indexConfessionLetterList[index].dislikeDisplay = false;
+                    state.indexConfessionLetterList[index].adislikeDisplay = true;
                 }else{
                     state.indexConfessionLetterList[index].confessionLetterNotGoodNum ++;
                 }
@@ -296,8 +309,11 @@ const mutations = {
         }
     },
     //用户点击主页表白信用户头像后将从后台获取的对应用户的信息存储在state中的putIndexConfessionLetterMsg中
-    [types.CONFESSION_LETTER_PERSONAL_MSG](state,index){
-
+    [types.CONFESSION_LETTER_PERSONAL_MSG](state,res){
+        state.putIndexConfessionLetterMsg[0] = res.data;
+    },
+    [types.GET_THE_TALK](state,res){
+        state.talkList = res.data;
     }
 }
 const actions = {
@@ -313,32 +329,79 @@ const actions = {
     //用户点击喜欢之后相应表白信件的喜欢数值会加一，并且传给后台
     like({commit,state},index){
         let toIndex = state.indexConfessionLetterList[index].confessionLetterIndex;
-        console.log(toIndex);
         axios({
             method: 'get',
-            url: 'webapp/message.json/'+toIndex,
+            url: 'webapp/point.json/'+toIndex,
         }).then((res)=>{
-
             commit(types.CONFESSION_LETTER_LIKE,index);
         })
     },
-    //用户点击喜欢之后相应表白信件的喜欢数值会加一，并且传给后台
+    //用户点击不喜欢之后相应表白信件的喜欢数值会加一，并且传给后台
     dislike({commit},index){
-        commit(types.CONFESSION_LETTER_DISLIKE,index);
+        let toIndex = state.indexConfessionLetterList[index].confessionLetterIndex;
+        axios({
+            method: 'get',
+            url: 'webapp/tread.json/'+toIndex,
+        }).then((res)=>{
+            commit(types.CONFESSION_LETTER_DISLIKE,index);
+        })
     },
     //用户点击主页表白信件下面的收藏按钮之后，用户会收藏此信件并且收藏数值会加一
     heart({commit},index){
-        commit(types.CONFESSION_LETTER_HEART,index);
+        let toIndex = state.indexConfessionLetterList[index].confessionLetterIndex;
+        axios({
+            method: 'get',
+            url: 'webapp/collect.json/'+ toIndex + "/18745119165",
+        }).then((res)=>{
+            commit(types.CONFESSION_LETTER_HEART,index);
+        })
     },
     //用户点击主页表白信件相应发件人的头像后会获取到相应发件人的信息
-    personalMsg({commit},index){
-        commit(types.CONFESSION_LETTER_PERSONAL_MSG,index);
+    personalMsg({commit,state},index){
+        /*let toIndex = state.indexConfessionLetterList[index].confessionLetterIndex;
+         axios({
+         method: 'get',
+         url: 'webapp/comment.json/'+toIndex,
+         }).then((res)=>{
+         commit(types.CONFESSION_LETTER_PERSONAL_MSG,res);
+         router.push("/index/index-home/index-personal-msg");
+         })*/
+        setTimeout(()=>{
+            state.putIndexConfessionLetterMsg[0] = {
+            personalImg: "/src/assets/img/head.png",
+            username: "aaaaaa",
+            gender: "女",
+            name: "aaaaa",
+            phone: "aaaaaa",
+            college: "aaaaa",
+            grade: "aaa"
+        }
+            router.push("/index/index-home/index-personal-msg");
+    },2000)
     },
     //用户在评论中评论完成后点击发送按钮，将用户的评论发送到后台
-    sendTheTalk(){
+    sendTheTalk({commit,state}){
         let input = document.getElementById('input').value;
-        console.log(input);
+        let toIndex = state.talkIndex;
+        axios({
+            method: 'get',
+            url: 'webapp/addComment/18745119165/' + toIndex + "/" + input,
+        }).then((res)=>{
+            console.log(res.data);
+        })
     },
+    //获取对应信件的评论
+    getTalk({commit,state},index){
+        let toIndex = state.indexConfessionLetterList[index].confessionLetterIndex;
+        axios({
+            method: 'get',
+            url: 'webapp/dongtaicomment/'+toIndex,
+        }).then((res)=>{
+            commit(types.GET_THE_TALK,res);
+            //因为当用户发送评论的时候需要发送给后台用户评论信件的索引，在这里先存储起来
+            state.talkIndex = toIndex;
+        })
+    }
 }
 
 const getters = {

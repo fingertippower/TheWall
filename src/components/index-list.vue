@@ -4,9 +4,9 @@
             <li class="li" v-for="(val, index) in getIndexConfessionLetterList">
                 <div class="listWord">
                     <div class="listWordHead">
-                        <router-link to="/index/index-home/index-personal-msg">
+                        <!--<router-link to="/index/index-home/index-personal-msg">-->
                             <img class="listWordHeadImg" :src="val.authorHeadImg" @click="personalMsg(index)">
-                        </router-link>
+                       <!-- </router-link>-->
                         <p class="nickname">{{val.authorUsername}}</p>
                         <p class="time">{{val.confessionLetterTime}}</p>
                         <router-link to="/index/index-home/index-not-like">
@@ -29,7 +29,7 @@
                     </div>
                     <div class="listWordFoot">
                         <ul class="listWordFootUl">
-                            <li class="listWordFootLi">
+                            <li class="listWordFootLi" @click="getTalk(index)">
                                 <router-link to="/talk">
                                     <div>
                                         <div class="listWordFootLiTalk">{{val.confessionLetterTalkNum}}</div>
@@ -51,10 +51,10 @@
                                     <img class="aListWordFootLiPostImg" src="../assets/img/alike.png" v-show="val.alikeDisplay">
                                 </div>
                             </li>
-                            <li class="listWordFootLi" @click="dislike(index)">
+                            <li class="listWordFootLi">
                                 <div>
                                     <div class="listWordFootLiGood">{{val.confessionLetterNotGoodNum}}</div>
-                                    <img class="listWordFootLiGoodImg" src="../assets/img/dislike.png" v-show="val.dislikeDisplay">
+                                    <img class="listWordFootLiGoodImg" src="../assets/img/dislike.png" v-show="val.dislikeDisplay" @click="dislike(index)">
                                     <img class="aListWordFootLiGoodImg" src="../assets/img/adislike.png" v-show="val.adislikeDisplay">
                                 </div>
                             </li>
@@ -87,7 +87,7 @@
         },
         computed:mapGetters(['getIndexConfessionLetterList']),
         methods:{
-            ...mapActions(['like','dislike','heart','personalMsg']),
+            ...mapActions(['like','dislike','heart','personalMsg','getTalk']),
             //判断表白信件列表滚动条位置
             menu:function(){
                 if(typeof this.timer === 'number'){

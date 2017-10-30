@@ -1,4 +1,5 @@
 import * as types from '../types'
+import axios from '../../fetch/api'
 
 const state = {
     letter: [
@@ -225,11 +226,18 @@ const mutations = {
     },
     //在页面刚刚创建的时候将后台的第一个信件的标题和信息内容赋值给state.letterTitle
     //并且在页面创建的时候第一个li的背景变颜色
-    [types.GET_LETTER_MSG](state){
+    [types.GET_LETTER_MSG](state,res){
+        state.letter = res.data;
         state.letterTitle = state.letter[0].letterTitle;
         state.letterBody = state.letter[0].letterBody;
         let bgcolor = document.getElementsByClassName('time-box');
         bgcolor[0].style.backgroundColor = "rgba(255,118,119,1)";
+    },
+    [types.GET_LETTER](state,res){
+        state.letterGet = res.data;
+    },
+    [types.LOOK_LETTER](state,res){
+        state.letterMsg[0] = res.data;
     }
 }
 
@@ -249,7 +257,30 @@ const actions = {
     //在页面刚刚创建的时候将后台的信件中的第一个数据赋值给state中对应的值，以免页面刚刚创建的时候信息体是空的
     //并且在页面创建的时候第一个li的背景变颜色
     getLetterMsg({commit}){
-        commit(types.GET_LETTER_MSG)
+        axios({
+            method: 'get',
+            url: 'webapp/Msgresend.server/18745119165',
+        }).then((res)=>{
+            commit(types.GET_LETTER_MSG,res)
+        })
+    },
+    //用户获取收信箱信件信息
+    getLetter({commit}){
+        axios({
+            method: 'get',
+            url: 'webapp/msg.server/18845874503',
+        }).then((res)=>{
+            commit(types.GET_LETTER,res);
+        })
+    },
+    //阅读信件
+    lookLetter({commit}){
+        axios({
+            method: 'get',
+            url: 'webapp/DetailedMsg/msg=1',
+        }).then((res)=>{
+            commit(types.LOOK_LETTER,res);
+        })
     }
 }
 

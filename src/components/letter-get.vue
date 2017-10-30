@@ -45,6 +45,7 @@
             for(let i=0; i<img.length; i++){
                 let a = Math.floor(Math.random()*2);
                 img[i].src = "/src/assets/img/" + a + ".png";
+                return this.$store.dispatch('getLetter')
             }
         }
     }
