@@ -318,6 +318,7 @@ const actions = {
             method: 'get',
             url: 'webapp/message.json/'+toIndex,
         }).then((res)=>{
+
             commit(types.CONFESSION_LETTER_LIKE,index);
         })
     },
