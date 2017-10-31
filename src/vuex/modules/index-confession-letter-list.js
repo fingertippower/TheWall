@@ -376,6 +376,7 @@ const actions = {
             college: "aaaaa",
             grade: "aaa"
         }
+
             router.push("/index/index-home/index-personal-msg");
     },2000)
     },
