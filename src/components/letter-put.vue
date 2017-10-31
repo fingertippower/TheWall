@@ -113,6 +113,7 @@
                 margin-left: px2rem(20px);
             }
             .letter-msg{
+                position: relative;
                 padding: px2rem(30px) px2rem(30px) 0 px2rem(30px);
                 background-color: #fff;
                 min-height: px2rem(760px);
@@ -131,7 +132,7 @@
                 }
                 .read{
                     position: absolute;
-                    margin-top: px2rem(55px);
+                    bottom: px2rem(0px);
                     margin-left: px2rem(-32px);
                     width: px2rem(564px);
                     height: px2rem(145px);

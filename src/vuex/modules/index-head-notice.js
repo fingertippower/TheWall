@@ -1,18 +1,24 @@
 import * as types from '../types'
+import axios from '../../fetch/api'
 
 const state = {
-    notice:"这是一个表白成功的例子"
+    notice:""
 }
 
 const mutations = {
-    [types.INDEX_NOTICE](state){
+    [types.INDEX_NOTICE](state,res){
+        state.notice = res.data;
     }
 }
 
 const actions = {
     notice({commit}){
-        commit(types.INDEX_NOTICE);
-
+        axios({
+            method: 'get',
+            url: 'webapp/flownotice',
+        }).then((res)=>{
+            commit(types.INDEX_NOTICE,res);
+        })
     }
 }
 

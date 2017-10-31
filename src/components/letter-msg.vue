@@ -34,6 +34,9 @@
             goBack:function(){
                 this.$router.go(-1);
             }
+        },
+        mounted:function () {
+            return this.$store.dispatch('lookLetter')
         }
     }
 </script>
@@ -105,7 +108,7 @@
                 position: relative;
                 float: right;
                 left: px2rem(80px);
-                width: px2rem(100px);
+                width: px2rem(200px);
                 height: px2rem(50px);
                 margin-top: px2rem(70px);
             }
