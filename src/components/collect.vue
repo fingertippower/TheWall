@@ -5,10 +5,12 @@
             <span>收藏</span>
         </div>
         <div class="collect" v-for="(val,collect) in getCollectList">
+            <img class="peopleImg" :src="val.collectPeopleImg" onerror="this.style.display='none'">
+            <span class="nickname">{{val.collectNickname}}</span>
             <p class="title">{{val.collectTitle}}</p>
             <p class="text">{{val.collectText}}</p>
             <p class="time">{{val.collectTime}}</p>
-            <img :src="val.collectImg" onerror="this.style.display='none'">
+            <img class="contentImg" :src="val.collectContentImg" onerror="this.style.display='none'">
         </div>
     </div>
 </template>
@@ -36,7 +38,6 @@
     .background{
         width: 100%;
         height: 100%;
-        background-color: #F6EDDC;
     }
     .head{
         width:100%;
@@ -59,8 +60,8 @@
         margin-left: px2rem(276.0039px);
     }
     .collect{
-        width: px2rem(691px);
-        height: px2rem(282.8843px);
+        width: px2rem(690px);
+        height: px2rem(300px);
         margin: auto;
         margin-bottom: px2rem(200px);
         border-radius: px2rem(10px) px2rem(10px) px2rem(10px) px2rem(10px);
@@ -69,28 +70,40 @@
         position: relative;
         top: px2rem(150px);
     }
+    .collect .peopleImg{
+        margin-top: px2rem(25px);
+        margin-left: px2rem(25px);
+        width: px2rem(68px);
+        height: px2rem(68px);
+    }
+    .collect .nickname{
+        font-size: px2rem(25px);
+        margin-left: px2rem(15px);
+        margin-top: px2rem(45px);
+        position: absolute;
+    }
     .collect .title{
         font-size: px2rem(26px);
-        margin-top: px2rem(58px);
+        margin-top: px2rem(0px);
         margin-left: px2rem(25px);
         position: absolute;
     }
     .collect .text{
-        width: px2rem(447px);
-        margin-top: px2rem(101px);
+        width: px2rem(450px);
+        margin-top: px2rem(70px);
         margin-left: px2rem(25px);
         position: absolute;
         color: #CDCCCB;
     }
     .collect .time{
-        margin-top: px2rem(233px);
+        margin-top: px2rem(160px);
         margin-left: px2rem(25px);
         position: absolute;
         color: #CDCCCB;
     }
-    .collect img{
-        width: px2rem(194px);
-        height: px2rem(282.8843px);
+    .collect .contentImg{
+        width: px2rem(200px);
+        height: px2rem(300px);
         float: right;
         border-radius: 0 px2rem(10px) px2rem(10px) 0;
     }
