@@ -55,7 +55,10 @@ const state={
 };
 
 const mutations={
-
+    [types.GET_SCHOOLFELLOW_LIST](state,res){
+        let arr = state.schoolfellowList.concat(res.data);
+        state.schoolfellowList= arr;
+    }
 };
 
 const actions={
