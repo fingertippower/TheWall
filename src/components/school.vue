@@ -21,7 +21,7 @@
             <input type="text" id="class" value="">
         </div>
         <div class="save">
-            <button @click="save()">保存</button>
+            <button @click="save1()">保存</button>
         </div>
     </div>
 </template>
@@ -30,7 +30,7 @@
     import {mapActions} from 'vuex'
     export default{
         methods:{
-            ...mapActions(['save']),
+            ...mapActions(['save1']),
             goBack:function () {
                 this.$router.go(-1);
             }

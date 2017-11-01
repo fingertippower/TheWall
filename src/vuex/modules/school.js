@@ -7,7 +7,7 @@ const mutations={
 };
 
 const actions={
-    save:function({}) {
+    save1:function({}) {
         let s=document.getElementById('school').value;
         let a=document.getElementById('academy').value;
         let m=document.getElementById('major').value;
