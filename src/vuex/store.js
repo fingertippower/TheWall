@@ -11,6 +11,8 @@ import Schoolfellow from './modules/schoolfellow'
 import Login from './modules/login'
 import Register from './modules/register'
 import School from './modules/school'
+import PersonalInformation from './modules/personalInformation'
+import SystemMsg from './modules/systemMsg'
 
 Vue.use(Vuex);
 //这里并没有把所有的vuex里面的内容写在一起，因为那样显得很乱，而是把不同页面的放在了一起最后暴露出去
@@ -26,6 +28,8 @@ export default new Vuex.Store({
         Schoolfellow,
         Login,
         Register,
-        School
+        School,
+        PersonalInformation,
+        SystemMsg
     }
 })

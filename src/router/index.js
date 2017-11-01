@@ -19,6 +19,8 @@ import LetterGet from '../components/letter-get.vue'
 import LetterGetMsg from '../components/letter-get-msg.vue'
 import LetterMsg from '../components/letter-msg.vue'
 import WriteLetter from '../components/writeLetter.vue'
+import PersonalInformation from '../components/personalInformation.vue'
+import SystemMsg from '../components/systemMsg.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -111,6 +113,14 @@ export default new Router({
         {
             path:'/write-letter',
             component:WriteLetter
+        },
+        {
+            path:'/personalInformation',
+            component:PersonalInformation
+        },
+        {
+            path:'/systemMsg',
+            component:SystemMsg
         }
     ]
 })

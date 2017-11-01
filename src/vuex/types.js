@@ -28,9 +28,9 @@ export const CONFESSION_LETTER_HEART = 'CONFESSION_LETTER_HEART'
 export const CONFESSION_LETTER_PERSONAL_MSG = 'CONFESSION_LETTER_PERSONAL_MSG'
 //主页通知
 export const INDEX_NOTICE = 'INDEX_NOTICE'
-
+//获取收藏信息
 export const GET_COLLECT_LIST='GET_COLLECT_LIST'
-
+//获取校友列表
 export const GET_SCHOOLFELLOW_LIST='GET_SCHOOLFELLOW_LIST'
 //获取评论
 export const GET_THE_TALK = 'GET_THE_TALK'
@@ -38,3 +38,5 @@ export const GET_THE_TALK = 'GET_THE_TALK'
 export const GET_LETTER = 'GET_LETTER'
 //阅读信件
 export const LOOK_LETTER = 'LOOK_LETTER'
+//获取系统消息
+export const GET_SYSTEM_MSG_LIST='GET_SYSTEM_MSG_LIST'
