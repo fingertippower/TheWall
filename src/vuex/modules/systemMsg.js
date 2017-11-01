@@ -13,25 +13,25 @@ const state={
 
 const mutations={
     [types.GET_SYSTEM_MSG_LIST](state,res){
-        let arr = state.systemMsgtList.concat(res.data);
-        state.systemMsgtList = arr;
+        let arr = state.systemMsgList.concat(res.data);
+        state.systemMsgList = arr;
     }
 };
 
 const actions={
-    getSystemMsgList({commit,state}){
+    /*getSystemMsgList({commit,state}){
         axios({
             method:'get',
             url:'',
         }).then((res)=>{
             commit(types.GET_SYSTEM_MSG_LIST,res);
         })
-    }
+    }*/
 };
 
 const getters={
     getSystemMsgList(state){
-        return state.systemMsgtList;
+        return state.systemMsgList;
     }
 };
 

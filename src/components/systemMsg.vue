@@ -4,17 +4,20 @@
             <img src="../assets/img/return.png" @click="goBack">
             <span>系统消息</span>
         </div>
-        <div class="msg" v-for="(val,systemMsg) in getSystemMsgList">
-            <p class="title">{{val.systemMsgTitle}}</p>
-            <p class="text">{{val.systemMsgText}}</p>
-            <p class="time">{{val.systemMsgTime}}</p>
+        <div class="msg">
+            <ul>
+                <li v-for="(val, index) in getSystemMsgList">
+                    <p class="title">{{val.systemMsgTitle}}</p>
+                    <p class="text">{{val.systemMsgText}}</p>
+                    <p class="time">{{val.systemMsgTime}}</p>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
 
 <script>
-    import {mapGetters} from 'vuex'
-    import axios from 'axios'
+    import { mapGetters } from 'vuex'
     export default{
         data(){
             return{

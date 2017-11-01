@@ -21,10 +21,14 @@
                 <img class="hide" src="../assets/img/hide.png">
             </span>
             <img class="public" id="name" src="../assets/img/name.png">
+            <router-link to="/personalInformation">
             <span>个人信息</span>
+            </router-link>
             <hr class="short-hr">
             <img class="public" id="news" src="../assets/img/news.png">
+            <router-link to="/systemMsg">
             <span>系统消息</span>
+            </router-link>
             <hr class="short-hr">
             <img class="public" id="follow" src="../assets/img/follow.png">
             <router-link to="/schoolfellow">
