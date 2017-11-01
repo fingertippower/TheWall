@@ -118,7 +118,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" rel="stylesheet/scss" scoped>
     @import '../assets/css/function.scss';
     .indexList{
         margin-top:px2rem(215px);
