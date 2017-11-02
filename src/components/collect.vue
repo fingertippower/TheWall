@@ -4,13 +4,17 @@
             <img src="../assets/img/return.png" @click="goBack">
             <span>收藏</span>
         </div>
-        <div class="collect" v-for="(val,collect) in getCollectList">
-            <img class="peopleImg" :src="val.collectPeopleImg" onerror="this.style.display='none'">
-            <span class="nickname">{{val.collectNickname}}</span>
-            <p class="title">{{val.collectTitle}}</p>
-            <p class="text">{{val.collectText}}</p>
-            <p class="time">{{val.collectTime}}</p>
-            <img class="contentImg" :src="val.collectContentImg" onerror="this.style.display='none'">
+        <div class="collect">
+            <ul>
+                <li  v-for="(val,index) in getCollectList">
+                    <img class="peopleImg" :src="val.collectPeopleImg" onerror="this.style.display='none'">
+                    <span class="nickname">{{val.collectNickname}}</span>
+                    <p class="title">{{val.collectTitle}}</p>
+                    <p class="text">{{val.collectText}}</p>
+                    <p class="time">{{val.collectTime}}</p>
+                    <img class="contentImg" :src="val.collectContentImg" onerror="this.style.display='none'">
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -89,7 +93,7 @@
     }
     .collect .text{
         width: px2rem(450px);
-        margin-top: px2rem(70px);
+        margin-top: px2rem(50px);
         margin-left: px2rem(25px);
         position: absolute;
         color: #CDCCCB;
