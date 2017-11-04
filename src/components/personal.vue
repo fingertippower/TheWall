@@ -1,11 +1,14 @@
 <template>
     <div class="personal">
         <div class="background">
-            <img class="people" src="../assets/img/people.png">
+            <!--<img class="people" src="../assets/img/people.png">
             <p class="name">
                 回忆专用小马甲
                 <img class="woman" src="../assets/img/woman.png">
-            </p>
+            </p>-->
+            <router-link to="/login">
+                <button class="toLogin">登录/注册</button>
+            </router-link>
             <hr class="long-hr">
             <img class="public" id="collection" src="../assets/img/collection.png">
             <router-link to="/collect">
@@ -21,10 +24,14 @@
                 <img class="hide" src="../assets/img/hide.png">
             </span>
             <img class="public" id="name" src="../assets/img/name.png">
-            <span>个人信息</span>
+            <router-link to="/personalInformation">
+                <span>个人信息</span>
+            </router-link>
             <hr class="short-hr">
             <img class="public" id="news" src="../assets/img/news.png">
-            <span>系统消息</span>
+            <router-link to="/systemMsg">
+                <span>系统消息</span>
+            </router-link>
             <hr class="short-hr">
             <img class="public" id="follow" src="../assets/img/follow.png">
             <router-link to="/schoolfellow">
@@ -78,7 +85,7 @@
         from{left:px2rem(-568px)}
         to{left:0}
     }
-    .people{
+    /*.people{
         width: px2rem(152.344px);
         height: px2rem(152.344px);
         margin-top: px2rem(123px);
@@ -93,10 +100,18 @@
     .woman{
         width: px2rem(21px);
         height: px2rem(24.237px);
+    }*/
+    .toLogin{
+        font-size: px2rem(50px);
+        color: #60D1FF;
+        width: px2rem(270px);
+        margin-top: px2rem(150px);
+        margin-left: px2rem(105px);
+        background:transparent;
     }
     .long-hr{
-        margin-top: px2rem(35px);
-        width: px2rem(537px);
+        margin-top: px2rem(150px);
+        width: px2rem(533px);
     }
     .public{
         width: px2rem(32px);
