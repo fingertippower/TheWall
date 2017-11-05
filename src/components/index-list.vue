@@ -82,7 +82,6 @@
                 timer: null,
                 refresh: false,
                 big:false
-
             }
         },
         computed:mapGetters(['getIndexConfessionLetterList']),
