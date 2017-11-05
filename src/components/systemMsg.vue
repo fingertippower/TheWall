@@ -28,7 +28,7 @@
         methods:{
             goBack:function(){
                 this.$router.go(-1);
-            },
+            }
         }
     }
 </script>
@@ -77,14 +77,13 @@
         position: absolute;
     }
     .msg .text{
-        width: px2rem(450px);
         margin-top: px2rem(70px);
         margin-left: px2rem(25px);
         position: absolute;
         color: #CDCCCB;
     }
     .msg .time{
-        margin-top: px2rem(160px);
+        margin-top: px2rem(260px);
         margin-left: px2rem(25px);
         position: absolute;
         color: #CDCCCB;

@@ -4,10 +4,14 @@
             <img src="../assets/img/return.png" @click="goBack">
             <span>校友</span>
         </div>
-        <div class="people" v-for="(val,schoolfellow) in getSchoolfellowList">
-            <img :src="val.schoolfellowImg" onerror="this.style.display='none'">
-            <span>{{val.schoolfellowName}}</span>
-            <hr/>
+        <div class="people">
+            <ul>
+                <li v-for="(val,index) in getSchoolfellowList">
+                    <img :src="val.schoolfellowImg" onerror="this.style.display='none'">
+                    <span>{{val.schoolfellowName}}</span>
+                    <hr/>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
