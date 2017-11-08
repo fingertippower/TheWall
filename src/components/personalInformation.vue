@@ -8,8 +8,11 @@
             <span>姓名</span>
             <input type="text" id="name" value="">
             <br/>
-            <span>性别</span>
-            <input type="text" id="gender" value="">
+            <span class="sex">性别</span>
+            <select class="drop-down" id="gender">
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
             <br/>
             <span>生日</span>
             <input type="text" id="birthday" value="">
@@ -88,6 +91,22 @@
         margin-left: px2rem(31px);
         margin-top: px2rem(53px);
         position: absolute;
+    }
+    .sex{
+        margin-left: px2rem(-131px);
+    }
+    .drop-down{
+        width: px2rem(680px);
+        height: px2rem(120px);
+        border: px2rem(1px) solid;
+        border-top-style: none;
+        border-left-style: none;
+        border-right-style: none;
+        border-color: #B8B8B8;
+        color: #B8B8B8;
+        font-size: px2rem(35px);
+        padding-left: px2rem(120px);
+        padding-top: px2rem(30px);
     }
     .save{
         text-align: center;
