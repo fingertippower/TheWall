@@ -5,8 +5,14 @@
             <span>学校信息</span>
         </div>
         <div class="message">
-            <span>学校</span>
-            <input type="text" id="school" value="">
+            <span class="schoolGrade">学校</span>
+            <select class="drop-down" id="school">
+                <option value="黑龙江大学">黑龙江大学</option>
+                <option value="哈尔滨工业大学">哈尔滨工业大学</option>
+                <option value="哈尔滨工程大学">哈尔滨工程大学</option>
+                <option value="中南大学">中南大学</option>
+                <option value="湖南大学">湖南大学</option>
+            </select>
             <br/>
             <span>学院</span>
             <input type="text" id="academy" value="">
@@ -15,7 +21,12 @@
             <input type="text" id="major" value="">
             <br/>
             <span>年级</span>
-            <input type="text" id="grade" value="">
+            <select class="drop-down" id="grade">
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+            </select>
             <br/>
             <span>班级</span>
             <input type="text" id="class" value="">
@@ -88,6 +99,22 @@
         margin-left: px2rem(31px);
         margin-top: px2rem(53px);
         position: absolute;
+    }
+    .schoolGrade{
+        margin-left: px2rem(-131px);
+    }
+    .drop-down{
+        width: px2rem(680px);
+        height: px2rem(120px);
+        border: px2rem(1px) solid;
+        border-top-style: none;
+        border-left-style: none;
+        border-right-style: none;
+        border-color: #B8B8B8;
+        color: #B8B8B8;
+        font-size: px2rem(35px);
+        padding-left: px2rem(120px);
+        padding-top: px2rem(30px);
     }
     .save{
         text-align: center;
