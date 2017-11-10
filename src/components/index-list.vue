@@ -30,7 +30,7 @@
                     <div class="listWordFoot">
                         <ul class="listWordFootUl">
                             <li class="listWordFootLi" @click="getTalk(index)">
-                                <router-link to="/talk">
+                                <router-link to="/talk" v-if="$route.meta.keepAlive">
                                     <div>
                                         <div class="listWordFootLiTalk">{{val.confessionLetterTalkNum}}</div>
                                         <img class="listWordFootLiTalkImg" src="../assets/img/comment_alt.png">

@@ -381,6 +381,7 @@ const actions = {
     },2000)
     },
 
+
     //用户在评论中评论完成后点击发送按钮，将用户的评论发送到后台
     sendTheTalk({commit,state}){
         let input = document.getElementById('input').value;
