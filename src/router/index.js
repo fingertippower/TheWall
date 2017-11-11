@@ -36,6 +36,7 @@ export default new Router({
             return { x: 0, y: to.meta.savedPosition || 0 }
         }
     },
+
     routes: [
         {
             path: '/is-send',
