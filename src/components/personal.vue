@@ -32,11 +32,12 @@
             <router-link to="/systemMsg">
                 <span>系统消息</span>
             </router-link>
+            <!--
             <hr class="short-hr">
             <img class="public" id="follow" src="../assets/img/follow.png">
             <router-link to="/schoolfellow">
                 <span>我的校友</span>
-            </router-link>
+            </router-link>-->
             <div class="foot">
                 <button class="border">检查更新</button>
                 <button>系统设置</button>
@@ -117,7 +118,7 @@
         width: px2rem(32px);
         height: px2rem(24px);
         margin-left: px2rem(105px);
-        margin-top: px2rem(29.2397px);
+        margin-top: px2rem(30px);
     }
     #collection{
         margin-top: px2rem(173px);
@@ -157,12 +158,12 @@
         margin-top: px2rem(11.2495px);
     }
     button{
-        width: px2rem(140px);
+        width: px2rem(120px);
         font-size: px2rem(24px);
         background-color: transparent;
         color: #8E8D8D;
         border: none;
-        margin-top: px2rem(215.3311px);
+        margin-top: px2rem(400px);
     }
     .border{
         border-top: none;
