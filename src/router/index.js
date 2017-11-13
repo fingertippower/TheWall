@@ -24,6 +24,18 @@ import SystemMsg from '../components/systemMsg.vue'
 Vue.use(Router)
 
 export default new Router({
+    mode: 'history',
+    //routes,
+    scrollBehavior (to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            if (from.meta.keepAlive) {
+                from.meta.savedPosition = document.body.scrollTop
+            }
+            return { x: 0, y: to.meta.savedPosition || 0 }
+        }
+    },
     routes: [
         {
             path: '/is-send',
@@ -47,6 +59,10 @@ export default new Router({
             children:[{
                 path: 'index-home',
                 component:IndexHome,
+                meta: {
+                    title: 'home',
+                    keepAlive: true
+                },
                 children:[{
                     path:'index-personal-msg',
                     component:IndexPersonalMsg
