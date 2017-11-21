@@ -7,6 +7,11 @@ const state={
             systemMsgTitle:'五点二十分中央大街',
             systemMsgText:'修订版市场部被称，为难吃武功长鼻王建安成本卡不与。难吃无欧巴，别逼我VB。',
             systemMsgTime:'2017-08-18',
+        },
+        {
+            systemMsgTitle:'五点二十分中央大街',
+            systemMsgText:'修订版市场部被称，为难吃武功长鼻王建安成本卡不与。难吃无欧巴，别逼我VB。',
+            systemMsgTime:'2017-08-18',
         }
     ]
 };

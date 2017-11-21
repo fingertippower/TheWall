@@ -6,7 +6,7 @@
         </div>
         <div class="msg">
             <ul>
-                <li v-for="(val, index) in getSystemMsgList">
+                <li class="li" v-for="(val, index) in getSystemMsgList">
                     <p class="title">{{val.systemMsgTitle}}</p>
                     <p class="text">{{val.systemMsgText}}</p>
                     <p class="time">{{val.systemMsgTime}}</p>
@@ -59,7 +59,7 @@
         margin-top:px2rem(55.4971px);
         margin-left: px2rem(231px);
     }
-    .msg{
+    .li{
         width: px2rem(690px);
         height: px2rem(300px);
         margin: auto;
