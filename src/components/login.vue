@@ -1,5 +1,8 @@
 <template>
     <div class="background">
+        <router-link to="/index/index-home">
+            <span class="close">关闭</span>
+        </router-link>
         <div class="up">
             <img src="../assets/img/logo.png">
             <span>登录</span>
@@ -9,24 +12,26 @@
             </p>
         </div>
         <div class="down">
-            <div class="phone">
-                <span class="span1">
-                    <img class="img1" src="../assets/img/phone.png">
-                </span>
-                <input id="inputPhone" class="text1" type="text" placeholder="输入手机号">
-                <span class="span2">
-                    <img class="img2" src="../assets/img/delete.png" @click="clearInput1()">
-                </span>
-            </div>
-            <div class="password">
-                <span class="span1">
-                    <img class="img3" src="../assets/img/password.png">
-                </span>
-                <input id="inputPassword" class="text2" type="password" placeholder="输入密码">
-                <span class="span2">
-                    <img class="img2" src="../assets/img/delete.png" @click="clearInput2()">
-                </span>
-            </div>
+            <form>
+                <div class="phone">
+                    <span class="span1">
+                        <img class="img1" src="../assets/img/phone.png">
+                    </span>
+                    <input id="inputPhone" name="inputPhone" class="text1" type="text" placeholder="输入手机号">
+                    <span class="span2">
+                        <img class="img2" src="../assets/img/delete.png" @click="clearInput1()">
+                    </span>
+                </div>
+                <div class="password">
+                    <span class="span1">
+                        <img class="img3" src="../assets/img/password.png">
+                    </span>
+                    <input id="inputPassword" name="inputPassword" class="text2" type="password" placeholder="输入密码">
+                    <span class="span2">
+                        <img class="img2" src="../assets/img/delete.png" @click="clearInput2()">
+                    </span>
+                </div>
+            </form>
             <router-link to="/register">
                 <button class="btn1">立即注册</button>
             </router-link>
@@ -67,6 +72,13 @@
         width: 100%;
         height: 100%;
         position: fixed;
+    }
+    .close{
+        font-size: px2rem(40px);
+        color: #fff;
+        top:px2rem(20px);
+        left:px2rem(20px);
+        position: absolute;
     }
     .up{
         width: px2rem(605px);
